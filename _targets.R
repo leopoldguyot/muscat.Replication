@@ -17,17 +17,9 @@ tar_source()
 # Replace the target list below with your own:
 list(
   tar_target(
-    name = prepKang,
-    command = prep_Kang_data()
+    name = prepData,
+    command = list(prep_Kang_data(),  prep_LPS_data())
   ),
-  tar_target(
-    name = prepLPS,
-    command = prep_LPS_data()
-  ),
-  # Combine the prepped datasets into a list
-  tar_combine(name = prepData,
-              prepKang,
-              prepLPS),
   # Dynamically simulate on each dataset
   tar_target(
     simData,
