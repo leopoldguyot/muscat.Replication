@@ -4,7 +4,11 @@ library(targets)
 
 # Set target options:
 tar_option_set(
-  packages = c("muscat", "ExperimentHub") # Packages that your targets need for their tasks.
+  packages = c("muscat",
+               "ExperimentHub",
+               "muscdata",
+               "SingleCellExperiment"
+               ) # Packages that your targets need for their tasks.
 )
 
 # Run the R scripts in the R/ folder with your custom functions:
@@ -22,11 +26,21 @@ list(
     command = prep_LPS_data()
   ),
   # Combine the prepped datasets into a list
-  tar_target(prepList, list(prepKang, prepLPS)),
+  tar_target(prepData, list(prepKang, prepLPS)),
   # Dynamically simulate on each dataset
   tar_target(
     simData,
     simulate_data(prepData),
-    pattern = map(prepData = prepList)
+    pattern = map(prepData)
+  ),
+  tar_target(
+    aggMeanData,
+    aggregateAssay(simData, "mean"),
+    pattern = map(simData)
+  ),
+  tar_target(
+    aggSumData,
+    aggregateAssay(simData, "sum"),
+    pattern = map(simData)
   )
 )
