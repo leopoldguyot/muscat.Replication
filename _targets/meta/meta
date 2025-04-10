@@ -1,0 +1,9 @@
+name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
+simulate_data|function|367bd3cbbe62eae6|||||||||||||||
+prep_LPS_data|function|0a306dad8a26a601|||||||||||||||
+prep_Kang_data|function|9697bde7be9d762b|||||||||||||||
+prepKang|stem||8795fb663478a7e5|d845e9bea06d9bb9|-363830865||t20188.5221021063s||0|rds|local|vector|||0.67|Could not check database for updates.  Database source currently unreachable.  This should only be a temporary interruption.   Using previously cached version.|failed to connect  reason Couldnt resolve host name bioconductor.org Could not resolve host bioconductor.org  Consider rerunning with localHubTRUE
+simulate_data|function|367bd3cbbe62eae6
+prep_LPS_data|function|0a306dad8a26a601
+prep_Kang_data|function|9697bde7be9d762b
+prepKang|stem|bfde3d0078209379|8795fb663478a7e5|d845e9bea06d9bb9|-363830865||t20188.5255621035s|s10843171b|10843171|rds|local|vector|||266.335||
