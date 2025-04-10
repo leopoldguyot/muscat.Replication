@@ -1,19 +1,18 @@
 # Load packages required to define the pipeline:
 library(targets)
-# library(tarchetypes) # Load other packages as needed.
+library(tarchetypes)
 
 # Set target options:
 tar_option_set(
   packages = c("muscat",
                "ExperimentHub",
-               "muscdata",
+               "muscData",
                "SingleCellExperiment"
                ) # Packages that your targets need for their tasks.
 )
 
 # Run the R scripts in the R/ folder with your custom functions:
 tar_source()
-# tar_source("other_functions.R") # Source other scripts as needed.
 
 # Replace the target list below with your own:
 list(
@@ -26,7 +25,9 @@ list(
     command = prep_LPS_data()
   ),
   # Combine the prepped datasets into a list
-  tar_target(prepData, list(prepKang, prepLPS)),
+  tar_combine(name = prepData,
+              prepKang,
+              prepLPS),
   # Dynamically simulate on each dataset
   tar_target(
     simData,
@@ -35,12 +36,12 @@ list(
   ),
   tar_target(
     aggMeanData,
-    aggregateAssay(simData, "mean"),
+    aggregate_assay(simData, "mean"),
     pattern = map(simData)
   ),
   tar_target(
     aggSumData,
-    aggregateAssay(simData, "sum"),
+    aggregate_assay(simData, "sum"),
     pattern = map(simData)
   )
 )
