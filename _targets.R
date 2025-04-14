@@ -14,30 +14,37 @@ tar_option_set(
 
 # Run the R scripts in the R/ folder with your custom functions:
 tar_source()
-valuesData <- list(
-  dataset = c("Kang", "LPS")
-)
-valuesAgg <- list(
-  aggregation = c("None","Mean", "Sum")
-)
 
-targets <- tar_map(
-  values = valuesData,
-  tar_map(
-    values = valuesAgg,
-    tar_target(
-      name = prepData,
-      command = prep_data(dataset)
+target_analysis_pipeline <- function(data) {
+  c(
+    tar_target_raw(
+      paste0(data, "_aggregateSum"),
+      aggregate_assay(paste0("sim",data), sum)
     ),
-    # Dynamically simulate on each dataset
-    tar_target(
-      simData,
-      simulate_data(prepData),
-    ),
-    tar_target(
-      name = aggregateData,
-      command = aggregate_assay(simData, aggregation))
+    tar_target_raw(
+      paste0(data, "_aggregateMean"),
+      aggregate_assay(paste0("sim",data), mean)
+    )
   )
+}
+
+list(
+  tar_target(
+    name = prepKang,
+    command = prep_data("Kang")
+  ),
+  tar_target(
+    name = prepLPS,
+    command = prep_data("LPS")
+  ),
+  tar_target(
+    name = simKang,
+    command = simulate_data(prepKang)
+  ),
+  tar_target(
+    name = simLPS,
+    command = simulate_data(prepLPS)
+  ),
+  unlist(target_analysis_pipeline("Kang")),
+  unlist(target_analysis_pipeline("LPS"))
 )
-  
-list(targets)
