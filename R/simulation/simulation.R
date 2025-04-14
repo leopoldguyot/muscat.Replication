@@ -1,6 +1,12 @@
 library(muscat)
 library(ExperimentHub)
 
+prep_data <- function(data) {
+  stopifnot(data %in% c("Kang", "LPS"))
+  switch(data,
+         "Kang" = prep_Kang_data(),
+         "LPS" = prep_LPS_data())
+}
 
 prep_Kang_data <- function() {
     eh <- ExperimentHub()

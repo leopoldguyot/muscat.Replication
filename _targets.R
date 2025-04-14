@@ -1,6 +1,7 @@
 # Load packages required to define the pipeline:
 library(targets)
 library(tarchetypes)
+library(tidyr)
 
 # Set target options:
 tar_option_set(
@@ -13,27 +14,30 @@ tar_option_set(
 
 # Run the R scripts in the R/ folder with your custom functions:
 tar_source()
+valuesData <- list(
+  dataset = c("Kang", "LPS")
+)
+valuesAgg <- list(
+  aggregation = c("None","Mean", "Sum")
+)
 
-# Replace the target list below with your own:
-list(
-  tar_target(
-    name = prepData,
-    command = list(prep_Kang_data(),  prep_LPS_data())
-  ),
-  # Dynamically simulate on each dataset
-  tar_target(
-    simData,
-    simulate_data(prepData),
-    pattern = map(prepData)
-  ),
-  tar_target(
-    aggMeanData,
-    aggregate_assay(simData, "mean"),
-    pattern = map(simData)
-  ),
-  tar_target(
-    aggSumData,
-    aggregate_assay(simData, "sum"),
-    pattern = map(simData)
+targets <- tar_map(
+  values = valuesData,
+  tar_map(
+    values = valuesAgg,
+    tar_target(
+      name = prepData,
+      command = prep_data(dataset)
+    ),
+    # Dynamically simulate on each dataset
+    tar_target(
+      simData,
+      simulate_data(prepData),
+    ),
+    tar_target(
+      name = aggregateData,
+      command = aggregate_assay(simData, aggregation))
   )
 )
+  
+list(targets)

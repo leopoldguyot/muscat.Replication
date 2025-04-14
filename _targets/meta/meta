@@ -3,9 +3,29 @@ prepKang|stem|301290f41e69014d|8795fb663478a7e5|d845e9bea06d9bb9|-363830865||t20
 prepLPS|stem|db1fd14244ae2128|1917f5b765854f35|62b83bedaa8979bd|-1493148583||t20188.6011702047s|s43354073b|43354073|rds|local|vector|||1940.385||
 prepList|stem|cdd68f0f08e4e1e8|d4ed750dff0b0434|fdda7553da6bf157|1532895996||t20188.6012901361s|s54212061b|54212061|rds|local|vector||prepList_281f111033a71c94*prepList_2a700a249d920b53|0.001||
 simData_754b2d2d9b25611f|branch||fe500f4caec61d0c|61f0dabc925e3268|-1540857661||t20188.6012936679s||0|rds|local|vector|simData||0.004||object prepData not found
-simulate_data|function|367bd3cbbe62eae6
-aggregate_assay|function|1de300ad6f934bea
-prep_LPS_data|function|0a306dad8a26a601
+simData_1f3c671a5181237c|branch||fe500f4caec61d0c|61f0dabc925e3268|-2056977342||t20188.6162482006s||0|rds|local|vector|simData||0.006||isx, SingleCellExperiment is not TRUE
+prepData|stem|90b99cf071835b03|6a058250aac825ea|d845e9bea06d9bb9|164925258||t20189.515417606s|s21695371b|21695371|rds|local|list||prepData_314c1514a23e69a8*prepData_314c1514a23e69a8_1|1676.043||
+simData_c5bdfe009a710457|branch|301290f41e69014d|7c4b91be70363065|2c530c1562a7fbd1|30272500||t20189.5195086665s|s10843151b|10843151|rds|local|list|simData||0||
+simData_d3afe4f24a231dc5|branch|301290f41e69014d|7c4b91be70363065|2c530c1562a7fbd1|-1834459230||t20189.5195330647s|s10843151b|10843151|rds|local|list|simData||0||
+simData|pattern|f13b021a0a546dce|7c4b91be70363065||146399302||||21686302|rds|local|list||simData_c5bdfe009a710457*simData_d3afe4f24a231dc5|0||
+aggSumData_4130f66621d9b04d|branch|74c725745c54ddcf|561a7738c412cab1|21179f44ad32dfee|1974509486||t20189.5215706037s|s899888b|899888|rds|local|list|aggSumData||0.236||
+aggSumData_0bd5d1ecd56c61fd|branch|74c725745c54ddcf|561a7738c412cab1|b2ec535c76503d07|-1115158299||t20189.5215849556s|s899888b|899888|rds|local|list|aggSumData||0.119||
+aggSumData|pattern|dd1f8df4504d19fd|561a7738c412cab1||1435914800||||1799776|rds|local|list||aggSumData_4130f66621d9b04d*aggSumData_0bd5d1ecd56c61fd|0.355||
+aggMeanData_4130f66621d9b04d|branch|a869d8239976c623|bc6e54c05efc9f84|21179f44ad32dfee|-1284394592||t20189.5215894811s|s917719b|917719|rds|local|list|aggMeanData||0.115||
+aggMeanData_0bd5d1ecd56c61fd|branch|a869d8239976c623|bc6e54c05efc9f84|b2ec535c76503d07|-2014467105||t20189.5215940528s|s917719b|917719|rds|local|list|aggMeanData||0.109||
+aggMeanData|pattern|602f3538eee4eb37|bc6e54c05efc9f84||1191025727||||1835438|rds|local|list||aggMeanData_4130f66621d9b04d*aggMeanData_0bd5d1ecd56c61fd|0.224||
 prep_Kang_data|function|9697bde7be9d762b
-prepData|stem|cdd68f0f08e4e1e8|d4ed750dff0b0434|fdda7553da6bf157|164925258||t20188.6162444845s|s54212061b|54212061|rds|local|vector||prepData_281f111033a71c94*prepData_2a700a249d920b53|0.001||
-simData_1f3c671a5181237c|branch||fe500f4caec61d0c|61f0dabc925e3268|-2056977342||t20188.6162482006s||0|rds|local|vector|simData||0.005||isx, SingleCellExperiment is not TRUE
+prep_LPS_data|function|0a306dad8a26a601
+simulate_data|function|367bd3cbbe62eae6
+aggregate_assay|function|33984ee05f5ceac3
+valuesAgg|object|f43e5dca0ac494d3
+valuesData|object|2e9155aac3805626
+targets|object|02b26789fab09fcc
+prep_data|function|b60cea41d006a7e0
+prepData_Mean_LPS|stem|db1fd14244ae2128|39aa557023017e9d|ccedc77fca63d5fb|2051522627||t20189.6011778384s|s43354073b|43354073|rds|local|vector|||2037.81||
+prepData_None_Kang|stem|301290f41e69014d|1794a0c59f442200|ccedc77fca63d5fb|898099279||t20189.6108742583s|s10843151b|10843151|rds|local|vector|||835.643||
+prepData_None_LPS|stem|db1fd14244ae2128|39aa557023017e9d|ccedc77fca63d5fb|1384892069||t20189.6345830352s|s43354073b|43354073|rds|local|vector|||2040.174||
+prepData_Mean_Kang|stem|301290f41e69014d|1794a0c59f442200|ccedc77fca63d5fb|1701490232||t20189.6442936741s|s10843151b|10843151|rds|local|vector|||836.919||
+prepData_Sum_Kang|stem|301290f41e69014d|1794a0c59f442200|ccedc77fca63d5fb|405213807||t20189.6540407213s|s10843151b|10843151|rds|local|vector|||840.067||
+prepData_Sum_LPS|stem|db1fd14244ae2128|39aa557023017e9d|ccedc77fca63d5fb|217048092||t20189.6777474533s|s43354073b|43354073|rds|local|vector|||2039.935||
+simData_Mean_LPS|stem||a2a75bed1e77b5c5|0f530189593f629d|1359524021||t20189.6777479594s||0|rds|local|vector|||0.024||Trying to simulate more samples than available as reference please set force  TRUE.
