@@ -54,3 +54,11 @@ simulate_data <- function(prepData) {
                           p_dd = diag(6)[1, ], probs = NULL)
     sim
 }
+
+simulate_testis_data <- function(prepData) {
+    library(SingleCellExperiment)
+    library(CTdata)
+
+
+    sce <- CTdata::testis_sce()
+}
