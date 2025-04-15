@@ -1,7 +1,6 @@
 # Load packages required to define the pipeline:
 library(targets)
 library(tarchetypes)
-library(tidyr)
 
 # Set target options:
 tar_option_set(
@@ -19,11 +18,11 @@ target_analysis_pipeline <- function(data) {
   c(
     tar_target_raw(
       paste0(data, "_aggregateSum"),
-      aggregate_assay(paste0("sim",data), sum)
+      quote(aggregate_assay(paste0("sim",data), sum))
     ),
     tar_target_raw(
       paste0(data, "_aggregateMean"),
-      aggregate_assay(paste0("sim",data), mean)
+      quote(aggregate_assay(paste0("sim",data), mean))
     )
   )
 }
@@ -45,6 +44,6 @@ list(
     name = simLPS,
     command = simulate_data(prepLPS)
   ),
-  unlist(target_analysis_pipeline("Kang")),
-  unlist(target_analysis_pipeline("LPS"))
+  target_analysis_pipeline("Kang"),
+  target_analysis_pipeline("LPS")
 )
