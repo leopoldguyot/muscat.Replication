@@ -50,7 +50,7 @@ simulate_data <- function(prepData) {
     sim <- simData(prepData,
                           paired = FALSE, lfc = 2,
                           ng = nrow(prepData), nc = ncol(prepData),
-                          ns = 100, nk = NULL,
+                          ns = NULL, nk = NULL,
                           p_dd = diag(6)[1, ], probs = NULL)
     sim
 }

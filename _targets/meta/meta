@@ -1,6 +1,4 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-prepKang|stem|301290f41e69014d|8795fb663478a7e5|d845e9bea06d9bb9|-363830865||t20188.5786143366s|s10843151b|10843151|rds|local|vector|||800.79||
-prepLPS|stem|db1fd14244ae2128|1917f5b765854f35|62b83bedaa8979bd|-1493148583||t20188.6011702047s|s43354073b|43354073|rds|local|vector|||1940.385||
 prepList|stem|cdd68f0f08e4e1e8|d4ed750dff0b0434|fdda7553da6bf157|1532895996||t20188.6012901361s|s54212061b|54212061|rds|local|vector||prepList_281f111033a71c94*prepList_2a700a249d920b53|0.001||
 simData_754b2d2d9b25611f|branch||fe500f4caec61d0c|61f0dabc925e3268|-1540857661||t20188.6012936679s||0|rds|local|vector|simData||0.004||object prepData not found
 simData_1f3c671a5181237c|branch||fe500f4caec61d0c|61f0dabc925e3268|-2056977342||t20188.6162482006s||0|rds|local|vector|simData||0.006||isx, SingleCellExperiment is not TRUE
@@ -14,14 +12,9 @@ aggSumData|pattern|dd1f8df4504d19fd|561a7738c412cab1||1435914800||||1799776|rds|
 aggMeanData_4130f66621d9b04d|branch|a869d8239976c623|bc6e54c05efc9f84|21179f44ad32dfee|-1284394592||t20189.5215894811s|s917719b|917719|rds|local|list|aggMeanData||0.115||
 aggMeanData_0bd5d1ecd56c61fd|branch|a869d8239976c623|bc6e54c05efc9f84|b2ec535c76503d07|-2014467105||t20189.5215940528s|s917719b|917719|rds|local|list|aggMeanData||0.109||
 aggMeanData|pattern|602f3538eee4eb37|bc6e54c05efc9f84||1191025727||||1835438|rds|local|list||aggMeanData_4130f66621d9b04d*aggMeanData_0bd5d1ecd56c61fd|0.224||
-prep_Kang_data|function|9697bde7be9d762b
-prep_LPS_data|function|0a306dad8a26a601
-simulate_data|function|367bd3cbbe62eae6
-aggregate_assay|function|33984ee05f5ceac3
-valuesAgg|object|f43e5dca0ac494d3
-valuesData|object|2e9155aac3805626
-targets|object|02b26789fab09fcc
-prep_data|function|b60cea41d006a7e0
+valuesAgg|object|f43e5dca0ac494d3|||||||||||||||
+valuesData|object|2e9155aac3805626|||||||||||||||
+targets|object|02b26789fab09fcc|||||||||||||||
 prepData_Mean_LPS|stem|db1fd14244ae2128|39aa557023017e9d|ccedc77fca63d5fb|2051522627||t20189.6011778384s|s43354073b|43354073|rds|local|vector|||2037.81||
 prepData_None_Kang|stem|301290f41e69014d|1794a0c59f442200|ccedc77fca63d5fb|898099279||t20189.6108742583s|s10843151b|10843151|rds|local|vector|||835.643||
 prepData_None_LPS|stem|db1fd14244ae2128|39aa557023017e9d|ccedc77fca63d5fb|1384892069||t20189.6345830352s|s43354073b|43354073|rds|local|vector|||2040.174||
@@ -29,3 +22,18 @@ prepData_Mean_Kang|stem|301290f41e69014d|1794a0c59f442200|ccedc77fca63d5fb|17014
 prepData_Sum_Kang|stem|301290f41e69014d|1794a0c59f442200|ccedc77fca63d5fb|405213807||t20189.6540407213s|s10843151b|10843151|rds|local|vector|||840.067||
 prepData_Sum_LPS|stem|db1fd14244ae2128|39aa557023017e9d|ccedc77fca63d5fb|217048092||t20189.6777474533s|s43354073b|43354073|rds|local|vector|||2039.935||
 simData_Mean_LPS|stem||a2a75bed1e77b5c5|0f530189593f629d|1359524021||t20189.6777479594s||0|rds|local|vector|||0.024||Trying to simulate more samples than available as reference please set force  TRUE.
+prepKang|stem|4edb79987e684760|1794a0c59f442200|ccedc77fca63d5fb|-363830865||t20193.5937347337s|s9786130b|9786130|rds|local|vector|||275.231||
+prepLPS|stem|47840b10320cc02e|39aa557023017e9d|ccedc77fca63d5fb|-1493148583||t20193.6055417987s|s39299193b|39299193|rds|local|vector|||1018.411||
+simKang|stem|c00ced94bad4ae7a|bec4fd66d5153ed2|e36221cee4ccf8d4|1335660222||t20193.6141081517s|s19508763b|19508763|rds|local|vector|||8.31||
+simLPS|stem|68fb83b394db8ad8|603c035da7b17bf5|774496842ad86ae3|-1600585307||t20193.6143715779s|s65074566b|65074566|rds|local|vector|||17.502||
+prep_Kang_data|function|9697bde7be9d762b
+prep_LPS_data|function|0a306dad8a26a601
+simulate_data|function|03847229a2fc065e
+aggregate_assay|function|96d7768df82fb608
+simulate_testis_data|function|13aaf3512d33ab11
+target_analysis_pipeline|function|8988793b5d961972
+prep_data|function|b60cea41d006a7e0
+Kang_aggregateSum|stem|8072d06632c4fa64|ae9a4ea31147f023|259d2bd33e21df5d|201125132||t20193.6360180314s|s10508577b|10508577|rds|local|vector|||0.798||
+Kang_aggregateMean|stem|c2a2506404d340af|ae4f3761ffceb5c7|259d2bd33e21df5d|2139107742||t20193.6360370476s|s10525547b|10525547|rds|local|vector|||0.227||
+LPS_aggregateMean|stem|355b6f4de0e8b2c2|e51ca5ee711899f1|70e725da6a31b9d1|1007237221||t20193.6360917004s|s40779894b|40779894|rds|local|vector|||1.491||
+LPS_aggregateSum|stem|761354d248fa04a5|dec0ef7b584943f9|70e725da6a31b9d1|-2088398352||t20193.6361345708s|s40738626b|40738626|rds|local|vector|||0.469||
