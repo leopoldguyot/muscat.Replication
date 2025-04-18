@@ -9,9 +9,13 @@ tar_option_set(
 tar_source()
 
 target_analysis_pipeline <- function(data) {
+    prep_sym <- as.symbol(paste0("prep", data))
     sim_sym <- as.symbol(paste0("sim", data))
-
     list(
+      tar_target_raw(name = paste0("prep", data),
+                     command = substitute(prep_data(data))),
+      tar_target_raw(name = paste0("sim", data),
+                     command = substitute(simulate_data(PREP), list(PREP = prep_sym))),
         tar_target_raw(
             name = paste0(data, "_aggregateSum"),
             command = substitute(aggregate_assay(data = SIM, method = "Sum"), list(SIM = sim_sym))
@@ -25,12 +29,6 @@ target_analysis_pipeline <- function(data) {
 
 # Return the full target list:
 c(
-    list(
-        tar_target(name = prepKang, command = prep_data("Kang")),
-        tar_target(name = prepLPS, command = prep_data("LPS")),
-        tar_target(name = simKang, command = simulate_data(prepKang)),
-        tar_target(name = simLPS, command = simulate_data(prepLPS))
-    ),
     target_analysis_pipeline("Kang"),
     target_analysis_pipeline("LPS")
 )
