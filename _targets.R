@@ -141,6 +141,27 @@ target_analysis_node2 <- function(sim, params) {
                                                 list(SCE = sce)))
         ))
     }
+    if (params$method == "None" && params$assay == "logcounts" ) {
+        tarList <- c(tarList, list(
+            tar_target_raw(name = paste0(as.character(sce), "_MM_vst"),
+                           command = substitute(apply_MM_vst(SCE),
+                                                list(SCE = sce))),
+            tar_target_raw(name = paste0(as.character(sce), "_MM_dream2"),
+                           command = substitute(apply_MM_dream2(SCE),
+                                                list(SCE = sce))),
+            tar_target_raw(name = paste0(as.character(sce), "_MM_nbinom"),
+                           command = substitute(apply_MM_nbinom(SCE),
+                                                list(SCE = sce)))
+        ))
+    }
+    if (params$method == "None" &&
+        params$assay %in% c("logcounts", "vstresiduals") ) {
+        tarList <- c(tarList, list(
+            tar_target_raw(name = paste0(as.character(sce), "_scDD"),
+                           command = substitute(apply_scdd(SCE),
+                                                list(SCE = sce)))
+        ))
+    }
 
     tarList
 }
