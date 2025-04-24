@@ -113,7 +113,10 @@ target_analysis_node1 <- function(data, params) {
 }
 
 target_analysis_node2 <- function(sim, params) {
-    list(tar_target_raw(
+    sce <- as.symbol(paste0(as.character(sim),
+                            "_", params$assay,
+                            "_", params$method))
+    tarList <- list(tar_target_raw(
         name = paste0(as.character(sim), "_", params$assay, "_", params$method),
         command = substitute(aggregate_assay(data = SIM,
                                              assay = ASSAY,
@@ -121,7 +124,25 @@ target_analysis_node2 <- function(sim, params) {
                              list(SIM = sim,
                                   ASSAY = params$assay,
                                   METHOD = params$method))
-    ))
+        ))
+    if (params$method %in% c("Mean", "Sum") ) {
+        tarList <- c(tarList, list(
+            tar_target_raw(name = paste0(as.character(sce), "_limma_voom"),
+                           command = substitute(apply_limma_voom(SCE),
+                                                list(SCE = sce))),
+            tar_target_raw(name = paste0(as.character(sce), "_edgeR"),
+                           command = substitute(apply_edgeR(SCE),
+                                                list(SCE = sce))),
+            tar_target_raw(name = paste0(as.character(sce), "_limma_trend"),
+                           command = substitute(apply_limma_trend(SCE),
+                                                list(SCE = sce))),
+            tar_target_raw(name = paste0(as.character(sce), "_DESeq2"),
+                           command = substitute(apply_DESeq2(SCE),
+                                                list(SCE = sce)))
+        ))
+    }
+
+    tarList
 }
 
 # Return the full target list:
