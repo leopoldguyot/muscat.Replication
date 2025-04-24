@@ -97,17 +97,31 @@ target_analysis_node1 <- function(data, params) {
                                       PDD = params$p_dd,
                                       PROBS = params$probs))
         ),
-        tar_target_raw(
-            name = paste0(data, "_", params$name, "_aggregateSum"),
-            command = substitute(aggregate_assay(data = SIM, method = "Sum"),
-                                 list(SIM = sim_sym))
-        ),
-        tar_target_raw(
-            name = paste0(data, "_", params$name, "_aggregateMean"),
-            command = substitute(aggregate_assay(data = SIM, method = "Mean"),
-                                 list(SIM = sim_sym))
-        )
+        target_analysis_node2(sim_sym, list(assay = "counts",
+                                            method = "Sum")),
+        target_analysis_node2(sim_sym, list(assay = "cpm",
+                                            method = "Sum")),
+        target_analysis_node2(sim_sym, list(assay = "logcounts",
+                                            method = "Mean")),
+        target_analysis_node2(sim_sym, list(assay = "vstresiduals",
+                                            method = "Mean")),
+        target_analysis_node2(sim_sym, list(assay = "vstresiduals",
+                                            method = "None")),
+        target_analysis_node2(sim_sym, list(assay = "logcounts",
+                                            method = "None"))
     )
+}
+
+target_analysis_node2 <- function(sim, params) {
+    list(tar_target_raw(
+        name = paste0(as.character(sim), "_", params$assay, "_", params$method),
+        command = substitute(aggregate_assay(data = SIM,
+                                             assay = ASSAY,
+                                             method = METHOD),
+                             list(SIM = sim,
+                                  ASSAY = params$assay,
+                                  METHOD = params$method))
+    ))
 }
 
 # Return the full target list:

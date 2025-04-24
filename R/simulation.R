@@ -1,9 +1,10 @@
-library(muscat)
-library(ExperimentHub)
-library(dplyr)
-library(scater)
-library(sctransform)
-library(SingleCellExperiment)
+suppressMessages({
+    library(limma)
+    library(muscat)
+    library(scater)
+    library(sctransform)
+    library(SingleCellExperiment)
+})
 prep_data <- function(data) {
     stopifnot(data %in% c("Kang", "LPS"))
     switch(data,
