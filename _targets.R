@@ -3,32 +3,87 @@ library(targets)
 library(tarchetypes)
 
 tar_option_set(
-    packages = c("muscat", "ExperimentHub", "muscData", "SingleCellExperiment")
+    packages = c(
+        "muscat",
+        "ExperimentHub",
+        "muscData",
+        "SingleCellExperiment",
+        "scater",
+        "sctransform",
+        "tidyr"
+    )
 )
 
 tar_source()
 
-target_analysis_pipeline <- function(data) {
+target_analysis_base <- function(data) {
     prep_sym <- as.symbol(paste0("prep", data))
     sim_sym <- as.symbol(paste0("sim", data))
     list(
-      tar_target_raw(name = paste0("prep", data),
-                     command = substitute(prep_data(data))),
-      tar_target_raw(name = paste0("sim", data),
-                     command = substitute(simulate_data(PREP), list(PREP = prep_sym))),
         tar_target_raw(
-            name = paste0(data, "_aggregateSum"),
-            command = substitute(aggregate_assay(data = SIM, method = "Sum"), list(SIM = sim_sym))
+            name = paste0("prep", data),
+            command = substitute(prep_data(data))
+        ),
+        target_analysis_node1(data, list(name = "NC20",
+                                         ng = 4e3,
+                                         nc = 16*20,
+                                         ns = NULL,
+                                         nk = NULL,
+                                         p_dd = diag(6)[1, ],
+                                         probs = NULL)),
+        target_analysis_node1(data, list(name = "NC100",
+                                         ng = 4e3,
+                                         nc = 16*100,
+                                         ns = NULL,
+                                         nk = NULL,
+                                         p_dd = diag(6)[1, ],
+                                         probs = NULL)),
+        target_analysis_node1(data, list(name = "NC400",
+                                         ng = 4e3,
+                                         nc = 16*400,
+                                         ns = NULL,
+                                         nk = NULL,
+                                         p_dd = diag(6)[1, ],
+                                         probs = NULL))
+    )
+}
+
+target_analysis_node1 <- function(data, params) {
+    prep_sym <- as.symbol(paste0("prep", data))
+    sim_sym <- as.symbol(paste0("sim", data, "_", params$name))
+    list(
+        tar_target_raw(
+            name = paste0("sim", data, "_", params$name),
+            command = substitute(simulate_data(PREP,
+                                               NG,
+                                               NC,
+                                               NS,
+                                               NK,
+                                               PDD,
+                                               PROBS),
+                                 list(PREP = prep_sym,
+                                      NG = params$ng,
+                                      NC = params$nc,
+                                      NS = params$ns,
+                                      NK = params$nk,
+                                      PDD = params$p_dd,
+                                      PROBS = params$probs))
         ),
         tar_target_raw(
-            name = paste0(data, "_aggregateMean"),
-            command = substitute(aggregate_assay(data = SIM, method = "Mean"), list(SIM = sim_sym))
+            name = paste0(data, "_", params$name, "_aggregateSum"),
+            command = substitute(aggregate_assay(data = SIM, method = "Sum"),
+                                 list(SIM = sim_sym))
+        ),
+        tar_target_raw(
+            name = paste0(data, "_", params$name, "_aggregateMean"),
+            command = substitute(aggregate_assay(data = SIM, method = "Mean"),
+                                 list(SIM = sim_sym))
         )
     )
 }
 
 # Return the full target list:
 c(
-    target_analysis_pipeline("Kang"),
-    target_analysis_pipeline("LPS")
+    target_analysis_base("Kang"),
+    target_analysis_base("LPS")
 )
