@@ -91,15 +91,6 @@ LPS_NC400_dp10_aggregateSum|stem|f4b2a30fea2ccda5|7585d61712771036|4482f80ac3a15
 LPS_NC400_dp10_aggregateMean|stem|44bc958849d22b5a|d0f1ea3683f8819a|4482f80ac3a153ad|-1708907589||t20202.418657641s|s43964367b|43964367|rds|local|vector|||0.189||
 LPS_NC20_nill_aggregateSum|stem|88be23226ec5661e|7a9fcdd4e67f50dd|9d8bd78a8995dc08|-78023350||t20202.4187654193s|s43867418b|43867418|rds|local|vector|||0.092||
 LPS_NC20_nill_aggregateMean|stem|ab73816596e14339|01109d5fb1a7ee70|9d8bd78a8995dc08|-1466238698||t20202.4188734754s|s43873143b|43873143|rds|local|vector|||0.093||
-prep_Kang_data|function|9697bde7be9d762b
-prep_LPS_data|function|0a306dad8a26a601
-simulate_data|function|53c590cb5b42620d
-aggregate_assay|function|02e526fadc032422
-simulate_testis_data|function|13aaf3512d33ab11
-target_analysis_node2|function|72a6d2dfa810f729
-prep_data|function|b60cea41d006a7e0
-target_analysis_node1|function|2af1e33713eb3dc4
-target_analysis_base|function|2c59be43c401dd17
 simKang_NC400_dm10_cpm_Sum|stem|bb4b62601e24877e|21fc13f0d30d748e|6911b7cd044043b8|1087854392||t20202.4273464779s|s11769189b|11769189|rds|local|vector|||1.904||
 simKang_NC400_dm10_counts_Sum|stem|da5c3d5b4814803d|5afb29c07852c64c|6911b7cd044043b8|937096532||t20202.4274109805s|s11394606b|11394606|rds|local|vector|||0.291||
 simKang_NC400_dm10_vstresiduals_None|stem|f2d5945f4fde7a54|06033a4895d8ff42|6911b7cd044043b8|-1143817809||t20202.4286402917s|s393470024b|393470024|rds|local|vector|||85.346|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
@@ -184,3 +175,33 @@ simLPS_NC400_nill_logcounts_None|stem|dd8e98b1aff38e99|4cb2ff250c133c13|415fd76b
 simLPS_NC400_nill_vstresiduals_None|stem|2cfd8f51cb71a08d|6dc52dfc4651ba1a|415fd76b47458d69|2119121782||t20202.4573727617s|s430579358b|430579358|rds|local|vector|||86.052|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
 simLPS_NC400_nill_vstresiduals_Mean|stem|b850fc77233f35f1|fc97eb4cea315a00|415fd76b47458d69|696699702||t20202.4585059729s|s44319737b|44319737|rds|local|vector|||85.827|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
 simLPS_NC400_nill_cpm_Sum|stem|d5cf47322672dfda|88d4e1fec9ff8234|415fd76b47458d69|-385855240||t20202.45865205s|s44309083b|44309083|rds|local|vector|||0.729||
+prep_Kang_data|function|9697bde7be9d762b|||||||||||||||
+prep_LPS_data|function|0a306dad8a26a601|||||||||||||||
+simulate_data|function|53c590cb5b42620d|||||||||||||||
+aggregate_assay|function|02e526fadc032422|||||||||||||||
+simulate_testis_data|function|13aaf3512d33ab11|||||||||||||||
+apply_limma_trend|function|c9a2cc4c560ee01c|||||||||||||||
+target_analysis_node2|function|f0cf78eacece447d|||||||||||||||
+apply_limma_voom|function|f8dd4a3a8c4de0d7|||||||||||||||
+apply_DESeq2|function|fb67e2bebeda1065|||||||||||||||
+apply_edgeR|function|8acc649d61bc68d9|||||||||||||||
+prep_data|function|b60cea41d006a7e0|||||||||||||||
+target_analysis_node1|function|47086f64842ccf7e|||||||||||||||
+target_analysis_base|function|cf26cd312ec462aa|||||||||||||||
+simKang_NC400_nill_counts_Sum_edgeR|stem|9ac3abd279adadf3|89f18b81f070a8f6|6d018368a87b045f|-1995042410||t20202.5201243808s|s14193250b|14193250|rds|local|vector|||2.773||
+simKang_NC400_nill_counts_Sum_limma_trend|stem|35c769f5697930fc|e572a2536f3c16cd|b5e08a09da66ace0|-1041904914||t20202.520159381s|s12588182b|12588182|rds|local|vector|||0.399||
+simKang_NC400_nill_counts_Sum_limma_voom|stem|4909ce9c690e3bf6|036e239c3cc04cf6|ce4e89330a5b6e74|721126893||t20202.5202030617s|s13187690b|13187690|rds|local|vector|||0.44||
+simKang_NC400_nill_counts_Sum_DESeq2|stem|319d2cc57aa17b53|1d94b51ce1fa803d|03a35515c64e4ba6|37648099||t20202.5203331781s|s15795084b|15795084|rds|local|vector|||8.544||
+prep_Kang_data|function|9697bde7be9d762b
+prep_LPS_data|function|0a306dad8a26a601
+simulate_data|function|53c590cb5b42620d
+aggregate_assay|function|02e526fadc032422
+simulate_testis_data|function|13aaf3512d33ab11
+apply_limma_trend|function|c9a2cc4c560ee01c
+target_analysis_node2|function|f0cf78eacece447d
+apply_limma_voom|function|f8dd4a3a8c4de0d7
+apply_DESeq2|function|fb67e2bebeda1065
+apply_edgeR|function|8acc649d61bc68d9
+prep_data|function|b60cea41d006a7e0
+target_analysis_node1|function|47086f64842ccf7e
+target_analysis_base|function|cf26cd312ec462aa
