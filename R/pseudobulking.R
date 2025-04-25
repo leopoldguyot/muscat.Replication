@@ -7,11 +7,12 @@ suppressMessages({
 })
 
 aggregate_assay <- function(data, assay, method) {
-    assay(data) <- switch(assay,
-                          "counts" = counts(data),
-                          "cpm" = calculateCPM(counts(data)),
-                          "logcounts" = normalizeCounts(computeLibraryFactors(data)),
-                          "vstresiduals" = vst(counts(data), show_progress = FALSE)$y)
+    assays(data) <- list("values" = switch(assay,
+        "counts" = counts(data),
+        "cpm" = calculateCPM(counts(data)),
+        "logcounts" = normalizeCounts(computeLibraryFactors(data)),
+        "vstresiduals" = vst(counts(data), show_progress = FALSE)$y
+    ))
     switch(method,
         "None" = data,
         "Mean" = aggregateData(x = data, fun = "mean"),

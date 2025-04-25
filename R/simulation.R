@@ -56,12 +56,12 @@ prep_LPS_data <- function() {
 
 
 simulate_data <- function(prepData,
-                          ng,
-                          nc,
-                          ns,
-                          nk,
-                          p_dd,
-                          probs) {
+    ng,
+    nc,
+    ns,
+    nk,
+    p_dd,
+    probs) {
     set.seed(124)
 
     sim <- simData(prepData,
@@ -77,13 +77,6 @@ simulate_data <- function(prepData,
     gi <- metadata(sim)$gene_info
     gi <- dplyr::filter(gi, gene %in% rownames(sim))
     metadata(sim)$gene_info <- gi
-
-    sim <- computeLibraryFactors(sim)
-    sim <- logNormCounts(sim)
-    assays(sim)$cpm <- calculateCPM(sim)
-    assays(sim)$vstresiduals <- suppressWarnings(
-        vst(counts(sim), show_progress = FALSE)$y
-    )
     sim
 }
 

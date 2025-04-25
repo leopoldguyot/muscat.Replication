@@ -5,6 +5,7 @@ suppressMessages({
     library(sctransform)
     library(scDD)
     library(SingleCellExperiment)
+    library(tidyverse)
 })
 
 apply_edgeR <- function(sce) {
@@ -24,35 +25,39 @@ apply_DESeq2 <- function(sce) {
 }
 
 apply_MM_vst <- function(sce) {
+    counts(sce) <- assay(sce)
     mmDS(x = sce, method = "vst", verbose = FALSE)
 }
 
 apply_MM_nbinom <- function(sce) {
+    counts(sce) <- assay(sce)
     mmDS(x = sce, method = "nbinom", verbose = FALSE)
 }
 
 apply_MM_dream2 <- function(sce) {
+    counts(sce) <- assay(sce)
     mmDS(x = sce, method = "dream2", verbose = FALSE)
 }
 
 apply_scdd <- function(sce) {
     kids <- levels(sce$cluster_id)
     cells_by_k <- split(colnames(sce), sce$cluster_id)
-    if (is(normcounts(sce), "dgCMatrix"))
-        normcounts(sce) <- as.matrix(normcounts(sce))
+    normcounts(sce) <- assay(sce)
     suppressMessages(
         res <- lapply(kids, function(k) {
             res <- results(scDD(sce[, cells_by_k[[k]]],
-                                min.nonzero = 20, condition = "group_id",
-                                categorize = FALSE, testZeroes = FALSE,
-                                param = BiocParallel::MulticoreParam(workers = 1)))
+                min.nonzero = 20, condition = "group_id",
+                categorize = FALSE, testZeroes = FALSE,
+                param = BiocParallel::MulticoreParam(workers = 1)
+            ))
             data.frame(
                 gene = rownames(sce),
                 cluster_id = k,
                 p_val = res$nonzero.pvalue,
                 p_adj.loc = res$nonzero.pvalue.adj,
                 row.names = NULL,
-                stringsAsFactors = FALSE)
+                stringsAsFactors = FALSE
+            )
         })
     )
     df <- bind_rows(res)
