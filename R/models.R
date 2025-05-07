@@ -9,34 +9,41 @@ suppressMessages({
 })
 
 apply_edgeR <- function(sce) {
-    pbDS(pb = sce, method = "edgeR", filter = "none", verbose = FALSE)
+  res <- pbDS(pb = sce, method = "edgeR", filter = "none", verbose = FALSE)
+  process_results(res, sce)
 }
 
 apply_limma_trend <- function(sce) {
-    pbDS(pb = sce, method = "limma-trend", filter = "none", verbose = FALSE)
+  res <- pbDS(pb = sce, method = "limma-trend", filter = "none", verbose = FALSE)
+  process_results(res, sce)
 }
 
 apply_limma_voom <- function(sce) {
-    pbDS(pb = sce, method = "limma-voom", filter = "none", verbose = FALSE)
+  res <- pbDS(pb = sce, method = "limma-voom", filter = "none", verbose = FALSE)
+  process_results(res, sce)
 }
 
 apply_DESeq2 <- function(sce) {
-    pbDS(pb = sce, method = "DESeq2", filter = "none", verbose = FALSE)
+  res <- pbDS(pb = sce, method = "DESeq2", filter = "none", verbose = FALSE)
+  process_results(res, sce)
 }
 
 apply_MM_vst <- function(sce) {
     counts(sce) <- assay(sce)
     mmDS(x = sce, method = "vst", verbose = FALSE)
+    process_results(res, sce)
 }
 
 apply_MM_nbinom <- function(sce) {
     counts(sce) <- assay(sce)
-    mmDS(x = sce, method = "nbinom", verbose = FALSE)
+    res <- mmDS(x = sce, method = "nbinom", verbose = FALSE)
+    process_results(res, sce)
 }
 
 apply_MM_dream2 <- function(sce) {
     counts(sce) <- assay(sce)
-    mmDS(x = sce, method = "dream2", verbose = FALSE)
+    res <- mmDS(x = sce, method = "dream2", verbose = FALSE)
+    process_results(res, sce)
 }
 
 apply_scdd <- function(sce) {
