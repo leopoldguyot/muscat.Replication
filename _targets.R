@@ -170,7 +170,7 @@ target_analysis_node2 <- function(sim, params) {
         params$assay == "logcounts") {
         tarList <- c(tarList, list(
             tar_target_raw(
-                name = paste0(as.character(sce), "_limma_trend"),
+                name = paste0(as.character(sce), "_limmaTrend"),
                 command = substitute(
                     apply_limma_trend(SCE),
                     list(SCE = sce)
@@ -189,7 +189,7 @@ target_analysis_node2 <- function(sim, params) {
                 )
             ),
             tar_target_raw(
-                name = paste0(as.character(sce), "_limma_voom"),
+                name = paste0(as.character(sce), "_limmaVoom"),
                 command = substitute(
                     apply_limma_voom(SCE),
                     list(SCE = sce)
@@ -220,7 +220,7 @@ target_analysis_node2 <- function(sim, params) {
         params$assay == "vstresiduals") {
         tarList <- c(tarList, list(
             tar_target_raw(
-                name = paste0(as.character(sce), "_limma_trend"),
+                name = paste0(as.character(sce), "_limmaTrend"),
                 command = substitute(
                     apply_limma_trend(SCE),
                     list(SCE = sce)
