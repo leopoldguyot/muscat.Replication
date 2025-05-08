@@ -1,6 +1,7 @@
 library(stringr)
 library(dplyr)
 library(tidyr)
+library(targets)
 
 tarDF <- tar_manifest()
 tarDF_filtered <- tarDF %>%
@@ -15,10 +16,13 @@ tarDF_filtered <- tarDF %>%
     )
 
 paths <- sapply(tarDF_filtered$name, function(name) {
-    object <- tar_read(name)
-    path <- file.path("dataOutput", paste0(name, ".rds"))
+    object <- tar_read_raw(name)
+    cat("\nsaving object: ", name)
+    path <- file.path("dataOutput", "modelResults", paste0(name, ".rds"))
     saveRDS(object = object, path)
     path
 })
 
 tarDF_filtered[["path"]] <- paths
+
+write.csv(tarDF_filtered, "dataOutput/modelResults/resultMetadata.csv")
