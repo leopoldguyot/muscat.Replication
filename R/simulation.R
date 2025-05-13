@@ -55,13 +55,14 @@ prep_LPS_data <- function() {
 }
 
 
-simulate_data <- function(prepData,
-    ng,
-    nc,
-    ns,
-    nk,
-    p_dd,
-    probs) {
+simulate_data <- function(
+        prepData,
+        ng,
+        nc,
+        ns,
+        nk,
+        p_dd,
+        probs) {
     set.seed(124)
 
     sim <- simData(prepData,

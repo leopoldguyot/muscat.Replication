@@ -130,8 +130,8 @@ target_analysis_node1 <- function(data, params) {
             method = "None"
         )),
         target_analysis_node2(sim_sym, list(
-          assay = "counts",
-          method = "None"
+            assay = "counts",
+            method = "None"
         ))
     )
 }
@@ -245,15 +245,15 @@ target_analysis_node2 <- function(sim, params) {
                 command = substitute(
                     apply_MM_dream2(SCE),
                     list(SCE = sce)
-                )
-            ),
-            tar_target_raw(
-                name = paste0(as.character(sce), "_MM_nbinom"),
-                command = substitute(
-                    apply_MM_nbinom(SCE),
-                    list(SCE = sce)
-                )
-            )
+                ))
+            # ),
+            # tar_target_raw(
+            #     name = paste0(as.character(sce), "_MM_nbinom"),
+            #     command = substitute(
+            #         apply_MM_nbinom(SCE),
+            #         list(SCE = sce)
+            #     )
+            # )
         ))
     }
 

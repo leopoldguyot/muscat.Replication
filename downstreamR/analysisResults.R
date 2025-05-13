@@ -61,16 +61,18 @@ curve_NC400_DP <- function(metadata) {
 
 t <- curve_NC400_DP(metadata)
 perf <- calculate_performance(t,
-                              binary_truth = "is_de",
-                              aspects = "fdrtpr",
-                              maxsplit = Inf
-                              ) %>%
+    binary_truth = "is_de",
+    aspects = "fdrtpr",
+    maxsplit = Inf
+) %>%
     fdrtpr() %>%
     mutate(thr = as.numeric(sub("thr", "", thr)))
 
 plot <- ggplot(perf, aes(x = FDR, y = TPR, color = method)) +
-    geom_vline(xintercept = c(0.01, 0.05, 0.1),
-               linetype = "dashed", color = "grey50", size = 0.3) +
+    geom_vline(
+        xintercept = c(0.01, 0.05, 0.1),
+        linetype = "dashed", color = "grey50", size = 0.3
+    ) +
     geom_point(size = 2.5, alpha = 0.8) +
     geom_line(size = 0.7) +
     scale_x_continuous(
