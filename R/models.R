@@ -30,7 +30,7 @@ apply_DESeq2 <- function(sce) {
 
 apply_MM_vst <- function(sce) {
     counts(sce) <- assay(sce)
-    mmDS(x = sce, method = "vst", verbose = FALSE)
+    res <- mmDS(x = sce, method = "vst", verbose = FALSE)
     process_results(res, sce)
 }
 

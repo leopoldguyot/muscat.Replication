@@ -26,30 +26,21 @@ target_analysis_base <- function(data) {
             command = substitute(prep_data(data))
         ),
         target_analysis_node1(data, list(
-            name = "NC20_nill",
+            name = "NC20_de10",
             ng = 4e3,
             nc = 16 * 20,
             ns = NULL,
             nk = NULL,
-            p_dd = diag(6)[1, ],
+            p_dd = c(0.9, 0, 0.1, 0, 0, 0),
             probs = NULL
         )),
         target_analysis_node1(data, list(
-            name = "NC100_nill",
+            name = "NC100_de10",
             ng = 4e3,
             nc = 16 * 100,
             ns = NULL,
             nk = NULL,
-            p_dd = diag(6)[1, ],
-            probs = NULL
-        )),
-        target_analysis_node1(data, list(
-            name = "NC400_nill",
-            ng = 4e3,
-            nc = 16 * 400,
-            ns = NULL,
-            nk = NULL,
-            p_dd = diag(6)[1, ],
+            p_dd = c(0.9, 0, 0.1, 0, 0, 0),
             probs = NULL
         )),
         target_analysis_node1(data, list(
@@ -135,12 +126,12 @@ target_analysis_node1 <- function(data, params) {
             method = "Mean"
         )),
         target_analysis_node2(sim_sym, list(
-            assay = "vstresiduals",
+            assay = "logcounts",
             method = "None"
         )),
         target_analysis_node2(sim_sym, list(
-            assay = "logcounts",
-            method = "None"
+          assay = "counts",
+          method = "None"
         ))
     )
 }
