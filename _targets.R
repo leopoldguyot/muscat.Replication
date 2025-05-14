@@ -234,14 +234,14 @@ target_analysis_node2 <- function(sim, params) {
         params$assay %in% c("counts")) {
         tarList <- c(tarList, list(
             tar_target_raw(
-                name = paste0(as.character(sce), "_MM_vst"),
+                name = paste0(as.character(sce), "_MMvst"),
                 command = substitute(
                     apply_MM_vst(SCE),
                     list(SCE = sce)
                 )
             ),
             tar_target_raw(
-                name = paste0(as.character(sce), "_MM_dream2"),
+                name = paste0(as.character(sce), "_MMdream2"),
                 command = substitute(
                     apply_MM_dream2(SCE),
                     list(SCE = sce)
