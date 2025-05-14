@@ -10,9 +10,9 @@ suppressMessages({
     library(ggplot2)
     library(purrr)
 })
-curve_NC400_DP <- function(metadata) {
+curve_maker <- function(metadata, dataset, NC, props) {
     subset <- metadata %>%
-        filter(data == "simKang", NC == "NC400", props == "de10", model != "scDD")
+        filter(data == dataset, NC == NC, props == props)
 
     df_list <- lapply(seq_len(nrow(subset)), function(i) {
         file <- subset$path[i]
@@ -59,7 +59,7 @@ curve_NC400_DP <- function(metadata) {
     return(cobdata)
 }
 
-t <- curve_NC400_DP(metadata)
+t <- curve_maker(metadata, "simLPS", "NC400", "de10")
 perf <- calculate_performance(t,
     binary_truth = "is_de",
     aspects = "fdrtpr",
