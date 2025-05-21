@@ -10,12 +10,13 @@ suppressMessages({
     library(ggplot2)
     library(purrr)
 })
-curve_maker <- function(metadata, dataset, NC, props) {
+curve_maker <- function(metadata, selectedData, selectedNC, selectedProps, padjLoc) {
     subset <- metadata %>%
-        filter(data == dataset, NC == NC, props == props)
+        filter(data == selectedData, NC == selectedNC, props == selectedProps, model != "MMdream2")
 
     df_list <- lapply(seq_len(nrow(subset)), function(i) {
         file <- subset$path[i]
+        print(file)
         df <- readRDS(file) %>%
             mutate(E = (sim_mean.A + sim_mean.B) / 2) %>%
             filter(E > 0.1) %>%
@@ -27,7 +28,8 @@ curve_maker <- function(metadata, dataset, NC, props) {
         data.frame(
             sid = df$sid,
             pval = df$p_val,
-            padj = df$p_adj.loc,
+            padj.loc = df$p_adj.loc,
+            padj.glb = df$p_adj.glb,
             is_de = df$is_de,
             method = method_name
         )
@@ -40,9 +42,13 @@ curve_maker <- function(metadata, dataset, NC, props) {
         pivot_wider(names_from = method, values_from = pval) %>%
         column_to_rownames("sid")
 
-    padj_df <- combined_df %>%
-        select(sid, method, padj) %>%
-        pivot_wider(names_from = method, values_from = padj) %>%
+    padj.loc_df <- combined_df %>%
+        select(sid, method, padj.loc) %>%
+        pivot_wider(names_from = method, values_from = padj.loc) %>%
+        column_to_rownames("sid")
+    padj.glb_df <- combined_df %>%
+        select(sid, method, padj.glb) %>%
+        pivot_wider(names_from = method, values_from = padj.glb) %>%
         column_to_rownames("sid")
 
     truth_df <- combined_df %>%
@@ -51,27 +57,44 @@ curve_maker <- function(metadata, dataset, NC, props) {
         column_to_rownames("sid")
 
     cobdata <- COBRAData(
-        pval = as.data.frame(pval_df),
-        padj = as.data.frame(padj_df),
+        padj = as.data.frame(if (padjLoc) padj.loc_df else padj.glb_df),
         truth = as.data.frame(truth_df)
     )
-
-    return(cobdata)
+    perf <- calculate_performance(cobdata,
+                                  binary_truth = "is_de",
+                                  aspects = "fdrtpr",
+                                  maxsplit = Inf,
+                                  thrs = seq(0.01, 0.5, by = 0.05)
+    ) %>%
+        fdrtpr() %>%
+        mutate(thr = as.numeric(sub("thr", "", thr)))
+    return(perf)
 }
 
-t <- curve_maker(metadata, "simLPS", "NC400", "de10")
-perf <- calculate_performance(t,
-    binary_truth = "is_de",
-    aspects = "fdrtpr",
-    maxsplit = Inf
-) %>%
-    fdrtpr() %>%
-    mutate(thr = as.numeric(sub("thr", "", thr)))
+perfsProp <- lapply(unique(metadata$props), function(prop) {
+    cobDataLoc <- curve_maker(metadata, "simLPS", "NC400", prop, TRUE) %>%
+        mutate(padjType = "local",
+               prop = prop)
+    cobDataGlb <- curve_maker(metadata, "simLPS", "NC400", prop, FALSE) %>%
+        mutate(padjType = "global",
+               prop = prop)
 
-plot <- ggplot(perf, aes(x = FDR, y = TPR, color = method)) +
+    rbind(cobDataLoc, cobDataGlb)
+})
+
+perfsSize <- lapply(unique(metadata$NC), function(size) {
+     curve_maker(metadata, "simLPS", size, "de10", FALSE) %>%
+        mutate(padjType = "global",
+               NC = size)
+})
+
+perfsPropDF <- do.call(rbind, perfsProp)
+perfsSizeDF <- do.call(rbind, perfsSize)
+
+plot <- ggplot(perfsPropDF, aes(x = FDR, y = TPR, color = method)) +
     geom_vline(
         xintercept = c(0.01, 0.05, 0.1),
-        linetype = "dashed", color = "grey50", size = 0.3
+        linetype = "dashed", color = "grey50", linewidth = 0.3
     ) +
     geom_point(size = 2.5, alpha = 0.8) +
     geom_line(size = 0.7) +
@@ -91,6 +114,37 @@ plot <- ggplot(perf, aes(x = FDR, y = TPR, color = method)) +
         x = "False Discovery Rate (sqrt scale)",
         y = "True Positive Rate",
         color = "Method"
+    ) + facet_grid(rows = vars(padjType), cols = vars(prop)) + theme(
+        panel.border = element_rect(color = "black", fill = NA, size = 0.5)
     )
 
-ggsave("figs/NC400_DP.pdf", plot)
+ggsave("figs/fdrtpr_prop_method.pdf", plot)
+
+
+plot <- ggplot(perfsSizeDF, aes(x = FDR, y = TPR, color = NC)) +
+    geom_vline(
+        xintercept = c(0.01, 0.05, 0.1),
+        linetype = "dashed", color = "grey50", linewidth = 0.3
+    ) +
+    geom_point(size = 2.5, alpha = 0.8) +
+    geom_line(size = 0.7) +
+    scale_x_continuous(
+        trans = "sqrt",
+        limits = c(0, 1),
+        breaks = c(0.01, 0.05, 0.2, 0.4, 0.8, 1),
+        labels = scales::label_number()
+    ) +
+    scale_y_continuous(
+        limits = c(0, 1),
+        breaks = seq(0, 1, 0.2)
+    ) +
+    theme_minimal() +
+    labs(
+        title = "FDR vs TPR (square root x-axis)",
+        x = "False Discovery Rate (sqrt scale)",
+        y = "True Positive Rate",
+        color = "Method"
+    ) + facet_wrap(~method) +
+    theme(
+        panel.border = element_rect(color = "black", fill = NA, size = 0.5)
+    )
