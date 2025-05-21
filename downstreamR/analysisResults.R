@@ -10,7 +10,7 @@ suppressMessages({
     library(ggplot2)
     library(purrr)
 })
-curve_maker <- function(metadata, selectedData, selectedNC, selectedProps, padjLoc) {
+perf_metrics <- function(metadata, selectedData, selectedNC, selectedProps, padjLoc) {
     subset <- metadata %>%
         filter(data == selectedData, NC == selectedNC, props == selectedProps, model != "MMdream2")
 
@@ -71,27 +71,46 @@ curve_maker <- function(metadata, selectedData, selectedNC, selectedProps, padjL
     return(perf)
 }
 
-perfsProp <- lapply(unique(metadata$props), function(prop) {
-    cobDataLoc <- curve_maker(metadata, "simLPS", "NC400", prop, TRUE) %>%
+perfsPropLPS <- lapply(unique(metadata$props), function(prop) {
+    cobDataLoc <- perf_metrics(metadata, "simLPS", "NC400", prop, TRUE) %>%
         mutate(padjType = "local",
                prop = prop)
-    cobDataGlb <- curve_maker(metadata, "simLPS", "NC400", prop, FALSE) %>%
+    cobDataGlb <- perf_metrics(metadata, "simLPS", "NC400", prop, FALSE) %>%
         mutate(padjType = "global",
                prop = prop)
 
     rbind(cobDataLoc, cobDataGlb)
 })
 
-perfsSize <- lapply(unique(metadata$NC), function(size) {
-     curve_maker(metadata, "simLPS", size, "de10", FALSE) %>%
+perfsSizeLPS <- lapply(unique(metadata$NC), function(size) {
+     perf_metrics(metadata, "simLPS", size, "de10", FALSE) %>%
         mutate(padjType = "global",
                NC = size)
 })
 
-perfsPropDF <- do.call(rbind, perfsProp)
-perfsSizeDF <- do.call(rbind, perfsSize)
+perfsPropKang <- lapply(unique(metadata$props), function(prop) {
+    cobDataLoc <- perf_metrics(metadata, "simKang", "NC400", prop, TRUE) %>%
+        mutate(padjType = "local",
+               prop = prop)
+    cobDataGlb <- perf_metrics(metadata, "simKang", "NC400", prop, FALSE) %>%
+        mutate(padjType = "global",
+               prop = prop)
 
-plot <- ggplot(perfsPropDF, aes(x = FDR, y = TPR, color = method)) +
+    rbind(cobDataLoc, cobDataGlb)
+})
+
+perfsSizeKang <- lapply(unique(metadata$NC), function(size) {
+    perf_metrics(metadata, "simKang", size, "de10", FALSE) %>%
+        mutate(padjType = "global",
+               NC = size)
+})
+
+perfsPropLPSDF <- do.call(rbind, perfsPropLPS)
+perfsSizeLPSDF <- do.call(rbind, perfsSizeLPS)
+perfsPropKangDF <- do.call(rbind, perfsPropKang)
+perfsSizeKangDF <- do.call(rbind, perfsSizeKang)
+
+plot <- ggplot(perfsPropLPSDF, aes(x = FDR, y = TPR, color = method)) +
     geom_vline(
         xintercept = c(0.01, 0.05, 0.1),
         linetype = "dashed", color = "grey50", linewidth = 0.3
@@ -118,10 +137,10 @@ plot <- ggplot(perfsPropDF, aes(x = FDR, y = TPR, color = method)) +
         panel.border = element_rect(color = "black", fill = NA, size = 0.5)
     )
 
-ggsave("figs/fdrtpr_prop_method.pdf", plot)
+ggsave("figs/fdrtpr_prop_method_LPS.pdf", plot)
 
 
-plot <- ggplot(perfsSizeDF, aes(x = FDR, y = TPR, color = NC)) +
+plot <- ggplot(perfsSizeLPSDF, aes(x = FDR, y = TPR, color = NC)) +
     geom_vline(
         xintercept = c(0.01, 0.05, 0.1),
         linetype = "dashed", color = "grey50", linewidth = 0.3
@@ -148,3 +167,65 @@ plot <- ggplot(perfsSizeDF, aes(x = FDR, y = TPR, color = NC)) +
     theme(
         panel.border = element_rect(color = "black", fill = NA, size = 0.5)
     )
+
+ggsave("figs/fdrtpr_size_method_LPS.pdf", plot)
+
+plot <- ggplot(perfsPropKangDF, aes(x = FDR, y = TPR, color = method)) +
+    geom_vline(
+        xintercept = c(0.01, 0.05, 0.1),
+        linetype = "dashed", color = "grey50", linewidth = 0.3
+    ) +
+    geom_point(size = 2.5, alpha = 0.8) +
+    geom_line(size = 0.7) +
+    scale_x_continuous(
+        trans = "sqrt",
+        limits = c(0, 1),
+        breaks = c(0.01, 0.05, 0.2, 0.4, 0.8, 1),
+        labels = scales::label_number()
+    ) +
+    scale_y_continuous(
+        limits = c(0, 1),
+        breaks = seq(0, 1, 0.2)
+    ) +
+    theme_minimal() +
+    labs(
+        title = "FDR vs TPR (square root x-axis)",
+        x = "False Discovery Rate (sqrt scale)",
+        y = "True Positive Rate",
+        color = "Method"
+    ) + facet_grid(rows = vars(padjType), cols = vars(prop)) + theme(
+        panel.border = element_rect(color = "black", fill = NA, size = 0.5)
+    )
+
+ggsave("figs/fdrtpr_prop_method_Kang.pdf", plot)
+
+
+plot <- ggplot(perfsSizeKangDF, aes(x = FDR, y = TPR, color = NC)) +
+    geom_vline(
+        xintercept = c(0.01, 0.05, 0.1),
+        linetype = "dashed", color = "grey50", linewidth = 0.3
+    ) +
+    geom_point(size = 2.5, alpha = 0.8) +
+    geom_line(size = 0.7) +
+    scale_x_continuous(
+        trans = "sqrt",
+        limits = c(0, 1),
+        breaks = c(0.01, 0.05, 0.2, 0.4, 0.8, 1),
+        labels = scales::label_number()
+    ) +
+    scale_y_continuous(
+        limits = c(0, 1),
+        breaks = seq(0, 1, 0.2)
+    ) +
+    theme_minimal() +
+    labs(
+        title = "FDR vs TPR (square root x-axis)",
+        x = "False Discovery Rate (sqrt scale)",
+        y = "True Positive Rate",
+        color = "Method"
+    ) + facet_wrap(~method) +
+    theme(
+        panel.border = element_rect(color = "black", fill = NA, size = 0.5)
+    )
+
+ggsave("figs/fdrtpr_size_method_Kang.pdf", plot)
