@@ -4,12 +4,15 @@ suppressMessages({
     library(scater)
     library(sctransform)
     library(SingleCellExperiment)
+    library(ExperimentHub)
+    library(CTdata)
 })
 prep_data <- function(data) {
-    stopifnot(data %in% c("Kang", "LPS"))
+    stopifnot(data %in% c("Kang", "LPS", "testis"))
     switch(data,
         "Kang" = prep_Kang_data(),
-        "LPS" = prep_LPS_data()
+        "LPS" = prep_LPS_data(),
+        "testis" = prep_testis_data()
     )
 }
 
@@ -81,10 +84,26 @@ simulate_data <- function(
     sim
 }
 
-simulate_testis_data <- function(prepData) {
+prep_testis_data <- function() {
     library(SingleCellExperiment)
     library(CTdata)
 
-
     sce <- CTdata::testis_sce()
+    reducedDims(sce) <- NULL # remove dimensionality reductions
+    assays(sce) <- SimpleList(counts = counts(sce)) # remove slots other than counts
+    colData(sce)[["group_id"]] <- "CTRL"
+    sce <- sce[, !is.na(sce$clusters)]
+
+
+    sce <- prepSCE(sce, kid = "clusters",
+            sid = "Donor",
+            gid = "group_id")
+    sce <- prepSim(sce,
+                   verbose = FALSE,
+                   # keep genes w/ count > 1 in >= 10 cells
+                   min_count = 1, min_cells = 10,
+                   # keep cells w/ >= 100 detected genes & cluster w/ > 100 cells
+                   min_genes = 100, min_size = 100
+    )
+    sce
 }

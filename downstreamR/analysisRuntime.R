@@ -1,6 +1,7 @@
 library(dplyr)
 library(tidyr)
 library(ggplot2)
+library(targets)
 
 tar_runtime <- tar_meta(fields = c("name", "seconds")) %>%
   filter(!is.na(seconds)) %>%
@@ -12,13 +13,13 @@ tar_runtime <- tar_meta(fields = c("name", "seconds")) %>%
     remove = FALSE  # Keep original name column if you want to inspect
   )
 
-tar_runtime_filtered <- tar_runtime %>% 
+tar_runtime_filtered <- tar_runtime %>%
   filter(NC == "NC400",
          prop == "de10",
          dataset == "simLPS")
 
-tar_runtime_counts <- tar_runtime_filtered[2:10,]
-tar_runtime_model <- tar_runtime_filtered[11:16,]
+tar_runtime_model <- tar_runtime_filtered[2:10,]
+tar_runtime_counts <- tar_runtime_filtered[11:16,]
 tar_runtime_total <- tar_runtime_model %>%
   left_join(
     tar_runtime_counts %>%

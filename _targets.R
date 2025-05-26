@@ -13,7 +13,8 @@ tar_option_set(
         "tidyverse",
         "scDD",
         "scuttle",
-        "BiocParallel"
+        "BiocParallel",
+        "CTdata"
     )
 )
 
@@ -265,5 +266,6 @@ target_analysis_node2 <- function(sim, params) {
 # Return the full target list:
 c(
     target_analysis_base("Kang"),
-    target_analysis_base("LPS")
+    target_analysis_base("LPS"),
+    target_analysis_base("testis")
 )
