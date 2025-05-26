@@ -11,7 +11,9 @@ tar_option_set(
         "scater",
         "sctransform",
         "tidyverse",
-        "scDD"
+        "scDD",
+        "scuttle",
+        "BiocParallel"
     )
 )
 

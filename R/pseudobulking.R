@@ -5,6 +5,7 @@ suppressMessages({
     library(sctransform)
     library(SingleCellExperiment)
     library(scuttle)
+    library(BiocParallel)
 })
 
 aggregate_assay <- function(data, assay, method) {
@@ -34,7 +35,7 @@ aggregate_wrapper <- function(x,
     suppressWarnings(y <- summarizeAssayByGroup(x, assay.type = assay,
                                                 ids = (ids <- colData(x)[by]),
                                                 statistics = fun,
-                                                BPPARAM = BPPARAM = SerialParam()))
+                                                BPPARAM = SerialParam()))
     colnames(y) <- y[[by[length(by)]]]
     if (length(by) == 1)
         return(assay(y))

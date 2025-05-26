@@ -17,8 +17,8 @@ tar_runtime_filtered <- tar_runtime %>%
          prop == "de10",
          dataset == "simLPS")
 
-tar_runtime_counts <- tar_runtime_filtered[2:7,]
-tar_runtime_model <- tar_runtime_filtered[8:16,]
+tar_runtime_counts <- tar_runtime_filtered[2:10,]
+tar_runtime_model <- tar_runtime_filtered[11:16,]
 tar_runtime_total <- tar_runtime_model %>%
   left_join(
     tar_runtime_counts %>%
