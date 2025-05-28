@@ -9,22 +9,22 @@ suppressMessages({
 })
 
 apply_edgeR <- function(sce) {
-    res <- pbDS(pb = sce, method = "edgeR", filter = "none", verbose = FALSE)
+    res <- pbDS(pb = sce, method = "edgeR", min_cells = 0, filter = "none", verbose = FALSE)
     process_results_pb(res, sce)
 }
 
 apply_limma_trend <- function(sce) {
-    res <- pbDS(pb = sce, method = "limma-trend", filter = "none", verbose = FALSE)
+    res <- pbDS(pb = sce, method = "limma-trend", min_cells = 0, filter = "none", verbose = FALSE)
     process_results_pb(res, sce)
 }
 
 apply_limma_voom <- function(sce) {
-    res <- pbDS(pb = sce, method = "limma-voom", filter = "none", verbose = FALSE)
+    res <- pbDS(pb = sce, method = "limma-voom", min_cells = 0, filter = "none", verbose = FALSE)
     process_results_pb(res, sce)
 }
 
 apply_DESeq2 <- function(sce) {
-    res <- pbDS(pb = sce, method = "DESeq2", filter = "none", verbose = FALSE)
+    res <- pbDS(pb = sce, method = "DESeq2", min_cells = 0, filter = "none", verbose = FALSE)
     process_results_pb(res, sce)
 }
 

@@ -1,217 +1,314 @@
 name|type|data|command|depend|seed|path|time|size|bytes|format|repository|iteration|parent|children|seconds|warnings|error
-prepLPS|stem|56042a09187ebfc5|39aa557023017e9d|ccedc77fca63d5fb|-1493148583||t20222.5417902212s|s43354080b|43354080|rds|local|vector|||1942.774||
-prepKang|stem|55f0a0f056989173|1794a0c59f442200|ccedc77fca63d5fb|-363830865||t20222.5510496282s|s10843153b|10843153|rds|local|vector|||797.749||
-simLPS_NC400_dp10|stem|7f0bea180abc459f|805b9edcf8c42c13|25ea49b94e6c313f|-77078231||t20222.5513890395s|s49308780b|49308780|rds|local|vector|||17.747||
-simLPS_NC400_dm10|stem|54150d2fb88a8af2|2f6e8361d99eaa0c|25ea49b94e6c313f|-1649762770||t20222.5517217147s|s49333976b|49333976|rds|local|vector|||17.155||
-simLPS_NC400_de10|stem|a3460cfc85f5fd08|2fcbf51033d3fd22|25ea49b94e6c313f|-2081318492||t20222.5520528621s|s49593642b|49593642|rds|local|vector|||16.95||
-simLPS_NC20_de10|stem|23cbd194a45a43ef|6e9019ea900f1b7c|25ea49b94e6c313f|364270120||t20222.5521866938s|s44123741b|44123741|rds|local|vector|||1.85||
-simLPS_NC400_db10|stem|435bdc5fef54b2b2|e7208885f635affe|25ea49b94e6c313f|946777815||t20222.5525305727s|s49594413b|49594413|rds|local|vector|||18.096||
-simLPS_NC100_de10|stem|91b8000fff30ec2c|7e66eedb28a86c81|25ea49b94e6c313f|-379385436||t20222.5527070666s|s45298053b|45298053|rds|local|vector|||5.162||
-simKang_NC400_dm10|stem|e59e9d11baa108cf|01120153e38da8bc|20dd8e0fdefbc695|767093534||t20222.5528606321s|s16436717b|16436717|rds|local|vector|||8.934||
-simKang_NC100_de10|stem|f4993a24dbec85aa|6fa6e0ed4abda846|20dd8e0fdefbc695|-903908604||t20222.5529258639s|s12593601b|12593601|rds|local|vector|||2.743||
-simKang_NC400_de10|stem|02fa988994cd1178|99e011ccbc59f6e6|20dd8e0fdefbc695|-778708337||t20222.5530786077s|s16618449b|16618449|rds|local|vector|||8.923||
-simKang_NC400_dp10|stem|ff26c69fb0b433cd|22a1804d6f17c8e3|20dd8e0fdefbc695|1965410315||t20222.5532409233s|s16393419b|16393419|rds|local|vector|||9.833||
-simKang_NC400_db10|stem|f00b332703c96f47|d8d78ff0b7f48c99|20dd8e0fdefbc695|1951624237||t20222.5533921046s|s16556435b|16556435|rds|local|vector|||8.768||
-simKang_NC20_de10|stem|415d6ddc6da592d3|471e3e8c91fb2fc6|20dd8e0fdefbc695|435120446||t20222.5534330191s|s11572001b|11572001|rds|local|vector|||0.994||
-simLPS_NC400_dp10_cpm_Sum_edgeR|stem|77164d4cc639d055|21f8510a50477ccb|988162ac4ac59bde|1781229730||t20222.5680467585s|s913951b|913951|rds|local|vector|||4.603||
-simLPS_NC400_dp10_counts_Sum_edgeR|stem|42e2efc64a9e93bf|fd8742f018700f70|c98e5cc3302db76d|2022929953||t20222.5681108213s|s916876b|916876|rds|local|vector|||4.636||
-simLPS_NC400_dp10_counts_Sum_limmaVoom|stem|8e84f38b87b6d099|c07748272893c080|ba367e8411519a27|259175003||t20222.568165729s|s1039593b|1039593|rds|local|vector|||3.124||
-simLPS_NC400_dp10_counts_Sum_DESeq2|stem|ce64b5ea2f137a70|924e000e428e1a6f|91b83c7991225f7f|1670349868||t20222.568302107s|s1032861b|1032861|rds|local|vector|||11.022||
-simLPS_NC400_dp10_vstresiduals_Mean_limmaTrend|stem|9f3815aa6393ede6|b369900a13ea6cb0|9a65c62d0e9e1f9b|1457336529||t20222.5683571535s|s1043579b|1043579|rds|local|vector|||3.984||
-simLPS_NC400_dp10_logcounts_None_scDD|stem|422452e73fdcfc20|0d39788a72908a14|b148cc5bb623201a|-513237264||t20222.5685961824s|s835534b|835534|rds|local|vector|||19.585||
-simLPS_NC400_dp10_logcounts_Mean_limmaTrend|stem|d1aa043907a4422d|3f605f14400bcd45|a8fcab738766a342|-1884719192||t20222.5686506156s|s1034689b|1034689|rds|local|vector|||3.914||
-simLPS_NC400_dp10_counts_None_MMdream2|stem|a87dd15cb0a18ef5|9352ebe79a2f2b5f|2cfdec5b1d5c3d56|-444305199||t20222.5913966026s|s1023561b|1023561|rds|local|vector|||1964.173||
-simLPS_NC400_dp10_counts_None_MMvst|stem|e02fdfbf88533ce6|15acb4273730f659|12b35aa656ceb105|-6447067||t20222.6001278618s|s1097937b|1097937|rds|local|vector|||753.304|Model failed to converge with 1 negative eigenvalue: -1.2e+01|
-simLPS_NC400_dm10_counts_None_MMdream2|stem|f7ecfbc24db1f90d|1dc78dd4a49b749a|57e3715bbcf2b1f3|-1591951759||t20222.6218167799s|s1020423b|1020423|rds|local|vector|||1872.853||
-simLPS_NC400_dm10_counts_None_MMvst|stem|82baad74dbc2246d|1feff9fdca84386e|2409c367b23fed2e|309181084||t20222.6305223311s|s1075284b|1075284|rds|local|vector|||751.064||
-simLPS_NC400_dm10_counts_Sum_limmaVoom|stem|3f880a97579a08e1|e880c98080f2cf99|16c21c0cd93c4c57|851319608||t20222.6305690096s|s1043896b|1043896|rds|local|vector|||3.276||
-simLPS_NC400_dm10_counts_Sum_edgeR|stem|47cc5d0b3b465fbe|dc1983061898adb9|096734866cfa2ccd|-1030960807||t20222.6306315446s|s918983b|918983|rds|local|vector|||4.66||
-simLPS_NC400_dm10_counts_Sum_DESeq2|stem|87bf1d148e43e689|9589632fdde0f403|57464e5d7da3c0e4|884755181||t20222.6307739874s|s1032549b|1032549|rds|local|vector|||11.564||
-simLPS_NC400_dm10_vstresiduals_Mean_limmaTrend|stem|6b402a914a40fcca|2e956a7a85d3f101|f0d31f29b80a1018|-865816964||t20222.6308178302s|s1037063b|1037063|rds|local|vector|||3.008||
-simLPS_NC400_dm10_cpm_Sum_edgeR|stem|52050fcb40d9b6ab|7de8abaa7644b77e|f72e4b68eac52de4|968605434||t20222.6308791847s|s916662b|916662|rds|local|vector|||4.549||
-simLPS_NC400_dm10_logcounts_None_scDD|stem|c158d5e84eecb752|ceb76a918c4f665a|9468104d984c6999|-799940489||t20222.6310656902s|s807968b|807968|rds|local|vector|||15.049||
-simLPS_NC400_dm10_logcounts_Mean_limmaTrend|stem|f4c5072774c267f0|4e03c349ec30f4ce|09184c8642938190|-468960218||t20222.6311100076s|s1034927b|1034927|rds|local|vector|||3.064||
-simLPS_NC400_de10_logcounts_None_scDD|stem|5ef167c77bafb2b5|807793e790e7c5fc|8c2d91007adba528|1355976501||t20222.6312978789s|s832891b|832891|rds|local|vector|||15.17||
-simLPS_NC400_de10_counts_Sum_edgeR|stem|c2520f5b068334a5|23127e51d62029eb|8d6baca56796fa29|478299274||t20222.6313603097s|s927399b|927399|rds|local|vector|||4.646||
-simLPS_NC400_de10_counts_Sum_DESeq2|stem|66f73bd976118a7b|79af214cbe011b1d|3b02a12a7e1d99b4|-1165611097||t20222.6314909353s|s1040260b|1040260|rds|local|vector|||10.489||
-simLPS_NC400_de10_counts_Sum_limmaVoom|stem|982d32daf90345b0|fd17b91d753700a6|615295189dfb218e|-658636833||t20222.6315358198s|s1056504b|1056504|rds|local|vector|||3.121||
-simLPS_NC400_de10_cpm_Sum_edgeR|stem|ecd20b1c657fe2d7|5cee221c1ef860db|35cbf5ae938b00b5|-238472909||t20222.6315988294s|s926070b|926070|rds|local|vector|||4.686||
-simLPS_NC400_de10_logcounts_Mean_limmaTrend|stem|196935de39b3f6c8|66a2abb8ac8193e2|ee398230524b26e7|-1036493298||t20222.631643112s|s1045160b|1045160|rds|local|vector|||3.072||
-simLPS_NC400_de10_counts_None_MMvst|stem|45e7e65ae55af33a|f7b9520991832441|a6a9c86d73c9db43|-1460207916||t20222.640200515s|s1101438b|1101438|rds|local|vector|||738.188|Model failed to converge with 1 negative eigenvalue: -2.4e+00|
-simLPS_NC400_de10_counts_None_MMdream2|stem|86bb0c9a7a8b25a0|4213aa63da5fd4a5|6731ecf237526c11|1668820060||t20222.6501201582s|s43b|43|rds|local|vector|||856.056|Model failed to converge with 1 negative eigenvalue: -4.7e+00|
-simLPS_NC400_de10_vstresiduals_Mean_limmaTrend|stem|cf769bd48b2f0576|f9a75e42bbbe256f|c2b691feb8ea38cd|-816003410||t20222.6501675774s|s1046407b|1046407|rds|local|vector|||3.299||
-simLPS_NC20_de10_vstresiduals_Mean_limmaTrend|stem|7261ee068ddf7627|dad6cb6f3f296c9f|1ef846089a9f320c|-238428448||t20222.6502238045s|s1112937b|1112937|rds|local|vector|||4.042||
-simLPS_NC20_de10_counts_Sum_limmaVoom|stem|b0c607ce82e2eb5a|e45b29fa328086ef|53466df404f1a57f|-496725405||t20222.650269314s|s868267b|868267|rds|local|vector|||3.118||
-simLPS_NC20_de10_counts_Sum_edgeR|stem|2b06a188a947cca2|f05b84025fe404be|34c2fc4f48be6ba4|-1590301781||t20222.6503287934s|s810260b|810260|rds|local|vector|||4.385||
-simLPS_NC20_de10_counts_Sum_DESeq2|stem|83a62696642e583e|ce9abf8ccb1c31ec|38fe827987a31b0a|496230518||t20222.6504626019s|s821935b|821935|rds|local|vector|||10.782||
-simLPS_NC20_de10_logcounts_None_scDD|stem|2e47d7f06a72e263|5225af628ac467e0|565cd21e97474b4c|-480528922||t20222.6505197318s|s648773b|648773|rds|local|vector|||4.172||
-simLPS_NC20_de10_counts_None_MMvst|stem|3f0f043a3f51738a|3d783a5dbf27f9ab|3f2ddd50b74eca59|352232457||t20222.6515292386s|s195966b|195966|rds|local|vector|||86.495||
-simLPS_NC20_de10_counts_None_MMdream2|stem|bd2f1605441e624f|523a3cd46fd5ae8f|575b09e095931d8b|1215490269||t20222.6543013695s|s195380b|195380|rds|local|vector|||238.826||
-simLPS_NC20_de10_logcounts_Mean_limmaTrend|stem|a63a75b68ee2d5ac|b51cca8fdf3abb99|d5a677d6994841b4|1803735411||t20222.6543490202s|s1078437b|1078437|rds|local|vector|||3.288||
-simLPS_NC20_de10_cpm_Sum_edgeR|stem|ada6fe0ed917269c|bef5bfb200a3b000|f860ab377c4af00c|-2001067035||t20222.6544136964s|s902806b|902806|rds|local|vector|||4.809||
-simLPS_NC400_db10_counts_Sum_DESeq2|stem|5abb6c96685120f4|380b8087190312f6|d09bc1ed585a4a2a|1868561892||t20222.6545615096s|s1010374b|1010374|rds|local|vector|||11.989||
-simLPS_NC400_db10_counts_Sum_edgeR|stem|15ffc6c781fe0466|8d95681d89173c55|506c28675f325d4b|392228288||t20222.6546253757s|s889406b|889406|rds|local|vector|||4.717||
-simLPS_NC400_db10_counts_Sum_limmaVoom|stem|3b62c0a6307283fb|011d60f80fd16678|81940d3c55900f39|-2129732522||t20222.6546720889s|s1000404b|1000404|rds|local|vector|||3.275||
-simLPS_NC400_db10_vstresiduals_Mean_limmaTrend|stem|649b1db93eabe7a3|8bf7a19c7673d562|42412cca346658b4|1340407315||t20222.6547181192s|s1011400b|1011400|rds|local|vector|||3.218||
-simLPS_NC400_db10_cpm_Sum_edgeR|stem|0c33a113ad650503|4f247a4fe7404cfb|9a971a8423ac7ba1|-803984588||t20222.6547834667s|s891034b|891034|rds|local|vector|||4.872||
-simLPS_NC400_db10_logcounts_Mean_limmaTrend|stem|89c51a8835c63871|f77096d2dcba1fb6|ba5e4fa0c2659e22|172044508||t20222.6548412332s|s1010164b|1010164|rds|local|vector|||4.171||
-simLPS_NC400_db10_counts_None_MMvst|stem|936b779685d739e1|69c34c0a4bad3b24|29ddbd15b5476add|1443397970||t20222.6635579301s|s1037096b|1037096|rds|local|vector|||752.039|Model failed to converge with 1 negative eigenvalue: -5.4e+01. Model failed to converge with 1 negative eigenvalue: -9.5e+00. Model failed to converge with 1 negative eigenvalue: -1.4e+01. Model failed to converge with 1 negative eigenvalue: -6.3e+00. Model failed to converge with 1 negative eigenvalue: -1.0e+00|
-simLPS_NC400_db10_counts_None_MMdream2|stem|85c99decb5992f14|970f9bf0448a0df4|d57fa143b122a36a|-1511152529||t20222.6852559421s|s1021655b|1021655|rds|local|vector|||1873.661||
-simLPS_NC400_db10_logcounts_None_scDD|stem|e9374c03d5ae1a49|73a831e2a69e97d4|97a5cd56b1ca562b|724837804||t20222.685453825s|s818690b|818690|rds|local|vector|||15.97||
-simLPS_NC100_de10_counts_Sum_limmaVoom|stem|57edc065d21d2cd9|96c0081be66ffa96|f3640dea08a4d68d|-1468839031||t20222.6854991146s|s1033144b|1033144|rds|local|vector|||3.144||
-simLPS_NC100_de10_counts_Sum_DESeq2|stem|cd39592c23cc5f5e|9c51bf43cd26f89c|0f366b411c5333b1|1607544014||t20222.6856317426s|s1002636b|1002636|rds|local|vector|||10.718||
-simLPS_NC100_de10_counts_Sum_edgeR|stem|6c7c08f438b3637c|2c52f359852c34d9|8187d241235b4a90|1721466667||t20222.6856942545s|s932695b|932695|rds|local|vector|||4.641||
-simLPS_NC100_de10_counts_None_MMvst|stem|ab6cb69d4dd3e657|aace4b1559bdac78|e3d66c1f743da4cc|-221025968||t20222.6902031308s|s790320b|790320|rds|local|vector|||388.727|Model failed to converge with maxgrad = 0.00213845 (tol = 0.002, component 1)|
-simLPS_NC100_de10_counts_None_MMdream2|stem|f9ac05b9ac63b55a|3d9706136afb2982|d7a1ddec185a37b2|943331740||t20222.7027976355s|s725705b|725705|rds|local|vector|||1087.373||
-simLPS_NC100_de10_logcounts_Mean_limmaTrend|stem|9a6f53fddaa75f96|41e507ec909256a2|b0797a612d203ad7|-2067728355||t20222.7028444529s|s1065246b|1065246|rds|local|vector|||3.261||
-simLPS_NC100_de10_cpm_Sum_edgeR|stem|8d1b9bcb25f79442|0dfba52e5bc1f085|df4ed105b0f81869|-1255062173||t20222.7029089092s|s935720b|935720|rds|local|vector|||4.808||
-simLPS_NC100_de10_logcounts_None_scDD|stem|ac2643fcc8b5e8fa|399ae83f09908d3c|6813b189c1988e81|-228880275||t20222.7030079027s|s727669b|727669|rds|local|vector|||7.66||
-simLPS_NC100_de10_vstresiduals_Mean_limmaTrend|stem|592b5cba456a60a4|45d80b21d3d3e5c6|6cc922aa1cd401d0|1543521857||t20222.7030522316s|s1091857b|1091857|rds|local|vector|||3.074||
-simKang_NC400_dm10_vstresiduals_Mean_limmaTrend|stem|c5d1cdfded030863|8d06e90cfa4f25ad|b058df8eb21b8aff|-523705108||t20222.7030924749s|s1034288b|1034288|rds|local|vector|||3.158||
-simKang_NC400_dm10_counts_Sum_DESeq2|stem|f048f80557907c4d|0a2c1aa0d6dcd9bc|90dee37c236f2d18|486611190||t20222.7032190727s|s989170b|989170|rds|local|vector|||10.641||
-simKang_NC400_dm10_counts_Sum_limmaVoom|stem|aa3e44d345a11f0b|366063fc39f6b6b6|f9250903b67f7f6a|646735024||t20222.7032587604s|s1019559b|1019559|rds|local|vector|||3.133||
-simKang_NC400_dm10_counts_Sum_edgeR|stem|669e30fb10d9ee53|f2d72128dfbd8eb9|ef20d790819fca27|566979298||t20222.7033153926s|s895057b|895057|rds|local|vector|||4.605||
-simKang_NC400_dm10_counts_None_MMvst|stem|409ddca689f6fc30|dc6d0b38d07b6882|5bd8036fe5e650bd|-168700565||t20222.7113232668s|s929009b|929009|rds|local|vector|||691.244|Model failed to converge with 1 negative eigenvalue: -8.9e-01. Model failed to converge with 1 negative eigenvalue: -3.9e+00|
-simKang_NC400_dm10_counts_None_MMdream2|stem|307fed974c41f3f7|aab8fcf42b324c69|fdca5eade1ada1f6|-397366192||t20222.7306222264s|s894962b|894962|rds|local|vector|||1666.793||
-simKang_NC400_dm10_logcounts_Mean_limmaTrend|stem|a4ca5d15dfaa5dff|fecf9daefbe9e1eb|6903ace3ce6e85bf|-775596413||t20222.7306639164s|s1025598b|1025598|rds|local|vector|||3.293||
-simKang_NC400_dm10_cpm_Sum_edgeR|stem|418345f02e03d7fc|7a8ca635bc84a2c2|4c88fbeb3c97056b|-1420316759||t20222.7307227245s|s891386b|891386|rds|local|vector|||4.776||
-simKang_NC400_dm10_logcounts_None_scDD|stem|eea3cef6f9b18f18|70e09ded7a423b61|6fa7866d3ab7da22|1252701793||t20222.7308974592s|s677856b|677856|rds|local|vector|||14.468||
-simKang_NC100_de10_logcounts_Mean_limmaTrend|stem|813bb51294b91538|810db8a9b4f3e31f|0f51d17edfbdb663|2083562371||t20222.7309365566s|s1071469b|1071469|rds|local|vector|||3.08||
-simKang_NC100_de10_cpm_Sum_edgeR|stem|afcec2f95d702cc6|4f1ca60515fe0f2a|c58bf39dc92bec75|1176456680||t20222.7309925522s|s944654b|944654|rds|local|vector|||4.549||
-simKang_NC100_de10_logcounts_None_scDD|stem|380228bd235785aa|02b0a86c966da102|00ecb43dc1b87515|621158733||t20222.7310709438s|s624794b|624794|rds|local|vector|||6.416||
-simKang_NC100_de10_counts_Sum_edgeR|stem|c16b619de61a13f7|01ff45f1a1788656|b104b6cb31a0c8d5|89506942||t20222.7311278654s|s896026b|896026|rds|local|vector|||4.631||
-simKang_NC100_de10_counts_Sum_limmaVoom|stem|8ee37d0200d188c9|358c01b51aa9d3e9|537d0a925a2c8ee3|-741766963||t20222.7311679582s|s973727b|973727|rds|local|vector|||3.173||
-simKang_NC100_de10_counts_Sum_DESeq2|stem|4906154f801170d9|0c0cd503e0142694|3e8d50fc8fff9423|669065920||t20222.7312955167s|s931297b|931297|rds|local|vector|||10.734||
-simKang_NC100_de10_counts_None_MMdream2|stem|86bb0c9a7a8b25a0|d8a3964f5c7c78c7|d775e6f2e4e6ce8e|1437713743||t20222.733163535s|s43b|43|rds|local|vector|||161.085|Model failed to converge with 1 negative eigenvalue: -4.0e+00|
-simKang_NC100_de10_counts_None_MMvst|stem|c5e41406ca1a02c2|8bb10240986b6eb7|b9adb764e0bb7d85|-916895419||t20222.7364443843s|s505196b|505196|rds|local|vector|||283.11||
-simKang_NC100_de10_vstresiduals_Mean_limmaTrend|stem|30c5c68d5bbe5e0d|eeb3826d981d453c|86f08da46dce7dc3|940762418||t20222.7364843614s|s1091218b|1091218|rds|local|vector|||3.156||
-simKang_NC400_de10_counts_Sum_edgeR|stem|8a6292f820a784ed|8f896e26dc1dc5d5|4afeae530d8e7b55|-404520811||t20222.7365431579s|s907423b|907423|rds|local|vector|||4.767||
-simKang_NC400_de10_counts_Sum_limmaVoom|stem|41b915db87745da0|a7fc4cec70c6d5bd|ddeca50e46073f1d|-657224780||t20222.7365843619s|s1032009b|1032009|rds|local|vector|||3.259||
-simKang_NC400_de10_counts_Sum_DESeq2|stem|a17cdbe332aa9b6d|d7ba76f581a9b948|852b7b2d86bf4dbd|1637114089||t20222.7367126148s|s995314b|995314|rds|local|vector|||10.784||
-simKang_NC400_de10_vstresiduals_Mean_limmaTrend|stem|14c50ef9e91b0197|385d948d14da5d36|ea3d5381919def30|-1326347655||t20222.7367538187s|s1059920b|1059920|rds|local|vector|||3.243||
-simKang_NC400_de10_cpm_Sum_edgeR|stem|c987f75dc0bdb588|ad5e6c8baa804a92|0015eca78c052002|753025310||t20222.7368138537s|s900500b|900500|rds|local|vector|||4.829||
-simKang_NC400_de10_logcounts_None_scDD|stem|12c5f7d7d1078e14|6d909ae2d746c046|17880084a2f7960e|-46809667||t20222.7369944101s|s715351b|715351|rds|local|vector|||14.995||
-simKang_NC400_de10_logcounts_Mean_limmaTrend|stem|154d966edd136bde|57f4623dc2db6bbd|37ba235fe97a6e0b|560689744||t20222.7370357414s|s1047460b|1047460|rds|local|vector|||3.224||
-simKang_NC400_de10_counts_None_MMdream2|stem|86bb0c9a7a8b25a0|4ca69e24baaaabf1|900b4b94569725a1|-354947834||t20222.7452480367s|s43b|43|rds|local|vector|||708.992|Model failed to converge with 1 negative eigenvalue: -3.3e+00|
-simKang_NC400_de10_counts_None_MMvst|stem|a6350519b5e63724|e02fc078b8996818|f606dd4a5c7d0d66|1597743375||t20222.7532427943s|s966159b|966159|rds|local|vector|||690.117|Model failed to converge with 1 negative eigenvalue: -5.4e+01|
-simKang_NC400_dp10_counts_Sum_DESeq2|stem|10bcfac2053f42e8|724dd2aaf43330b7|dbfb858d22326f98|-1621362737||t20222.753369369s|s986728b|986728|rds|local|vector|||10.65||
-simKang_NC400_dp10_counts_Sum_limmaVoom|stem|e51c67000b5cfb16|6233a9cdd70424f8|fd9fd949c5e8ff91|-277511159||t20222.7534096122s|s1009091b|1009091|rds|local|vector|||3.179||
-simKang_NC400_dp10_counts_Sum_edgeR|stem|e74b537f0fe4e878|cb4095f1f8f18563|bf6cbd0b5a5d6d72|1167371456||t20222.7534665454s|s886702b|886702|rds|local|vector|||4.631||
-simKang_NC400_dp10_counts_None_MMdream2|stem|55df04f37d9f293e|c9eee0bacf5c9fdb|9e049b78af100287|1243212539||t20222.7728028569s|s960465b|960465|rds|local|vector|||1670.008||
-simKang_NC400_dp10_counts_None_MMvst|stem|ba40ba8910b5aa7b|533e727a37da6ffd|34409c06d09c78f5|1601984385||t20222.7807878979s|s927122b|927122|rds|local|vector|||689.286|Model failed to converge with 1 negative eigenvalue: -6.5e+01. Model failed to converge with 1 negative eigenvalue: -3.6e+00. Model failed to converge with 1 negative eigenvalue: -6.4e+01. Model failed to converge with 1 negative eigenvalue: -1.2e+00. Model failed to converge with 1 negative eigenvalue: -4.5e+00. Model failed to converge with 1 negative eigenvalue: -3.0e-01. Model failed to converge with 1 negative eigenvalue: -2.8e+00. Model failed to converge with 1 negative eigenvalue: -1.0e+01|
-simKang_NC400_dp10_logcounts_None_scDD|stem|c97b336f1ad71dda|43f988396154da76|0980da2a696422db|1299566028||t20222.7809536742s|s713354b|713354|rds|local|vector|||13.672||
-simKang_NC400_dp10_logcounts_Mean_limmaTrend|stem|e4212ddc69cb59b7|7ce9dbfc07a2b754|dae5b3232a173af9|-12897110||t20222.7810038596s|s1014078b|1014078|rds|local|vector|||4.046||
-simKang_NC400_dp10_vstresiduals_Mean_limmaTrend|stem|0330c23fe70cb1af|abfe9d69632364b6|f63cab342d8b9ac0|-727772076||t20222.7810438483s|s1029851b|1029851|rds|local|vector|||3.164||
-simKang_NC400_dp10_cpm_Sum_edgeR|stem|ff2ab74bf67fd52a|f97597d1744c12a9|4786231b9e0ebfb9|-142958633||t20222.7811001448s|s884728b|884728|rds|local|vector|||4.579||
-simKang_NC400_db10_logcounts_Mean_limmaTrend|stem|1e209bd1bbc77cee|fb8afac22b6c8103|b3cd1ef42d1c7ef5|-2058842668||t20222.7811392654s|s975372b|975372|rds|local|vector|||3.089||
-simKang_NC400_db10_counts_None_MMvst|stem|831d60074cedc5c8|e12969fc1c3e3c57|605bac60a8be21f9|-42723990||t20222.7891589811s|s903990b|903990|rds|local|vector|||692.292|Model failed to converge with 1 negative eigenvalue: -7.6e+01. Model failed to converge with 1 negative eigenvalue: -3.4e+01. Model failed to converge with 1 negative eigenvalue: -9.4e+01. Model failed to converge with 1 negative eigenvalue: -7.3e+00. Model failed to converge with 1 negative eigenvalue: -1.8e+01|
-simKang_NC400_db10_counts_None_MMdream2|stem|86bb0c9a7a8b25a0|e72cbebe46c61b26|7e017412a6a50d3f|-1162281342||t20222.7904135938s|s43b|43|rds|local|vector|||107.878|Model failed to converge with 1 negative eigenvalue: -1.1e+00|
-simKang_NC400_db10_counts_Sum_edgeR|stem|4a14f56fe55a3a00|e926b3a4460322c2|c8e6a7dbf30a0679|649019509||t20222.7904728996s|s852264b|852264|rds|local|vector|||4.827||
-simKang_NC400_db10_counts_Sum_limmaVoom|stem|efc5108cef734f9b|ce7df9f50c5392b0|6c9a43831dad378a|-72399504||t20222.7905264647s|s962053b|962053|rds|local|vector|||4.309||
-simKang_NC400_db10_counts_Sum_DESeq2|stem|329ff8270aea63a4|e47dee71398c1b7f|1f07f439a3e665ff|-1563262058||t20222.7906516505s|s968622b|968622|rds|local|vector|||10.523||
-simKang_NC400_db10_vstresiduals_Mean_limmaTrend|stem|d9c0e9f1e81c8b9d|53b27ff77b99ac95|ed97d271dd994690|207173683||t20222.79069069s|s984463b|984463|rds|local|vector|||3.082||
-simKang_NC400_db10_logcounts_None_scDD|stem|b03b137fcf0eabd1|2452a68954c977f7|02ed6ea7e6c7c2c2|1976693684||t20222.7908577163s|s683167b|683167|rds|local|vector|||13.841||
-simKang_NC400_db10_cpm_Sum_edgeR|stem|df65eaf7a6b592df|a314c72a8e54692e|3f1da1054b526d57|1576643958||t20222.7909152397s|s857565b|857565|rds|local|vector|||4.67||
-simKang_NC20_de10_counts_Sum_limmaVoom|stem|14ecd600a9ed2685|63ac4b14d6b76ea4|a7158b9412459a84|-406229335||t20222.790954696s|s797194b|797194|rds|local|vector|||3.113||
-simKang_NC20_de10_counts_Sum_edgeR|stem|aac728fa4d304ea3|3faf884f8ef80cba|137c5a01bc4775f4|-518837036||t20222.7910066754s|s746948b|746948|rds|local|vector|||4.201||
-simKang_NC20_de10_counts_Sum_DESeq2|stem|17b9ddfa99f7346d|2988f22ce3075aca|5b31228623ce4ecf|-1783329495||t20222.7911344769s|s760002b|760002|rds|local|vector|||10.757||
-simKang_NC20_de10_logcounts_None_scDD|stem|6fc2406d5507caab|87f2d4353d3a497e|195d0078594505b6|1885639288||t20222.7911874517s|s570640b|570640|rds|local|vector|||4.26||
-simKang_NC20_de10_counts_None_MMdream2|stem|e6d8ee5d68f8a006|6615f82a3574d264|0f282e18470fe119|-786780389||t20222.7934247775s|s149495b|149495|rds|local|vector|||193.055||
-simKang_NC20_de10_counts_None_MMvst|stem|ec515675f32d4cf7|4d67673da97b6ecf|6b36566dccb135fd|-1984603746||t20222.794244307s|s147472b|147472|rds|local|vector|||70.544||
-simKang_NC20_de10_cpm_Sum_edgeR|stem|19a9b5f83809aabe|1ec703b171c41e55|8fcf9d8c8499f9a9|-44529424||t20222.7943001406s|s875344b|875344|rds|local|vector|||4.534||
-simKang_NC20_de10_logcounts_Mean_limmaTrend|stem|0126ba4bf7908b5b|10df0123afaf29c7|90dab878c351a8cb|-1601962946||t20222.7943394001s|s1016816b|1016816|rds|local|vector|||3.096||
-simKang_NC20_de10_vstresiduals_Mean_limmaTrend|stem|f6ba98f99b7de0e3|d88095250fc78c59|e3ae2f142298abe5|1846264962||t20222.7943796549s|s1051844b|1051844|rds|local|vector|||3.183||
+prepKang|stem|ddb5d1d4e8393638|1794a0c59f442200|dfd00358e5871bcf|-363830865||t20234.5680276645s|s10843150b|10843150|rds|local|vector|||760.647||
+prepLPS|stem|35bbab310a67c55d|39aa557023017e9d|dfd00358e5871bcf|-1493148583||t20234.5894191804s|s43354078b|43354078|rds|local|vector|||1839.925||
+preptestis|stem|e066d1b0b5d363ce|10191d3b1929dbdc|dfd00358e5871bcf|994181284||t20234.6046082699s|s23519478b|23519478|rds|local|vector|||1305.775||
+simKang_NC400_dp10_counts_None|stem|834fdf35f7f4dc8b|cb80b0b1f8e070aa|ceffa5f9d9edecf8|1020274833||t20234.6088984063s|s16393411b|16393411|rds|local|vector|||0.013||
+simKang_NC400_dp10_counts_Sum|stem|49096f1d1844434d|f813a98a237bf0aa|ceffa5f9d9edecf8|1593427630||t20234.6089335453s|s11394397b|11394397|rds|local|vector|||0.317||
+simKang_NC400_dp10_vstresiduals_Mean|stem|445e774182a06f67|e8d1e41448841f22|ceffa5f9d9edecf8|1030757323||t20234.609917983s|s11790585b|11790585|rds|local|vector|||82.3|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simKang_NC400_dp10_logcounts_Mean|stem|cf316af00297a21b|e9ad0fc525b55a54|ceffa5f9d9edecf8|1568430137||t20234.6099606915s|s11765358b|11765358|rds|local|vector|||0.959||
+simKang_NC400_dp10_logcounts_None|stem|85b5e9c9e59de5e5|13b9293b0f49767b|ceffa5f9d9edecf8|-1639052313||t20234.6100185621s|s17490625b|17490625|rds|local|vector|||0.873||
+simKang_NC400_dp10_cpm_Sum|stem|4898cf33f155d6f8|2042cf864f868eb5|ceffa5f9d9edecf8|-1464271517||t20234.6100589096s|s11767251b|11767251|rds|local|vector|||0.762||
+simKang_NC400_dm10_counts_Sum|stem|7d5b8977eefb77c1|5afb29c07852c64c|bd4a4f10247d6cb5|937096532||t20234.6100920579s|s11394611b|11394611|rds|local|vector|||0.209||
+simKang_NC400_dm10_counts_None|stem|398e3898abea60ac|5b4cda84cb3c38e5|bd4a4f10247d6cb5|153915037||t20234.6101432155s|s16436716b|16436716|rds|local|vector|||0.013||
+simKang_NC400_dm10_vstresiduals_Mean|stem|777d45df287f391c|c6043d4286523993|bd4a4f10247d6cb5|1821335645||t20234.6111365073s|s11791092b|11791092|rds|local|vector|||83.086|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simKang_NC400_dm10_logcounts_Mean|stem|0a176d2af2c523fa|a0363746bfad8794|bd4a4f10247d6cb5|-1717188481||t20234.6111785562s|s11767168b|11767168|rds|local|vector|||0.994||
+simKang_NC400_dm10_cpm_Sum|stem|3143d2317903eef8|21fc13f0d30d748e|bd4a4f10247d6cb5|1087854392||t20234.6112190193s|s11769194b|11769194|rds|local|vector|||0.794||
+simKang_NC400_dm10_logcounts_None|stem|fb835e88be5f9a52|5878779551fe1df9|bd4a4f10247d6cb5|896886246||t20234.6112759525s|s17519949b|17519949|rds|local|vector|||0.797||
+simKang_NC400_db10_counts_Sum|stem|2b941cb1d314d4a9|97574af57fdd9a41|41c1a1ff1ce8d58e|-369174006||t20234.6113107674s|s11395078b|11395078|rds|local|vector|||0.209||
+simKang_NC400_db10_logcounts_None|stem|8cd7e9a62b529c00|fcb7ce9b36e362c4|41c1a1ff1ce8d58e|1657347343||t20234.6113668788s|s17625386b|17625386|rds|local|vector|||0.774||
+simKang_NC400_db10_logcounts_Mean|stem|ab766831ae20cae6|e5026a5a1221d7fe|41c1a1ff1ce8d58e|1330147668||t20234.6114099577s|s11768051b|11768051|rds|local|vector|||0.991||
+simKang_NC400_db10_cpm_Sum|stem|db103cb8f3d61cfd|3b2df7bc26f4b7fc|41c1a1ff1ce8d58e|-296806830||t20234.6114503399s|s11770055b|11770055|rds|local|vector|||0.802||
+simKang_NC400_db10_vstresiduals_Mean|stem|bceb6339fc784131|024fe341e77067d7|41c1a1ff1ce8d58e|1646148855||t20234.6124346733s|s11791422b|11791422|rds|local|vector|||82.301|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simKang_NC400_db10_counts_None|stem|4186009063b56283|bde774be3bcf5ead|41c1a1ff1ce8d58e|883582998||t20234.6124852175s|s16556430b|16556430|rds|local|vector|||0.012||
+simKang_NC100_de10_vstresiduals_Mean|stem|e63c3daf9d3f6ee6|20ff149cca8c357c|b687be126f7d7489|891729203||t20234.6126409012s|s11770928b|11770928|rds|local|vector|||10.989|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simKang_NC100_de10_counts_None|stem|f0678b78a2bae60a|533e6560a1337b3d|b687be126f7d7489|1905193813||t20234.6126745587s|s12593596b|12593596|rds|local|vector|||0.013||
+simKang_NC100_de10_counts_Sum|stem|4fc16479e272ae1c|407dabd171b69591|b687be126f7d7489|-138110466||t20234.6127041654s|s11370231b|11370231|rds|local|vector|||0.121||
+simKang_NC100_de10_logcounts_Mean|stem|c6a6caede1ecffd1|2d8ab979264272c9|b687be126f7d7489|-268772988||t20234.6127361447s|s11706710b|11706710|rds|local|vector|||0.293||
+simKang_NC100_de10_cpm_Sum|stem|d4fc9f86353fdd07|ea881e2823fb2bd4|b687be126f7d7489|-981174087||t20234.6127669319s|s11705762b|11705762|rds|local|vector|||0.225||
+simKang_NC100_de10_logcounts_None|stem|1f99404375201135|84b99c1eff63bc4e|b687be126f7d7489|-1959892183||t20234.6128015269s|s12879762b|12879762|rds|local|vector|||0.19||
+simKang_NC20_de10_logcounts_Mean|stem|8becf083035fc76a|ecae87057dc9c6d2|64cd91d8ea7525fd|-493968063||t20234.612830659s|s11528155b|11528155|rds|local|vector|||0.151||
+simKang_NC20_de10_counts_Sum|stem|95267145f1dcf3e6|c043318e6dc7fc31|64cd91d8ea7525fd|-2063234685||t20234.6128595133s|s11344184b|11344184|rds|local|vector|||0.106||
+simKang_NC20_de10_counts_None|stem|cb0c5c9913635d22|3ee3850fe28456b9|64cd91d8ea7525fd|1412168502||t20234.6128883908s|s11571996b|11571996|rds|local|vector|||0.013||
+simKang_NC20_de10_logcounts_None|stem|cfb90288a06462b5|46f078bd08e028d8|64cd91d8ea7525fd|644259505||t20234.6129172914s|s11635113b|11635113|rds|local|vector|||0.058||
+simKang_NC20_de10_vstresiduals_Mean|stem|f69264fdc06f137e|24868133b8591600|64cd91d8ea7525fd|-281811229||t20234.6129840278s|s11694528b|11694528|rds|local|vector|||3.364|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simKang_NC20_de10_cpm_Sum|stem|2090599ead9ca786|d20261e585a6804b|64cd91d8ea7525fd|1490762017||t20234.6130130094s|s11527178b|11527178|rds|local|vector|||0.12||
+simKang_NC400_de10_counts_Sum|stem|b1ac88b202405014|06f1354109160c60|325b01d354191d2a|24323832||t20234.613046204s|s11394718b|11394718|rds|local|vector|||0.195||
+simKang_NC400_de10_cpm_Sum|stem|ee1d157f15fcc751|081f69e4d1a48a28|325b01d354191d2a|1329559040||t20234.6130847227s|s11769647b|11769647|rds|local|vector|||0.67||
+simKang_NC400_de10_logcounts_None|stem|f634e75bcf0b0f0d|92ed04669f53db04|325b01d354191d2a|-1598295757||t20234.6131396767s|s17777045b|17777045|rds|local|vector|||0.634||
+simKang_NC400_de10_counts_None|stem|73f3abbbdb3c37c5|09f12a1d320d5f05|325b01d354191d2a|-668488109||t20234.6131903945s|s16618441b|16618441|rds|local|vector|||0.012||
+simKang_NC400_de10_logcounts_Mean|stem|1cdc01beb7e3a118|900c0ed4a1222e6b|325b01d354191d2a|1892015651||t20234.613231066s|s11767825b|11767825|rds|local|vector|||0.872||
+simKang_NC400_de10_vstresiduals_Mean|stem|89cefa2d83ca1d19|08ab15b9ce57b7be|325b01d354191d2a|1966659944||t20234.6142164875s|s11791035b|11791035|rds|local|vector|||82.392|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simLPS_NC400_de10_logcounts_Mean|stem|7a71c30df4c31046|4187a3ec8a95bcf8|7dba040931312a75|-128231297||t20234.6143433283s|s44326564b|44326564|rds|local|vector|||1.636||
+simLPS_NC400_de10_vstresiduals_Mean|stem|ed9bb977619e98d6|363cb3be108692ad|7dba040931312a75|515414217||t20234.6154140048s|s44326714b|44326714|rds|local|vector|||83.253|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simLPS_NC400_de10_logcounts_None|stem|7a4438d2c1464012|6bef623cc75864ff|7dba040931312a75|-667112519||t20234.6155574893s|s50415993b|50415993|rds|local|vector|||1.44||
+simLPS_NC400_de10_counts_Sum|stem|e4e7f824068b78d5|ba7ad50a576613ac|7dba040931312a75|1756420502||t20234.6156686241s|s43956235b|43956235|rds|local|vector|||0.22||
+simLPS_NC400_de10_counts_None|stem|3bc2cff2e99bb070|5f03931fb58c26d1|7dba040931312a75|-879955257||t20234.6158005229s|s49593641b|49593641|rds|local|vector|||0.013||
+simLPS_NC400_de10_cpm_Sum|stem|d62772cb3da3583b|5e661c48bc923b1c|7dba040931312a75|1641651496||t20234.6159249332s|s44329477b|44329477|rds|local|vector|||0.656||
+simLPS_NC100_de10_vstresiduals_Mean|stem|87eeadc1cad3bec2|4ff672add262ab05|6d0cb32089bce0ea|-269998404||t20234.6161608139s|s44326598b|44326598|rds|local|vector|||11.169|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simLPS_NC100_de10_counts_Sum|stem|497231e6e19a1b9f|da8e9434d06e07e7|6d0cb32089bce0ea|1997622913||t20234.6162677821s|s43913956b|43913956|rds|local|vector|||0.122||
+simLPS_NC100_de10_cpm_Sum|stem|80c62935926b2d9a|5dd2b3aa2acc1a11|6d0cb32089bce0ea|1240556727||t20234.616377308s|s44280083b|44280083|rds|local|vector|||0.225||
+simLPS_NC100_de10_counts_None|stem|7912ac6b3055d8d3|fa5d797a3aa255f3|6d0cb32089bce0ea|-1917864158||t20234.6164886859s|s45298053b|45298053|rds|local|vector|||0.013||
+simLPS_NC100_de10_logcounts_Mean|stem|b30fdde073f888bf|1ff665a7bc7397e6|6d0cb32089bce0ea|1578705125||t20234.6165982698s|s44279735b|44279735|rds|local|vector|||0.287||
+simLPS_NC100_de10_logcounts_None|stem|e867a544d09588b5|e274b67974533388|6d0cb32089bce0ea|-770635920||t20234.6167117772s|s45532594b|45532594|rds|local|vector|||0.161||
+simLPS_NC400_dm10_counts_None|stem|a87201f4c6b8c674|13e70e41e82004a3|6d323b2af4dc09e2|-1019426141||t20234.6168425649s|s49333977b|49333977|rds|local|vector|||0.013||
+simLPS_NC400_dm10_cpm_Sum|stem|03a0ef3f536ef72d|b6f12289dd979a00|6d323b2af4dc09e2|74110203||t20234.6169592206s|s44330992b|44330992|rds|local|vector|||0.684||
+simLPS_NC400_dm10_logcounts_None|stem|5671b6386b7f7843|92c07d35a2d0adcc|6d323b2af4dc09e2|-1499378397||t20234.6171029944s|s50077843b|50077843|rds|local|vector|||1.477||
+simLPS_NC400_dm10_vstresiduals_Mean|stem|2ace7a559731d927|8125226c979e1195|6d323b2af4dc09e2|-612909714||t20234.6181867265s|s44325704b|44325704|rds|local|vector|||84.264|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simLPS_NC400_dm10_counts_Sum|stem|46e0cbfedfa6ee1c|0a9204f3bb2f5e22|6d323b2af4dc09e2|-1080038188||t20234.6182976529s|s43954711b|43954711|rds|local|vector|||0.208||
+simLPS_NC400_dm10_logcounts_Mean|stem|1cdc255ead623d7f|ce19207870c23f12|6d323b2af4dc09e2|-61343806||t20234.6184267855s|s44327223b|44327223|rds|local|vector|||1.73||
+simLPS_NC400_db10_counts_None|stem|f30d563fac024ff2|09f73b697566ac85|20ea3480279f143a|1847824698||t20234.6185576658s|s49594414b|49594414|rds|local|vector|||0.012||
+simLPS_NC400_db10_cpm_Sum|stem|a9d4e93926fbae70|154d02c759710e7f|20ea3480279f143a|-1473884871||t20234.618675583s|s44329672b|44329672|rds|local|vector|||0.68||
+simLPS_NC400_db10_logcounts_None|stem|b42d2783924cb9d1|3afea2a35683ded0|20ea3480279f143a|-593071097||t20234.6188223082s|s50431214b|50431214|rds|local|vector|||1.623||
+simLPS_NC400_db10_logcounts_Mean|stem|24126851bc1c738f|4aa22e406a04ebc2|20ea3480279f143a|1459775508||t20234.618951545s|s44326743b|44326743|rds|local|vector|||1.813||
+simLPS_NC400_db10_counts_Sum|stem|eeea3fa9dc87a74d|228e74e4f16ec1c3|20ea3480279f143a|-673948598||t20234.6190630501s|s43957049b|43957049|rds|local|vector|||0.213||
+simLPS_NC400_db10_vstresiduals_Mean|stem|5ab313bdda4deb57|a79f5d1dc91cc59e|20ea3480279f143a|-296466704||t20234.6201504049s|s44327148b|44327148|rds|local|vector|||84.584|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simLPS_NC20_de10_counts_Sum|stem|67a60b48fbc450e3|4af7cba4cd1a8cc9|c42ae065ec61f3ea|-2097990557||t20234.6202566207s|s43904368b|43904368|rds|local|vector|||0.099||
+simLPS_NC20_de10_counts_None|stem|80cf1daab8205392|5deddcebfa5e0126|c42ae065ec61f3ea|-271093923||t20234.6203644337s|s44123737b|44123737|rds|local|vector|||0.012||
+simLPS_NC20_de10_logcounts_Mean|stem|a2ccddad64e63984|d0df34aef2eeebf0|c42ae065ec61f3ea|-1943092783||t20234.6204709155s|s44117807b|44117807|rds|local|vector|||0.159||
+simLPS_NC20_de10_logcounts_None|stem|f78d96c9dce4acee|50c8a4828046cd2a|c42ae065ec61f3ea|-2146183091||t20234.6205783s|s44150259b|44150259|rds|local|vector|||0.071||
+simLPS_NC20_de10_cpm_Sum|stem|e45d4450d615f39b|8da1b9687d2f3009|c42ae065ec61f3ea|-1930619084||t20234.6206859161s|s44115123b|44115123|rds|local|vector|||0.124||
+simLPS_NC20_de10_vstresiduals_Mean|stem|e2c4d87d1c9acb2b|813fc235f26152c6|c42ae065ec61f3ea|-2105799798||t20234.6208398748s|s44262222b|44262222|rds|local|vector|||4.245|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simLPS_NC400_dp10_counts_None|stem|aefa5e48a6b32cb1|e369811955a01a23|80bbb6fa5584d47a|1965970331||t20234.6209711599s|s49308778b|49308778|rds|local|vector|||0.012||
+simLPS_NC400_dp10_vstresiduals_Mean|stem|b33ad841d4fbf321|2cfb91640cec7a68|80bbb6fa5584d47a|-984696931||t20234.622063663s|s44327396b|44327396|rds|local|vector|||85.024|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simLPS_NC400_dp10_logcounts_Mean|stem|40460591ea599a23|029a73eeaf960607|80bbb6fa5584d47a|35148498||t20234.6221930731s|s44326678b|44326678|rds|local|vector|||1.618||
+simLPS_NC400_dp10_logcounts_None|stem|b3f1cf99f64ecb68|7a1f60ba21c3d36b|80bbb6fa5584d47a|-31076333||t20234.6223276105s|s50023845b|50023845|rds|local|vector|||0.724||
+simLPS_NC400_dp10_cpm_Sum|stem|b46ea65753dedbfd|073200b7f474e4ef|80bbb6fa5584d47a|444346295||t20234.6224436525s|s44330287b|44330287|rds|local|vector|||0.733||
+simLPS_NC400_dp10_counts_Sum|stem|73d2b83abb36ca2e|a17c812473a922ab|80bbb6fa5584d47a|-1621306561||t20234.6225553774s|s43955507b|43955507|rds|local|vector|||0.203||
+simKang_NC400_dp10_counts_None_MMdream2|stem|55df04f37d9f293e|c9eee0bacf5c9fdb|12c5e2c15c6d48e2|1243212539||t20234.6489808656s|s960465b|960465|rds|local|vector|||1635.156||
+simKang_NC400_dp10_counts_None_MMvst|stem|ba40ba8910b5aa7b|533e727a37da6ffd|970eef9d7d01bf96|1601984385||t20234.656579782s|s927122b|927122|rds|local|vector|||655.937|Model failed to converge with 1 negative eigenvalue: -6.5e+01. Model failed to converge with 1 negative eigenvalue: -3.6e+00. Model failed to converge with 1 negative eigenvalue: -6.4e+01. Model failed to converge with 1 negative eigenvalue: -1.2e+00. Model failed to converge with 1 negative eigenvalue: -4.5e+00. Model failed to converge with 1 negative eigenvalue: -3.0e-01. Model failed to converge with 1 negative eigenvalue: -2.8e+00. Model failed to converge with 1 negative eigenvalue: -1.0e+01|
+simKang_NC400_dp10_logcounts_None_scDD|stem|c97b336f1ad71dda|43f988396154da76|a4fa3e446700d32a|1299566028||t20235.3521661432s|s713354b|713354|rds|local|vector|||17.281||
+simKang_NC400_dm10_counts_None_MMdream2|stem|307fed974c41f3f7|aab8fcf42b324c69|b4bbe17122a1a506|-397366192||t20235.3714259963s|s894962b|894962|rds|local|vector|||1638.065||
+simKang_NC400_dm10_counts_None_MMvst|stem|409ddca689f6fc30|dc6d0b38d07b6882|117106191aff8ddd|-168700565||t20235.3790961589s|s929009b|929009|rds|local|vector|||662.013|Model failed to converge with 1 negative eigenvalue: -8.9e-01. Model failed to converge with 1 negative eigenvalue: -3.9e+00|
+simKang_NC400_dm10_logcounts_None_scDD|stem|eea3cef6f9b18f18|70e09ded7a423b61|93bd177cd7611c6f|1252701793||t20235.3793790309s|s677856b|677856|rds|local|vector|||12.383||
+simKang_NC400_db10_logcounts_None_scDD|stem|b03b137fcf0eabd1|2452a68954c977f7|6955ee7cb6153203|1976693684||t20235.3797539162s|s683167b|683167|rds|local|vector|||12.466||
+simKang_NC400_db10_counts_None_MMvst|stem|831d60074cedc5c8|e12969fc1c3e3c57|2aedcd0032949b38|-42723990||t20235.3876815425s|s903990b|903990|rds|local|vector|||671.812|Model failed to converge with 1 negative eigenvalue: -7.6e+01. Model failed to converge with 1 negative eigenvalue: -3.4e+01. Model failed to converge with 1 negative eigenvalue: -9.4e+01. Model failed to converge with 1 negative eigenvalue: -7.3e+00. Model failed to converge with 1 negative eigenvalue: -1.8e+01|
+simKang_NC400_db10_counts_None_MMdream2|stem|86bb0c9a7a8b25a0|e72cbebe46c61b26|cad43c90aac32a3b|-1162281342||t20235.3889066864s|s43b|43|rds|local|vector|||105.324|Model failed to converge with 1 negative eigenvalue: -1.1e+00|
+simKang_NC100_de10_counts_None_MMvst|stem|c5e41406ca1a02c2|8bb10240986b6eb7|dfc951324aee5117|-916895419||t20235.3920883555s|s505196b|505196|rds|local|vector|||270.728||
+simKang_NC100_de10_counts_None_MMdream2|stem|86bb0c9a7a8b25a0|d8a3964f5c7c78c7|5653cbf04f19b162|1437713743||t20235.3939028778s|s43b|43|rds|local|vector|||156.488|Model failed to converge with 1 negative eigenvalue: -4.0e+00|
+simKang_NC100_de10_logcounts_None_scDD|stem|380228bd235785aa|02b0a86c966da102|25b6f361968b85f6|621158733||t20235.3943154955s|s624794b|624794|rds|local|vector|||5.814||
+simKang_NC20_de10_counts_None_MMdream2|stem|e6d8ee5d68f8a006|6615f82a3574d264|46332fc8fc610b18|-786780389||t20235.3967836208s|s149495b|149495|rds|local|vector|||190.414||
+simKang_NC20_de10_counts_None_MMvst|stem|ec515675f32d4cf7|4d67673da97b6ecf|aa42a4a42311d2c9|-1984603746||t20235.3975938331s|s147472b|147472|rds|local|vector|||69.724||
+simKang_NC20_de10_logcounts_None_scDD|stem|6fc2406d5507caab|87f2d4353d3a497e|dc53dab7fc55ccd7|1885639288||t20235.3976445509s|s570640b|570640|rds|local|vector|||4.065||
+simKang_NC400_de10_logcounts_None_scDD|stem|12c5f7d7d1078e14|6d909ae2d746c046|76282de09b18187e|-46809667||t20235.398194461s|s715351b|715351|rds|local|vector|||14.599||
+simKang_NC400_de10_counts_None_MMdream2|stem|86bb0c9a7a8b25a0|4ca69e24baaaabf1|5917be3ef512d018|-354947834||t20235.4062356439s|s43b|43|rds|local|vector|||694.167|Model failed to converge with 1 negative eigenvalue: -3.3e+00|
+simKang_NC400_de10_counts_None_MMvst|stem|a6350519b5e63724|e02fc078b8996818|e1d9abe83c36e82b|1597743375||t20235.4139351923s|s966159b|966159|rds|local|vector|||664.579|Model failed to converge with 1 negative eigenvalue: -5.4e+01|
+simLPS_NC400_de10_logcounts_None_scDD|stem|5ef167c77bafb2b5|807793e790e7c5fc|9911ceb76efe127e|1355976501||t20235.4142979371s|s832891b|832891|rds|local|vector|||15.805||
+simLPS_NC400_de10_counts_None_MMvst|stem|45e7e65ae55af33a|f7b9520991832441|84403bc986b08887|-1460207916||t20235.4229287886s|s1101438b|1101438|rds|local|vector|||723.022|Model failed to converge with 1 negative eigenvalue: -2.4e+00|
+simLPS_NC400_de10_counts_None_MMdream2|stem|86bb0c9a7a8b25a0|4213aa63da5fd4a5|24dba806052e4342|1668820060||t20235.4327524832s|s43b|43|rds|local|vector|||847.71|Model failed to converge with 1 negative eigenvalue: -4.7e+00|
+simLPS_NC100_de10_counts_None_MMvst|stem|ab6cb69d4dd3e657|aace4b1559bdac78|d59e0263b2c30844|-221025968||t20235.4374823794s|s790320b|790320|rds|local|vector|||371.412|Model failed to converge with maxgrad = 0.00213845 (tol = 0.002, component 1)|
+simLPS_NC100_de10_counts_None_MMdream2|stem|f9ac05b9ac63b55a|3d9706136afb2982|a4c8899caaa2963d|943331740||t20235.4498473014s|s725705b|725705|rds|local|vector|||1067.535||
+simLPS_NC100_de10_logcounts_None_scDD|stem|ac2643fcc8b5e8fa|399ae83f09908d3c|c27c9f6193cab9d7|-228880275||t20235.4499901609s|s727669b|727669|rds|local|vector|||7.293||
+simLPS_NC400_dm10_counts_None_MMdream2|stem|f7ecfbc24db1f90d|1dc78dd4a49b749a|0eaf0ab9f5e82822|-1591951759||t20235.4714049615s|s1020423b|1020423|rds|local|vector|||1849.148||
+simLPS_NC400_dm10_counts_None_MMvst|stem|82baad74dbc2246d|1feff9fdca84386e|d1dcc9a5565b588f|309181084||t20235.4798467866s|s1075284b|1075284|rds|local|vector|||728.138||
+simLPS_NC400_dm10_logcounts_None_scDD|stem|c158d5e84eecb752|ceb76a918c4f665a|8252cb448fed705b|-799940489||t20235.4800918461s|s807968b|807968|rds|local|vector|||14.81||
+simLPS_NC400_db10_counts_None_MMdream2|stem|85c99decb5992f14|970f9bf0448a0df4|d2449ec68c968974|-1511152529||t20235.5017694256s|s1021655b|1021655|rds|local|vector|||1843.668||
+simLPS_NC400_db10_counts_None_MMvst|stem|936b779685d739e1|69c34c0a4bad3b24|278ea518a3d1bd9c|1443397970||t20235.510197636s|s1037096b|1037096|rds|local|vector|||726.966|Model failed to converge with 1 negative eigenvalue: -5.4e+01. Model failed to converge with 1 negative eigenvalue: -9.5e+00. Model failed to converge with 1 negative eigenvalue: -1.4e+01. Model failed to converge with 1 negative eigenvalue: -6.3e+00. Model failed to converge with 1 negative eigenvalue: -1.0e+00|
+simLPS_NC400_db10_logcounts_None_scDD|stem|e9374c03d5ae1a49|73a831e2a69e97d4|ee5a896fdfb84c36|724837804||t20235.5104465605s|s818690b|818690|rds|local|vector|||15.037||
+simLPS_NC20_de10_counts_None_MMdream2|stem|bd2f1605441e624f|523a3cd46fd5ae8f|0ef63cac7cd498c9|1215490269||t20235.513736041s|s195380b|195380|rds|local|vector|||235.603||
+simLPS_NC20_de10_counts_None_MMvst|stem|3f0f043a3f51738a|3d783a5dbf27f9ab|63b16a6eaa8bd049|352232457||t20235.5147171097s|s195966b|195966|rds|local|vector|||84.038||
+simLPS_NC20_de10_logcounts_None_scDD|stem|2e47d7f06a72e263|5225af628ac467e0|292ce28046682dc1|-480528922||t20235.5148263926s|s648773b|648773|rds|local|vector|||3.925||
+simLPS_NC400_dp10_counts_None_MMvst|stem|e02fdfbf88533ce6|15acb4273730f659|a410f47a91d2c520|-6447067||t20235.5232874493s|s1097937b|1097937|rds|local|vector|||720.888|Model failed to converge with 1 negative eigenvalue: -1.2e+01|
+simLPS_NC400_dp10_counts_None_MMdream2|stem|a87dd15cb0a18ef5|9352ebe79a2f2b5f|3705b77fb12a8e8c|-444305199||t20235.5446111313s|s1023561b|1023561|rds|local|vector|||1841.224||
+simLPS_NC400_dp10_logcounts_None_scDD|stem|422452e73fdcfc20|0d39788a72908a14|6ef99435e828f580|-513237264||t20235.5448984937s|s835534b|835534|rds|local|vector|||15.378||
+simKang_NC400_dp10|stem|dadff98b0e772c3e|22a1804d6f17c8e3|78f5018c63ac0170|1965410315||t20235.5682175627s|s16393412b|16393412|rds|local|vector|||13.956||
+simKang_NC400_dm10|stem|e1a5401cb944fa81|01120153e38da8bc|78f5018c63ac0170|767093534||t20235.5683773319s|s16436716b|16436716|rds|local|vector|||9.634||
+simKang_NC400_db10|stem|e703908e0da1c2c9|d8d78ff0b7f48c99|78f5018c63ac0170|1951624237||t20235.5685580388s|s16556430b|16556430|rds|local|vector|||11.21||
+simKang_NC100_de10|stem|7ea73f8382220e8d|6fa6e0ed4abda846|78f5018c63ac0170|-903908604||t20235.5686318817s|s12593596b|12593596|rds|local|vector|||3.471||
+simKang_NC20_de10|stem|fcd85a2b8acda2e0|471e3e8c91fb2fc6|78f5018c63ac0170|435120446||t20235.5686725069s|s11571996b|11571996|rds|local|vector|||1.009||
+simKang_NC400_de10|stem|a853609f919a7ca8|99e011ccbc59f6e6|78f5018c63ac0170|-778708337||t20235.568860598s|s16618441b|16618441|rds|local|vector|||11.946||
+simLPS_NC400_de10|stem|f47e56c16a838888|2fcbf51033d3fd22|6c4ac83f61ef154b|-2081318492||t20235.5692330997s|s49593642b|49593642|rds|local|vector|||20.791||
+simLPS_NC100_de10|stem|40b09dff04790c51|7e66eedb28a86c81|6c4ac83f61ef154b|-379385436||t20235.569405288s|s45298053b|45298053|rds|local|vector|||5.003||
+simLPS_NC400_dm10|stem|347fa353b931c1cc|2f6e8361d99eaa0c|6c4ac83f61ef154b|-1649762770||t20235.5697391555s|s49333977b|49333977|rds|local|vector|||17.49||
+simLPS_NC400_db10|stem|0ddc319d424cfd7d|e7208885f635affe|6c4ac83f61ef154b|946777815||t20235.5700832892s|s49594414b|49594414|rds|local|vector|||18.33||
+simLPS_NC20_de10|stem|8ea3677864e97d83|6e9019ea900f1b7c|6c4ac83f61ef154b|364270120||t20235.5702239843s|s44123739b|44123739|rds|local|vector|||1.712||
+simLPS_NC400_dp10|stem|1a006a34541016da|805b9edcf8c42c13|6c4ac83f61ef154b|-77078231||t20235.5705719606s|s49308779b|49308779|rds|local|vector|||18.79||
+simtestis_NC400_dp10|stem|8cefc44dacddbbbd|f470e46d5d4f744d|f78d60074b08e0c9|-817797530||t20235.5710384791s|s32706840b|32706840|rds|local|vector|||29.86||
+simtestis_NC100_de10|stem|9ff2e260bdb10334|cae8116184aa4c31|f78d60074b08e0c9|-1670048728||t20235.5712511191s|s26333047b|26333047|rds|local|vector|||8.925||
+simtestis_NC400_dm10|stem|dfb8c542f434c1cd|f80d1ad6f8b7e9c3|f78d60074b08e0c9|643504848||t20235.5717082163s|s32819021b|32819021|rds|local|vector|||29.053||
+simtestis_NC400_db10|stem|fa034a91c803d954|ec877be7e2e14020|f78d60074b08e0c9|1096009978||t20235.5721577903s|s32773670b|32773670|rds|local|vector|||28.388||
+simtestis_NC20_de10|stem|c6723060814bb33e|26760c0c35acd8d1|f78d60074b08e0c9|146768397||t20235.5723080572s|s24546700b|24546700|rds|local|vector|||4.88||
+simtestis_NC400_de10|stem|c5c4bd2dd66fc52b|2a1d57883bb802c9|f78d60074b08e0c9|-479388705||t20235.572767909s|s32804738b|32804738|rds|local|vector|||29.393||
+simtestis_NC400_dp10_logcounts_None|stem|db5afb751c0a6882|fbdc8e22ee75c1ff|70e1966a2ba93dd6|-1068972110||t20235.5729060115s|s34405385b|34405385|rds|local|vector|||1.695||
+simtestis_NC400_dp10_cpm_Sum|stem|27558b2246578e10|77991bee746d4101|70e1966a2ba93dd6|1904439668||t20235.5730130375s|s25099917b|25099917|rds|local|vector|||0.987||
+simtestis_NC400_dp10_counts_Sum|stem|a03183d9100c2f8c|511a8e92f002a6da|70e1966a2ba93dd6|2128940056||t20235.5731129454s|s24371856b|24371856|rds|local|vector|||0.216||
+simtestis_NC400_dp10_vstresiduals_Mean|stem|0b9d79f10fc6877f|1f842bef4ab396c0|70e1966a2ba93dd6|599699085||t20235.5741009595s|s25251574b|25251574|rds|local|vector|||77.149|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simtestis_NC400_dp10_counts_None|stem|395dfd902d8f5329|2f99d5d55ca2eed7|70e1966a2ba93dd6|-1021692701||t20235.5742251036s|s32706840b|32706840|rds|local|vector|||0.012||
+simtestis_NC400_dp10_logcounts_Mean|stem|f522a7223ce4a79d|3929775f8d4315a7|70e1966a2ba93dd6|-2000346306||t20235.5743311689s|s25098767b|25098767|rds|local|vector|||1.079||
+simtestis_NC100_de10_logcounts_Mean|stem|a2698a7afbbe959b|6da4daa9f8e74379|bcba21217cf84583|-1447088890||t20235.5744347806s|s24887953b|24887953|rds|local|vector|||0.288||
+simtestis_NC100_de10_counts_Sum|stem|0a6f398234e805a2|f7c627ad6a063fd1|bcba21217cf84583|163039749||t20235.5745281375s|s24317266b|24317266|rds|local|vector|||0.133||
+simtestis_NC100_de10_counts_None|stem|e82d356fb10ec01d|0f3becaa10ba1d33|bcba21217cf84583|543815990||t20235.5746278602s|s26333045b|26333045|rds|local|vector|||0.012||
+simtestis_NC100_de10_cpm_Sum|stem|8f1d9e23c8778d05|066a6b851bc83886|bcba21217cf84583|-870759408||t20235.5747220273s|s24884258b|24884258|rds|local|vector|||0.222||
+simtestis_NC100_de10_vstresiduals_Mean|stem|b570160f3646def8|31e7df8a8bd15ce0|bcba21217cf84583|1486265084||t20235.5749345515s|s25212938b|25212938|rds|local|vector|||10.269|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simtestis_NC100_de10_logcounts_None|stem|704dedf5118f3b09|0460f5ca261ac0cf|bcba21217cf84583|-1145454878||t20235.5750327696s|s26796343b|26796343|rds|local|vector|||0.166||
+simtestis_NC400_dm10_counts_None|stem|5c0d62aede233fba|59fd8c058929006e|a8a3c07f0f9ed21c|161544774||t20235.5751553396s|s32819021b|32819021|rds|local|vector|||0.012||
+simtestis_NC400_dm10_counts_Sum|stem|dca912e387f19266|989b0dd4b4e5de07|a8a3c07f0f9ed21c|212529646||t20235.575251266s|s24373120b|24373120|rds|local|vector|||0.208||
+simtestis_NC400_dm10_logcounts_None|stem|2d40ba8c00a2e20e|0c0dfa9a7ea6ddc6|a8a3c07f0f9ed21c|-1987861642||t20235.5753873893s|s34558589b|34558589|rds|local|vector|||0.767||
+simtestis_NC400_dm10_vstresiduals_Mean|stem|d0803d37b6871d7f|d12e94d0abd2541d|a8a3c07f0f9ed21c|350132320||t20235.5763632042s|s25250994b|25250994|rds|local|vector|||76.025|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simtestis_NC400_dm10_logcounts_Mean|stem|63ba1262856e949f|8a44b95e69588462|a8a3c07f0f9ed21c|1380104034||t20235.5764795821s|s25098646b|25098646|rds|local|vector|||1.9||
+simtestis_NC400_dm10_cpm_Sum|stem|4c817117755e8c2c|22c5019c6ba4f646|a8a3c07f0f9ed21c|1232843582||t20235.5765925456s|s25099489b|25099489|rds|local|vector|||1.499||
+simtestis_NC400_db10_counts_Sum|stem|be9cce69599c6fc6|30a4d6e4fa5223b6|6f93490477c3f561|-333463683||t20235.5766999188s|s24373489b|24373489|rds|local|vector|||1.021||
+simtestis_NC400_db10_counts_None|stem|4b4edf8b2051e1ce|0d121fbaff2e7ddd|6f93490477c3f561|1249060562||t20235.5768245953s|s32773670b|32773670|rds|local|vector|||0.011||
+simtestis_NC400_db10_logcounts_Mean|stem|56d19aeb2ef950b3|c8fb80adcae63002|6f93490477c3f561|439209711||t20235.5769324315s|s25099034b|25099034|rds|local|vector|||0.978||
+simtestis_NC400_db10_vstresiduals_Mean|stem|ff43b8fe2e7c196d|345de21d4ee0ab97|6f93490477c3f561|-1638176635||t20235.5779310011s|s25251489b|25251489|rds|local|vector|||77.179|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simtestis_NC400_db10_logcounts_None|stem|f8e00076f6bdad42|cfbe8384372a7a35|6f93490477c3f561|-1118438861||t20235.5780694276s|s34427901b|34427901|rds|local|vector|||0.778||
+simtestis_NC400_db10_cpm_Sum|stem|58ead93cdbb586f2|b74be70ad6128d41|6f93490477c3f561|-147448530||t20235.5781847291s|s25100427b|25100427|rds|local|vector|||1.566||
+simtestis_NC20_de10_counts_Sum|stem|bca3a648c7908370|9f1ae8e79c5a0dfd|0fdca6f8ac9628a7|-768159331||t20235.5782789772s|s24262306b|24262306|rds|local|vector|||0.11||
+simtestis_NC20_de10_vstresiduals_Mean|stem|03ec651c2156e18a|05102dc96f5a02ac|0fdca6f8ac9628a7|1105060244||t20235.5784162233s|s25090645b|25090645|rds|local|vector|||3.975|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simtestis_NC20_de10_logcounts_Mean|stem|d460f79d82d12f99|c2c61932b333a1a8|0fdca6f8ac9628a7|-2064989001||t20235.5785093834s|s24556831b|24556831|rds|local|vector|||0.154||
+simtestis_NC20_de10_counts_None|stem|b315f1d5deaa8885|2f1f832cba6361c5|0fdca6f8ac9628a7|634290763||t20235.5786018723s|s24546700b|24546700|rds|local|vector|||0.012||
+simtestis_NC20_de10_cpm_Sum|stem|7c882c57c653d4d2|0322c067a8236e61|0fdca6f8ac9628a7|-265240750||t20235.578694882s|s24550408b|24550408|rds|local|vector|||0.124||
+simtestis_NC20_de10_logcounts_None|stem|6f68347f279bbd74|1d4029c740b7ef01|0fdca6f8ac9628a7|-606794704||t20235.5787920468s|s24630000b|24630000|rds|local|vector|||0.056||
+simtestis_NC400_de10_logcounts_Mean|stem|d76bb6e52b93a3e8|52df3bc9c28e3c24|b962155e0a0a3bf1|1106082801||t20235.5789094895s|s25094861b|25094861|rds|local|vector|||1.885||
+simtestis_NC400_de10_counts_None|stem|fb04708064e1b447|6e95f80095c3f122|b962155e0a0a3bf1|-661259657||t20235.5790353119s|s32804738b|32804738|rds|local|vector|||0.013||
+simtestis_NC400_de10_counts_Sum|stem|14f02b99421b89ae|1232870e5537e494|b962155e0a0a3bf1|-1364108445||t20235.5791429513s|s24372851b|24372851|rds|local|vector|||1.032||
+simtestis_NC400_de10_vstresiduals_Mean|stem|066fdf3270946878|77325b70b2fea71c|b962155e0a0a3bf1|-1618840645||t20235.5801284073s|s25252725b|25252725|rds|local|vector|||76.851|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simtestis_NC400_de10_logcounts_None|stem|064f12aaee45c702|1c8c5ebc39fb59fa|b962155e0a0a3bf1|62269137||t20235.5802643802s|s34565390b|34565390|rds|local|vector|||0.795||
+simtestis_NC400_de10_cpm_Sum|stem|b6405f0ac8d61ee3|f71887e5001bdc6a|b962155e0a0a3bf1|-1572063653||t20235.5803779803s|s25094226b|25094226|rds|local|vector|||1.55||
+simtestis_NC400_dp10_logcounts_None_scDD|stem|03056e150cdc0d7a|9c1729f478fb87ba|8923e90d12615235|1120432855||t20235.5806125879s|s1015609b|1015609|rds|local|vector|||18.711||
+simtestis_NC400_dp10_counts_None_MMdream2|stem|b892d27d4c3a0567|f43284c3fc7a24e4|c3dd3bcba95943a9|-1562046264||t20235.6039414593s|s1111104b|1111104|rds|local|vector|||1958.857||
+simtestis_NC400_dp10_counts_None_MMvst|stem|ed0e3ee313cedfed|00c9bcecda767a83|01ab021ba6163f3c|591378801||t20235.6124862133s|s1201995b|1201995|rds|local|vector|||735.773|Model failed to converge with 1 negative eigenvalue: -1.1e+02. Model failed to converge with maxgrad = 0.00994931 (tol = 0.002, component 1). Model failed to converge with 1 negative eigenvalue: -3.1e+01|
+simtestis_NC100_de10_counts_None_MMdream2|stem|09301c4fe65e4323|bf5da3e8697f6978|d7d019153414b033|-579684091||t20235.6264862985s|s828439b|828439|rds|local|vector|||1156.473||
+simtestis_NC100_de10_counts_None_MMvst|stem|9a7ce4a8e8da3f2f|bbadada843ab0f0e|fc962db7cae411d3|-1129620895||t20235.6311675863s|s861193b|861193|rds|local|vector|||403.198|Model failed to converge with 1 negative eigenvalue: -2.6e+00|
+simtestis_NC100_de10_logcounts_None_scDD|stem|271595af315925d5|32f585f2f4783a95|de8be81c7fcb5872|1474590596||t20235.6315008173s|s968335b|968335|rds|local|vector|||9.186||
+simtestis_NC400_dm10_counts_None_MMdream2|stem|0af08dff90360da8|670eb4ef2513da70|f67e5f042ff83f8a|-410995274||t20235.6542420903s|s1125126b|1125126|rds|local|vector|||1963.377||
+simtestis_NC400_dm10_counts_None_MMvst|stem|b74bf9891af8a7d1|5fc81522f454999c|a8c7f9d8e336de3d|-2077529303||t20235.6628201823s|s1224294b|1224294|rds|local|vector|||739.559|Model failed to converge with 1 negative eigenvalue: -2.9e+00. Model failed to converge with 1 negative eigenvalue: -2.4e+00|
+simtestis_NC400_dm10_logcounts_None_scDD|stem|f965fa2f18a3b20e|a20aabec774f5568|0e5c7af4dbc60fc4|-1578656152||t20235.6634438425s|s1037981b|1037981|rds|local|vector|||15.731||
+simtestis_NC400_db10_counts_None_MMvst|stem|d9a27ecf31c91928|4de96e3caa988fe7|f708bb861b020ec0|-702797329||t20235.6726967759s|s1163015b|1163015|rds|local|vector|||735.247|Model failed to converge with 1 negative eigenvalue: -5.0e+00. Model failed to converge with 1 negative eigenvalue: -1.7e+00|
+simtestis_NC400_db10_counts_None_MMdream2|stem|4ad2576fca6b330f|eac6db59e4b9965f|fa4f041c1e5ced93|-356755725||t20235.6953990734s|s1107810b|1107810|rds|local|vector|||1959.067||
+simtestis_NC400_db10_logcounts_None_scDD|stem|7f9d9d4230fca11c|27840e1c51ecbf3d|0eeadd3d331217cf|121372009||t20235.695810823s|s999140b|999140|rds|local|vector|||16.046||
+simKang_NC400_dp10_counts_Sum_DESeq2|stem|10bcfac2053f42e8|724dd2aaf43330b7|8ddf92df1078e3a3|-1621362737||t20235.795482351s|s986728b|986728|rds|local|vector|||13.257||
+simKang_NC400_dm10_counts_Sum_DESeq2|stem|f048f80557907c4d|0a2c1aa0d6dcd9bc|3e95c0aaf0776163|486611190||t20235.7956098978s|s989170b|989170|rds|local|vector|||10.677||
 prep_Kang_data|function|9697bde7be9d762b
 prep_LPS_data|function|0a306dad8a26a601
+prep_testis_data|function|d64f88cccda327e0
 process_results_scdd|function|ee9090f0c71b74fc
-simulate_data|function|d47c22e794a7e00f
+simulate_data|function|fdc9f667aeaa6978
 aggregate_wrapper|function|b6e6cc4f78c19783
-simulate_testis_data|function|13aaf3512d33ab11
 process_results_pb|function|c22ac7c232e99a7e
 target_analysis_node2|function|3f685c65c23c642b
-.Random.seed|object|7ea7cd3fb27c207e
+.Random.seed|object|421c35195e0d6ee3
 process_results_mm|function|3ee8aa4ecd63e839
-prep_data|function|b60cea41d006a7e0
+prep_data|function|5ef2971717294b14
 apply_scdd|function|9f77664c0e085fe1
 aggregate_assay|function|36463381eb897e7f
-apply_limma_trend|function|2a2d559845500c39
-apply_limma_voom|function|7557b518dbc6278a
-apply_DESeq2|function|fd8482615f70e145
-apply_edgeR|function|1bfb1aba8704a291
+apply_limma_trend|function|7b34fe2b1a0d98e6
+apply_limma_voom|function|32a01597c134c23d
+apply_DESeq2|function|0c527be30d0beb34
+apply_edgeR|function|aae898dd8c39e1b4
 target_analysis_node1|function|fca860ceb94c63a6
 apply_MM_nbinom|function|d41fc7bb99c9dfcf
 apply_MM_dream2|function|2e2399d4f874d12d
 apply_MM_vst|function|6bf6d9b9d50f5176
 target_analysis_base|function|b44425ae1a6e5fa4
-simLPS_NC400_dp10_cpm_Sum|stem|e28bd7b568852c51|073200b7f474e4ef|fc1d1a14885520ab|444346295||t20234.416619113s|s44330288b|44330288|rds|local|vector|||2.629||
-simLPS_NC400_dp10_counts_Sum|stem|f147654a105a2c22|a17c812473a922ab|fc1d1a14885520ab|-1621306561||t20234.416743315s|s43955508b|43955508|rds|local|vector|||0.263||
-simLPS_NC400_dp10_vstresiduals_Mean|stem|bd5a68bca83c6a33|2cfb91640cec7a68|fc1d1a14885520ab|-984696931||t20234.4178557505s|s44327395b|44327395|rds|local|vector|||86.428|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
-simLPS_NC400_dp10_logcounts_None|stem|ea9342e5cda30b05|7a1f60ba21c3d36b|fc1d1a14885520ab|-31076333||t20234.4180049989s|s50023844b|50023844|rds|local|vector|||1.682||
-simLPS_NC400_dp10_logcounts_Mean|stem|e74e8d1230a88599|029a73eeaf960607|fc1d1a14885520ab|35148498||t20234.4181370018s|s44326682b|44326682|rds|local|vector|||1.883||
-simLPS_NC400_dp10_counts_None|stem|a534c12e529f7bd4|e369811955a01a23|fc1d1a14885520ab|1965970331||t20234.418269294s|s49308780b|49308780|rds|local|vector|||0.013||
-simLPS_NC400_dm10_counts_None|stem|e9c7ee5b02138303|13e70e41e82004a3|1c76a3c4ea8fc8f6|-1019426141||t20234.4184118641s|s49333976b|49333976|rds|local|vector|||0.012||
-simLPS_NC400_dm10_counts_Sum|stem|8189b538b5fa0192|0a9204f3bb2f5e22|1c76a3c4ea8fc8f6|-1080038188||t20234.4185252443s|s43954717b|43954717|rds|local|vector|||0.239||
-simLPS_NC400_dm10_vstresiduals_Mean|stem|d69cf5d9de5db926|8125226c979e1195|1c76a3c4ea8fc8f6|-612909714||t20234.4196253998s|s44325703b|44325703|rds|local|vector|||85.528|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
-simLPS_NC400_dm10_cpm_Sum|stem|68150f885ae67258|b6f12289dd979a00|1c76a3c4ea8fc8f6|74110203||t20234.4197541619s|s44330994b|44330994|rds|local|vector|||1.654||
-simLPS_NC400_dm10_logcounts_None|stem|a1dcc8b6838bc1da|92c07d35a2d0adcc|1c76a3c4ea8fc8f6|-1499378397||t20234.4199056441s|s50077843b|50077843|rds|local|vector|||1.762||
-simLPS_NC400_dm10_logcounts_Mean|stem|cb868f5d5ae66eb0|ce19207870c23f12|1c76a3c4ea8fc8f6|-61343806||t20234.4200395799s|s44327223b|44327223|rds|local|vector|||1.974||
-simLPS_NC400_de10_logcounts_None|stem|9eeffab84446c463|6bef623cc75864ff|aa0ed0ed81e95d6d|-667112519||t20234.4201875783s|s50415992b|50415992|rds|local|vector|||1.677||
-simLPS_NC400_de10_counts_Sum|stem|494f9314a7afbe81|ba7ad50a576613ac|aa0ed0ed81e95d6d|1756420502||t20234.4202998589s|s43956237b|43956237|rds|local|vector|||0.272||
-simLPS_NC400_de10_cpm_Sum|stem|e9dc92d89fe2ff1d|5e661c48bc923b1c|aa0ed0ed81e95d6d|1641651496||t20234.4204187136s|s44329478b|44329478|rds|local|vector|||0.873||
-simLPS_NC400_de10_logcounts_Mean|stem|ad10e092aa122175|4187a3ec8a95bcf8|aa0ed0ed81e95d6d|-128231297||t20234.4205514688s|s44326563b|44326563|rds|local|vector|||1.076||
-simLPS_NC400_de10_counts_None|stem|a81749d46ab4f28a|5f03931fb58c26d1|aa0ed0ed81e95d6d|-879955257||t20234.4206822912s|s49593641b|49593641|rds|local|vector|||0.013||
-simLPS_NC400_de10_vstresiduals_Mean|stem|f21e40da69c9467f|363cb3be108692ad|aa0ed0ed81e95d6d|515414217||t20234.4217797036s|s44326713b|44326713|rds|local|vector|||85.266|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
-simLPS_NC20_de10_vstresiduals_Mean|stem|3e80b0db2ab82e1d|813fc235f26152c6|011fcc006b5e165b|-2105799798||t20234.4219269381s|s44262221b|44262221|rds|local|vector|||3.659|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
-simLPS_NC20_de10_counts_Sum|stem|d632fcc8a1fa59b2|4af7cba4cd1a8cc9|011fcc006b5e165b|-2097990557||t20234.4220334432s|s43904369b|43904369|rds|local|vector|||0.102||
-simLPS_NC20_de10_logcounts_None|stem|951ae4b320a0e1f6|50c8a4828046cd2a|011fcc006b5e165b|-2146183091||t20234.4221405734s|s44150258b|44150258|rds|local|vector|||0.056||
-simLPS_NC20_de10_counts_None|stem|2c5471ee93559ad3|5deddcebfa5e0126|011fcc006b5e165b|-271093923||t20234.4222494859s|s44123739b|44123739|rds|local|vector|||0.013||
-simLPS_NC20_de10_logcounts_Mean|stem|d147e6f9ad8503d2|d0df34aef2eeebf0|011fcc006b5e165b|-1943092783||t20234.4223580049s|s44117807b|44117807|rds|local|vector|||0.148||
-simLPS_NC20_de10_cpm_Sum|stem|1d9ff9dfc22937ac|8da1b9687d2f3009|011fcc006b5e165b|-1930619084||t20234.4224651813s|s44115125b|44115125|rds|local|vector|||0.116||
-simLPS_NC400_db10_counts_Sum|stem|5b9ae04ca666e7b6|228e74e4f16ec1c3|06bd9966d09e9347|-673948598||t20234.4225773231s|s43957052b|43957052|rds|local|vector|||0.216||
-simLPS_NC400_db10_vstresiduals_Mean|stem|8243db6a207512a6|a79f5d1dc91cc59e|06bd9966d09e9347|-296466704||t20234.4236868537s|s44327147b|44327147|rds|local|vector|||86.45|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
-simLPS_NC400_db10_cpm_Sum|stem|ca2b40b57a1ee602|154d02c759710e7f|06bd9966d09e9347|-1473884871||t20234.4238154191s|s44329672b|44329672|rds|local|vector|||1.695||
-simLPS_NC400_db10_logcounts_Mean|stem|68da7a88f56cc8ff|4aa22e406a04ebc2|06bd9966d09e9347|1459775508||t20234.423946253s|s44326743b|44326743|rds|local|vector|||1.867||
-simLPS_NC400_db10_counts_None|stem|6999562d1040e153|09f73b697566ac85|06bd9966d09e9347|1847824698||t20234.4240771448s|s49594413b|49594413|rds|local|vector|||0.012||
-simLPS_NC400_db10_logcounts_None|stem|cb5e0dfaeca00115|3afea2a35683ded0|06bd9966d09e9347|-593071097||t20234.424223384s|s50431215b|50431215|rds|local|vector|||1.608||
-simLPS_NC100_de10_counts_Sum|stem|d6c0d04b8af5a20a|da8e9434d06e07e7|8ee5a8b8953e3421|1997622913||t20234.4243331761s|s43913955b|43913955|rds|local|vector|||0.121||
-simLPS_NC100_de10_counts_None|stem|ddd0f370d55b2ec3|fa5d797a3aa255f3|8ee5a8b8953e3421|-1917864158||t20234.4244456767s|s45298053b|45298053|rds|local|vector|||0.012||
-simLPS_NC100_de10_logcounts_Mean|stem|3196daa21bc45397|1ff665a7bc7397e6|8ee5a8b8953e3421|1578705125||t20234.4245553994s|s44279734b|44279734|rds|local|vector|||0.302||
-simLPS_NC100_de10_cpm_Sum|stem|417a100a21afd7dd|5dd2b3aa2acc1a11|8ee5a8b8953e3421|1240556727||t20234.4246642656s|s44280082b|44280082|rds|local|vector|||0.232||
-simLPS_NC100_de10_logcounts_None|stem|e278e957f6cee1d3|e274b67974533388|8ee5a8b8953e3421|-770635920||t20234.4247772638s|s45532593b|45532593|rds|local|vector|||0.202||
-simLPS_NC100_de10_vstresiduals_Mean|stem|ef390fd80bea8570|4ff672add262ab05|8ee5a8b8953e3421|-269998404||t20234.4250249155s|s44326597b|44326597|rds|local|vector|||12.063|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
-simKang_NC400_dm10_vstresiduals_Mean|stem|f36897cd47f566ae|c6043d4286523993|a537f5e7bbfa99f9|1821335645||t20234.4260157419s|s11791097b|11791097|rds|local|vector|||82.871|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
-simKang_NC400_dm10_counts_Sum|stem|4efd7982bd809946|5afb29c07852c64c|a537f5e7bbfa99f9|937096532||t20234.4260504642s|s11394613b|11394613|rds|local|vector|||0.247||
-simKang_NC400_dm10_counts_None|stem|d923c2cf71388877|5b4cda84cb3c38e5|a537f5e7bbfa99f9|153915037||t20234.4261012631s|s16436717b|16436717|rds|local|vector|||0.012||
-simKang_NC400_dm10_logcounts_Mean|stem|86a0db4b55121941|a0363746bfad8794|a537f5e7bbfa99f9|-1717188481||t20234.4261453721s|s11767169b|11767169|rds|local|vector|||1.074||
-simKang_NC400_dm10_cpm_Sum|stem|948614425a3b0a58|21fc13f0d30d748e|a537f5e7bbfa99f9|1087854392||t20234.4261950135s|s11769195b|11769195|rds|local|vector|||0.753||
-simKang_NC400_dm10_logcounts_None|stem|deb03296bf025011|5878779551fe1df9|a537f5e7bbfa99f9|896886246||t20234.4262526295s|s17519948b|17519948|rds|local|vector|||0.822||
-simKang_NC100_de10_logcounts_Mean|stem|e7f8b69fb0a4df07|2d8ab979264272c9|96395d7e664ac462|-268772988||t20234.4262846667s|s11706713b|11706713|rds|local|vector|||0.318||
-simKang_NC100_de10_cpm_Sum|stem|89f2c1f4e9b78b2b|ea881e2823fb2bd4|96395d7e664ac462|-981174087||t20234.4263157896s|s11705766b|11705766|rds|local|vector|||0.238||
-simKang_NC100_de10_logcounts_None|stem|b057725ed8a34612|84b99c1eff63bc4e|96395d7e664ac462|-1959892183||t20234.4263515883s|s12879765b|12879765|rds|local|vector|||0.194||
-simKang_NC100_de10_counts_Sum|stem|b6f23512071a825c|407dabd171b69591|96395d7e664ac462|-138110466||t20234.4263819125s|s11370236b|11370236|rds|local|vector|||0.12||
-simKang_NC100_de10_counts_None|stem|3a56a09d3b5b2456|533e6560a1337b3d|96395d7e664ac462|1905193813||t20234.4264151187s|s12593601b|12593601|rds|local|vector|||0.012||
-simKang_NC100_de10_vstresiduals_Mean|stem|cd25ba55e50304e3|20ff149cca8c357c|96395d7e664ac462|891729203||t20234.4265724343s|s11770934b|11770934|rds|local|vector|||11.128|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
-simKang_NC400_de10_counts_Sum|stem|defd924070f3ec9c|06f1354109160c60|dd24dc623d5cd5de|24323832||t20234.4266062307s|s11394717b|11394717|rds|local|vector|||0.196||
-simKang_NC400_de10_vstresiduals_Mean|stem|041f99b98dad709b|08ab15b9ce57b7be|dd24dc623d5cd5de|1966659944||t20234.4275949159s|s11791036b|11791036|rds|local|vector|||82.715|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
-simKang_NC400_de10_cpm_Sum|stem|5c6831082685f244|081f69e4d1a48a28|dd24dc623d5cd5de|1329559040||t20234.4276450435s|s11769649b|11769649|rds|local|vector|||1.606||
-simKang_NC400_de10_logcounts_None|stem|2de5d180767bd364|92ed04669f53db04|dd24dc623d5cd5de|-1598295757||t20234.4277039789s|s17777052b|17777052|rds|local|vector|||0.862||
-simKang_NC400_de10_logcounts_Mean|stem|262e9577368737d4|900c0ed4a1222e6b|dd24dc623d5cd5de|1892015651||t20234.4277567801s|s11767825b|11767825|rds|local|vector|||1.031||
-simKang_NC400_de10_counts_None|stem|9978826abd5fcf27|09f12a1d320d5f05|dd24dc623d5cd5de|-668488109||t20234.4278077757s|s16618448b|16618448|rds|local|vector|||0.012||
-simKang_NC400_dp10_counts_Sum|stem|d66ea77248a027fc|f813a98a237bf0aa|7510b272a87e3e64|1593427630||t20234.4278421277s|s11394396b|11394396|rds|local|vector|||0.231||
-simKang_NC400_dp10_counts_None|stem|8529095595cd06b8|cb80b0b1f8e070aa|7510b272a87e3e64|1020274833||t20234.4278935168s|s16393419b|16393419|rds|local|vector|||0.012||
-simKang_NC400_dp10_logcounts_None|stem|7a33ccff672ae8b1|13b9293b0f49767b|7510b272a87e3e64|-1639052313||t20234.4279518736s|s17490629b|17490629|rds|local|vector|||0.855||
-simKang_NC400_dp10_logcounts_Mean|stem|685da3b7a0005145|e9ad0fc525b55a54|7510b272a87e3e64|1568430137||t20234.4279959942s|s11765357b|11765357|rds|local|vector|||1.049||
-simKang_NC400_dp10_vstresiduals_Mean|stem|30c837b6c46dabcf|e8d1e41448841f22|7510b272a87e3e64|1030757323||t20234.4290077813s|s11790585b|11790585|rds|local|vector|||84.649|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
-simKang_NC400_dp10_cpm_Sum|stem|c27037a3adb6b350|2042cf864f868eb5|7510b272a87e3e64|-1464271517||t20234.4290600385s|s11767252b|11767252|rds|local|vector|||1.769||
-simKang_NC400_db10_logcounts_Mean|stem|3cf9f8626705b729|e5026a5a1221d7fe|41e13696bdb953b0|1330147668||t20234.4291131175s|s11768060b|11768060|rds|local|vector|||1.875||
-simKang_NC400_db10_counts_None|stem|ffd8f50bd1344f76|bde774be3bcf5ead|41e13696bdb953b0|883582998||t20234.4291645992s|s16556435b|16556435|rds|local|vector|||0.012||
-simKang_NC400_db10_counts_Sum|stem|dd80618ffcc29b7b|97574af57fdd9a41|41e13696bdb953b0|-369174006||t20234.4291983841s|s11395084b|11395084|rds|local|vector|||0.205||
-simKang_NC400_db10_vstresiduals_Mean|stem|cdbf03640a236a7e|024fe341e77067d7|41e13696bdb953b0|1646148855||t20234.4301875554s|s11791428b|11791428|rds|local|vector|||82.727|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
-simKang_NC400_db10_logcounts_None|stem|d51c372f76ef0eea|fcb7ce9b36e362c4|41e13696bdb953b0|1657347343||t20234.4302559006s|s17625387b|17625387|rds|local|vector|||1.717||
-simKang_NC400_db10_cpm_Sum|stem|6357061cbff8a1e2|3b2df7bc26f4b7fc|41e13696bdb953b0|-296806830||t20234.4303059935s|s11770054b|11770054|rds|local|vector|||1.611||
-simKang_NC20_de10_counts_Sum|stem|809e4b9737fc1830|c043318e6dc7fc31|de0b80570f0c59ed|-2063234685||t20234.4303346394s|s11344181b|11344181|rds|local|vector|||0.104||
-simKang_NC20_de10_logcounts_None|stem|0c2224f1fa8c59f9|46f078bd08e028d8|de0b80570f0c59ed|644259505||t20234.4303633896s|s11635112b|11635112|rds|local|vector|||0.059||
-simKang_NC20_de10_counts_None|stem|357296955ac2511e|3ee3850fe28456b9|de0b80570f0c59ed|1412168502||t20234.4303934013s|s11572001b|11572001|rds|local|vector|||0.012||
-simKang_NC20_de10_cpm_Sum|stem|285050874dead4e1|d20261e585a6804b|de0b80570f0c59ed|1490762017||t20234.4304227417s|s11527175b|11527175|rds|local|vector|||0.123||
-simKang_NC20_de10_logcounts_Mean|stem|22c7758c2f055dd9|ecae87057dc9c6d2|de0b80570f0c59ed|-493968063||t20234.4304522673s|s11528156b|11528156|rds|local|vector|||0.165||
-simKang_NC20_de10_vstresiduals_Mean|stem|c06d9aed13eb634f|24868133b8591600|de0b80570f0c59ed|-281811229||t20234.4305192468s|s11694523b|11694523|rds|local|vector|||3.408|The 'show_progress' argument is deprecated as of v0.3. Use 'verbosity' instead. (in sctransform::vst)|
+simKang_NC400_dp10_counts_Sum_limmaVoom|stem|e51c67000b5cfb16|6233a9cdd70424f8|120e93e482db08cc|-277511159||t20235.7960223877s|s1009091b|1009091|rds|local|vector|||5.862||
+simKang_NC400_dp10_counts_Sum_edgeR|stem|e74b537f0fe4e878|cb4095f1f8f18563|6c5a1bbc27bdfa71|1167371456||t20235.7960845639s|s886702b|886702|rds|local|vector|||5.024||
+simKang_NC400_dp10_vstresiduals_Mean_limmaTrend|stem|0330c23fe70cb1af|abfe9d69632364b6|a6cd2d297011ab30|-727772076||t20235.7961438118s|s1029851b|1029851|rds|local|vector|||4.767||
+simKang_NC400_dp10_logcounts_Mean_limmaTrend|stem|e4212ddc69cb59b7|7ce9dbfc07a2b754|0f28a7967b07fa3e|-12897110||t20235.796185386s|s1014078b|1014078|rds|local|vector|||3.271||
+simKang_NC400_dp10_cpm_Sum_edgeR|stem|ff2ab74bf67fd52a|f97597d1744c12a9|b309602d6e3d49ff|-142958633||t20235.79625284s|s884728b|884728|rds|local|vector|||5.529||
+simKang_NC400_dm10_counts_Sum_edgeR|stem|669e30fb10d9ee53|f2d72128dfbd8eb9|c211fbab1d2b9055|566979298||t20235.7963209305s|s895057b|895057|rds|local|vector|||5.544||
+simKang_NC400_dm10_counts_Sum_limmaVoom|stem|aa3e44d345a11f0b|366063fc39f6b6b6|60e4496be29a19e5|646735024||t20235.7963636853s|s1019559b|1019559|rds|local|vector|||3.384||
+simKang_NC400_dm10_vstresiduals_Mean_limmaTrend|stem|c5d1cdfded030863|8d06e90cfa4f25ad|dbb54ef477a56f62|-523705108||t20235.7964133615s|s1034288b|1034288|rds|local|vector|||3.984||
+simKang_NC400_dm10_logcounts_Mean_limmaTrend|stem|a4ca5d15dfaa5dff|fecf9daefbe9e1eb|19ed29ca85015695|-775596413||t20235.7964633964s|s1025598b|1025598|rds|local|vector|||3.99||
+simKang_NC400_dm10_cpm_Sum_edgeR|stem|418345f02e03d7fc|7a8ca635bc84a2c2|3b8ac10f00616c0a|-1420316759||t20235.7965228758s|s891386b|891386|rds|local|vector|||4.832||
+simKang_NC400_db10_counts_Sum_DESeq2|stem|329ff8270aea63a4|e47dee71398c1b7f|4e3a6125222d67a8|-1563262058||t20235.7966635707s|s968622b|968622|rds|local|vector|||11.848||
+simKang_NC400_db10_counts_Sum_limmaVoom|stem|efc5108cef734f9b|ce7df9f50c5392b0|3b76b8ef0d0cc24c|-72399504||t20235.7967221126s|s962053b|962053|rds|local|vector|||4.719||
+simKang_NC400_db10_counts_Sum_edgeR|stem|4a14f56fe55a3a00|e926b3a4460322c2|6274ae31643ad0e8|649019509||t20235.796782055s|s852264b|852264|rds|local|vector|||4.852||
+simKang_NC400_db10_logcounts_Mean_limmaTrend|stem|1e209bd1bbc77cee|fb8afac22b6c8103|ff5f7e7c83a53390|-2058842668||t20235.7968316732s|s975372b|975372|rds|local|vector|||3.987||
+simKang_NC400_db10_cpm_Sum_edgeR|stem|df65eaf7a6b592df|a314c72a8e54692e|8791de5af081fa7b|1576643958||t20235.7968999721s|s857565b|857565|rds|local|vector|||5.588||
+simKang_NC400_db10_vstresiduals_Mean_limmaTrend|stem|d9c0e9f1e81c8b9d|53b27ff77b99ac95|1a2a42c7bfd45b00|207173683||t20235.7969418126s|s984463b|984463|rds|local|vector|||3.319||
+simKang_NC100_de10_vstresiduals_Mean_limmaTrend|stem|30c5c68d5bbe5e0d|eeb3826d981d453c|090d068f9f8052d0|940762418||t20235.7969937456s|s1091218b|1091218|rds|local|vector|||4.164||
+simKang_NC100_de10_counts_Sum_edgeR|stem|c16b619de61a13f7|01ff45f1a1788656|ab752231ca393cd2|89506942||t20235.7970642667s|s896026b|896026|rds|local|vector|||5.797||
+simKang_NC100_de10_counts_Sum_DESeq2|stem|4906154f801170d9|0c0cd503e0142694|f24b1a4ddfa2a938|669065920||t20235.7972021376s|s931297b|931297|rds|local|vector|||11.618||
+simKang_NC100_de10_counts_Sum_limmaVoom|stem|8ee37d0200d188c9|358c01b51aa9d3e9|c0af8658adee8349|-741766963||t20235.7972472188s|s973727b|973727|rds|local|vector|||3.604||
+simKang_NC100_de10_logcounts_Mean_limmaTrend|stem|813bb51294b91538|810db8a9b4f3e31f|47afffdd22fd5dc6|2083562371||t20235.7973094297s|s1071469b|1071469|rds|local|vector|||5.038||
+simKang_NC100_de10_cpm_Sum_edgeR|stem|afcec2f95d702cc6|4f1ca60515fe0f2a|e48b6ce0a3218d39|1176456680||t20235.7973715017s|s944654b|944654|rds|local|vector|||5.056||
+simKang_NC20_de10_logcounts_Mean_limmaTrend|stem|0126ba4bf7908b5b|10df0123afaf29c7|8302f882a25fe869|-1601962946||t20235.7974223931s|s1016816b|1016816|rds|local|vector|||4.085||
+simKang_NC20_de10_counts_Sum_DESeq2|stem|17b9ddfa99f7346d|2988f22ce3075aca|ef49e318daac7932|-1783329495||t20235.7975610858s|s760002b|760002|rds|local|vector|||11.693||
+simKang_NC20_de10_counts_Sum_limmaVoom|stem|14ecd600a9ed2685|63ac4b14d6b76ea4|98e50556c57275a4|-406229335||t20235.7976040837s|s797194b|797194|rds|local|vector|||3.411||
+simKang_NC20_de10_counts_Sum_edgeR|stem|aac728fa4d304ea3|3faf884f8ef80cba|fa3e3ec6a3ac1ace|-518837036||t20235.7976697089s|s746948b|746948|rds|local|vector|||5.3||
+simKang_NC20_de10_vstresiduals_Mean_limmaTrend|stem|f6ba98f99b7de0e3|d88095250fc78c59|11771a1ba9193d60|1846264962||t20235.7977212485s|s1051844b|1051844|rds|local|vector|||4.153||
+simKang_NC20_de10_cpm_Sum_edgeR|stem|19a9b5f83809aabe|1ec703b171c41e55|b0823aa3edcb8caf|-44529424||t20235.7977811677s|s875344b|875344|rds|local|vector|||4.859||
+simKang_NC400_de10_counts_Sum_DESeq2|stem|a17cdbe332aa9b6d|d7ba76f581a9b948|6a77dd966353ceb8|1637114089||t20235.7979166775s|s995314b|995314|rds|local|vector|||11.366||
+simKang_NC400_de10_counts_Sum_edgeR|stem|8a6292f820a784ed|8f896e26dc1dc5d5|d7f838b5c10e50f0|-404520811||t20235.7979843861s|s907423b|907423|rds|local|vector|||5.546||
+simKang_NC400_de10_counts_Sum_limmaVoom|stem|41b915db87745da0|a7fc4cec70c6d5bd|c6bd792f819996e4|-657224780||t20235.7980268862s|s1032009b|1032009|rds|local|vector|||3.37||
+simKang_NC400_de10_cpm_Sum_edgeR|stem|c987f75dc0bdb588|ad5e6c8baa804a92|06ad5454c37ae19f|753025310||t20235.798093912s|s900500b|900500|rds|local|vector|||5.491||
+simKang_NC400_de10_logcounts_Mean_limmaTrend|stem|154d966edd136bde|57f4623dc2db6bbd|52e62a3fd783d19f|560689744||t20235.798144896s|s1047460b|1047460|rds|local|vector|||4.098||
+simKang_NC400_de10_vstresiduals_Mean_limmaTrend|stem|14c50ef9e91b0197|385d948d14da5d36|6e33417d5c04ea8d|-1326347655||t20235.7981868174s|s1059920b|1059920|rds|local|vector|||3.301||
+simLPS_NC400_de10_logcounts_Mean_limmaTrend|stem|196935de39b3f6c8|66a2abb8ac8193e2|4276fcc20eb69c15|-1036493298||t20235.7982523385s|s1045160b|1045160|rds|local|vector|||3.958||
+simLPS_NC400_de10_vstresiduals_Mean_limmaTrend|stem|cf769bd48b2f0576|f9a75e42bbbe256f|d5dd77323649ea17|-816003410||t20235.7983126513s|s1046407b|1046407|rds|local|vector|||3.499||
+simLPS_NC400_de10_counts_Sum_DESeq2|stem|66f73bd976118a7b|79af214cbe011b1d|e5b8ae41734021c2|-1165611097||t20235.79845308s|s1040260b|1040260|rds|local|vector|||10.477||
+simLPS_NC400_de10_counts_Sum_limmaVoom|stem|982d32daf90345b0|fd17b91d753700a6|f8a901d1b6b52126|-658636833||t20235.7985103488s|s1056504b|1056504|rds|local|vector|||3.244||
+simLPS_NC400_de10_counts_Sum_edgeR|stem|c2520f5b068334a5|23127e51d62029eb|5f085fc3e0754707|478299274||t20235.7985950598s|s927399b|927399|rds|local|vector|||5.623||
+simLPS_NC400_de10_cpm_Sum_edgeR|stem|ecd20b1c657fe2d7|5cee221c1ef860db|77cf747c303849a0|-238472909||t20235.7986693078s|s926070b|926070|rds|local|vector|||5.615||
+simLPS_NC100_de10_vstresiduals_Mean_limmaTrend|stem|592b5cba456a60a4|45d80b21d3d3e5c6|b36a457a233df01c|1543521857||t20235.7987240881s|s1091857b|1091857|rds|local|vector|||3.936||
+simLPS_NC100_de10_counts_Sum_DESeq2|stem|cd39592c23cc5f5e|9c51bf43cd26f89c|220280302c627901|1607544014||t20235.7988659405s|s1002636b|1002636|rds|local|vector|||11.444||
+simLPS_NC100_de10_counts_Sum_limmaVoom|stem|57edc065d21d2cd9|96c0081be66ffa96|945c32391c30f4c0|-1468839031||t20235.7989282787s|s1033144b|1033144|rds|local|vector|||4.597||
+simLPS_NC100_de10_counts_Sum_edgeR|stem|6c7c08f438b3637c|2c52f359852c34d9|375be6f1c44e9277|1721466667||t20235.7990021679s|s932695b|932695|rds|local|vector|||5.499||
+simLPS_NC100_de10_cpm_Sum_edgeR|stem|8d1b9bcb25f79442|0dfba52e5bc1f085|fb8a886cafa587ca|-1255062173||t20235.7990818557s|s935720b|935720|rds|local|vector|||6.043||
+simLPS_NC100_de10_logcounts_Mean_limmaTrend|stem|9a6f53fddaa75f96|41e507ec909256a2|15cce5c249ca28d5|-2067728355||t20235.7991451893s|s1065246b|1065246|rds|local|vector|||4.672||
+simLPS_NC400_dm10_cpm_Sum_edgeR|stem|52050fcb40d9b6ab|7de8abaa7644b77e|173565fa96e405c3|968605434||t20235.7992184766s|s916662b|916662|rds|local|vector|||5.546||
+simLPS_NC400_dm10_vstresiduals_Mean_limmaTrend|stem|6b402a914a40fcca|2e956a7a85d3f101|35550aa502614d02|-865816964||t20235.7992739745s|s1037063b|1037063|rds|local|vector|||3.996||
+simLPS_NC400_dm10_counts_Sum_limmaVoom|stem|3f880a97579a08e1|e880c98080f2cf99|d15284e084611718|851319608||t20235.7993303521s|s1043896b|1043896|rds|local|vector|||4.085||
+simLPS_NC400_dm10_counts_Sum_DESeq2|stem|87bf1d148e43e689|9589632fdde0f403|6a7e0ef7b0f4d369|884755181||t20235.7994697392s|s1032549b|1032549|rds|local|vector|||11.201||
+simLPS_NC400_dm10_counts_Sum_edgeR|stem|47cc5d0b3b465fbe|dc1983061898adb9|97f371467e5d3052|-1030960807||t20235.7995409084s|s918983b|918983|rds|local|vector|||5.279||
+simLPS_NC400_dm10_logcounts_Mean_limmaTrend|stem|f4c5072774c267f0|4e03c349ec30f4ce|1fd2e60079e958a4|-468960218||t20235.7995935013s|s1034927b|1034927|rds|local|vector|||3.747||
+simLPS_NC400_db10_cpm_Sum_edgeR|stem|0c33a113ad650503|4f247a4fe7404cfb|bcbb4168a1a661b7|-803984588||t20235.7996642654s|s891034b|891034|rds|local|vector|||5.349||
+simLPS_NC400_db10_logcounts_Mean_limmaTrend|stem|89c51a8835c63871|f77096d2dcba1fb6|6e2e829a3aeb818f|172044508||t20235.7997247286s|s1010164b|1010164|rds|local|vector|||3.661||
+simLPS_NC400_db10_counts_Sum_edgeR|stem|15ffc6c781fe0466|8d95681d89173c55|b4c9d0b0e3dee47f|392228288||t20235.7997984442s|s889406b|889406|rds|local|vector|||5.58||
+simLPS_NC400_db10_counts_Sum_limmaVoom|stem|3b62c0a6307283fb|011d60f80fd16678|011f9c3bf068ba7d|-2129732522||t20235.799859625s|s1000404b|1000404|rds|local|vector|||4.515||
+simLPS_NC400_db10_counts_Sum_DESeq2|stem|5abb6c96685120f4|380b8087190312f6|d7eec3614093fe3e|1868561892||t20235.8000043015s|s1010374b|1010374|rds|local|vector|||11.733||
+simLPS_NC400_db10_vstresiduals_Mean_limmaTrend|stem|649b1db93eabe7a3|8bf7a19c7673d562|a21c06a247cb7767|1340407315||t20235.8000624383s|s1011400b|1011400|rds|local|vector|||4.188||
+simLPS_NC20_de10_counts_Sum_DESeq2|stem|83a62696642e583e|ce9abf8ccb1c31ec|9659c560f9d4472e|496230518||t20235.800201293s|s821935b|821935|rds|local|vector|||11.23||
+simLPS_NC20_de10_counts_Sum_limmaVoom|stem|b0c607ce82e2eb5a|e45b29fa328086ef|60c23ba67232566b|-496725405||t20235.8002554021s|s868267b|868267|rds|local|vector|||3.849||
+simLPS_NC20_de10_counts_Sum_edgeR|stem|2b06a188a947cca2|f05b84025fe404be|9c2812df3aa981e6|-1590301781||t20235.8003231338s|s810260b|810260|rds|local|vector|||5.057||
+simLPS_NC20_de10_logcounts_Mean_limmaTrend|stem|a63a75b68ee2d5ac|b51cca8fdf3abb99|2d88c71dc2a3d3e0|1803735411||t20235.8003754836s|s1078437b|1078437|rds|local|vector|||3.762||
+simLPS_NC20_de10_cpm_Sum_edgeR|stem|ada6fe0ed917269c|bef5bfb200a3b000|676da7f86a3c4b19|-2001067035||t20235.8004451019s|s902806b|902806|rds|local|vector|||5.223||
+simLPS_NC20_de10_vstresiduals_Mean_limmaTrend|stem|7261ee068ddf7627|dad6cb6f3f296c9f|b0351ca6aa5d6c95|-238428448||t20235.8005061554s|s1112937b|1112937|rds|local|vector|||4.515||
+simLPS_NC400_dp10_vstresiduals_Mean_limmaTrend|stem|9f3815aa6393ede6|b369900a13ea6cb0|63b4c069a6099ee8|1457336529||t20235.800559269s|s1043579b|1043579|rds|local|vector|||3.817||
+simLPS_NC400_dp10_logcounts_Mean_limmaTrend|stem|d1aa043907a4422d|3f605f14400bcd45|7797d2704a3ca959|-1884719192||t20235.8006119081s|s1034689b|1034689|rds|local|vector|||3.754||
+simLPS_NC400_dp10_cpm_Sum_edgeR|stem|77164d4cc639d055|21f8510a50477ccb|046723a36ba5e6f4|1781229730||t20235.800682464s|s913951b|913951|rds|local|vector|||5.312||
+simLPS_NC400_dp10_counts_Sum_limmaVoom|stem|8e84f38b87b6d099|c07748272893c080|ff0a7b02901eed94|259175003||t20235.8007363878s|s1039593b|1039593|rds|local|vector|||3.89||
+simLPS_NC400_dp10_counts_Sum_DESeq2|stem|ce64b5ea2f137a70|924e000e428e1a6f|79822486f2eac694|1670349868||t20235.8008732518s|s1032861b|1032861|rds|local|vector|||11.058||
+simLPS_NC400_dp10_counts_Sum_edgeR|stem|42e2efc64a9e93bf|fd8742f018700f70|5f8958a145e305a7|2022929953||t20235.8009431942s|s916876b|916876|rds|local|vector|||5.275||
+simtestis_NC400_dp10_cpm_Sum_edgeR|stem|5b0849fed34b1f38|e20a249e9daecea0|67d2fac045cce909|2093604490||t20235.8010799656s|s1287191b|1287191|rds|local|vector|||9.773||
+simtestis_NC400_dp10_counts_Sum_edgeR|stem|376a462acc12ca11|4089e93cbd476cf7|619180429eb3b0cb|-349731819||t20235.8012109036s|s1271585b|1271585|rds|local|vector|||9.302||
+simtestis_NC400_dp10_counts_Sum_limmaVoom|stem|f9fb60cd2d0d0d38|d5231ef974470d4f|67a41ff5a98a6315|364691591||t20235.80131161s|s1438430b|1438430|rds|local|vector|||6.703||
+simtestis_NC400_dp10_counts_Sum_DESeq2|stem|63700b7add8bfdc1|404a7482837f999b|0855cad52ea36115|207143356||t20235.801531391s|s1423647b|1423647|rds|local|vector|||16.985||
+simtestis_NC400_dp10_vstresiduals_Mean_limmaTrend|stem|1606ca12dbcf91c1|cdb624b9ec88b62f|35aefa3687ad5618|654890626||t20235.8016298058s|s1471140b|1471140|rds|local|vector|||6.474||
+simtestis_NC400_dp10_logcounts_Mean_limmaTrend|stem|637d347357fbc612|8e147ee5c57ce0d5|ec8ebf3f5f6cba3a|254594554||t20235.8017350724s|s1453613b|1453613|rds|local|vector|||7.008||
+simtestis_NC100_de10_logcounts_Mean_limmaTrend|stem|265685f267bf6e3e|f86bb71fa85206c5|73beb13a00e4c2a5|458187331||t20235.8018454548s|s1526286b|1526286|rds|local|vector|||7.502||
+simtestis_NC100_de10_counts_Sum_edgeR|stem|c755e7c616d9ed24|50498a950f89f857|cce84c85e980f472|1581721745||t20235.8019748998s|s1250544b|1250544|rds|local|vector|||9.183||
+simtestis_NC100_de10_counts_Sum_limmaVoom|stem|6142749d2ee368c8|ae6665be6083b43d|4cbdf4478ef0a1c2|-2136138912||t20235.8020722266s|s1381435b|1381435|rds|local|vector|||6.424||
+simtestis_NC100_de10_counts_Sum_DESeq2|stem|70d39ddc4b93793c|d5116d0644c1816b|63dc4064ecf2d532|-969048103||t20235.8022827714s|s1336019b|1336019|rds|local|vector|||16.077||
+simtestis_NC100_de10_cpm_Sum_edgeR|stem|4daa4813d98df629|323b7105b0b3c7e7|396f0cabe6eb5c0d|-556760458||t20235.8024180845s|s1324112b|1324112|rds|local|vector|||9.567||
+simtestis_NC100_de10_vstresiduals_Mean_limmaTrend|stem|63d2a99454fb73b2|711432f6b5167978|28b3885e84b6b734|1224289469||t20235.802517483s|s1617349b|1617349|rds|local|vector|||6.497||
+simtestis_NC400_dm10_counts_Sum_DESeq2|stem|df9181be2d6e4a7f|f2ac968f8bc8f7d8|e127fc018bd1996e|-1767163650||t20235.8027292895s|s1421126b|1421126|rds|local|vector|||16.241||
+simtestis_NC400_dm10_counts_Sum_edgeR|stem|b5bcfc36f6c46adb|610b21db84b45d2c|4f94ebbb93cfaa85|-699343736||t20235.8028544289s|s1270376b|1270376|rds|local|vector|||8.715||
+simtestis_NC400_dm10_counts_Sum_limmaVoom|stem|704a4fdc7bad98e8|2261efb85036d5dd|aa9ce63e08133056|1106353782||t20235.8029542788s|s1439619b|1439619|rds|local|vector|||6.586||
+simtestis_NC400_dm10_vstresiduals_Mean_limmaTrend|stem|d367038b92db2ffc|5eee7d7ec9b67aec|8b9cd249511ae706|1687070970||t20235.8030577746s|s1511839b|1511839|rds|local|vector|||6.867||
+simtestis_NC400_dm10_logcounts_Mean_limmaTrend|stem|35c0f850a230ca62|e559f72573f35002|ec1e71d797633ac5|756009945||t20235.8031712473s|s1471903b|1471903|rds|local|vector|||7.713||
+simtestis_NC400_dm10_cpm_Sum_edgeR|stem|f0845e3b3d82dbde|f861461fba630fb4|a192b8c4481abdb9|471349202||t20235.8032979608s|s1284991b|1284991|rds|local|vector|||8.89||
+simtestis_NC400_db10_counts_Sum_DESeq2|stem|77efc084f31cccb2|0c5808e03e0390b0|38cc778093b5c34f|-1035690981||t20235.803508714s|s1390440b|1390440|rds|local|vector|||16.141||
+simtestis_NC400_db10_counts_Sum_edgeR|stem|2e741c0fbe4b991b|68347f5a9e0be841|06da1bc1244fe829|632944064||t20235.8036371173s|s1219612b|1219612|rds|local|vector|||9.026||
+simtestis_NC400_db10_counts_Sum_limmaVoom|stem|d9af3775244c65f2|f6636309a1de3207|bea9b25f4cea09f7|-2112386834||t20235.8037376154s|s1373305b|1373305|rds|local|vector|||6.625||
+simtestis_NC400_db10_logcounts_Mean_limmaTrend|stem|82988f3037b169cb|bb35e21107ca459a|e2f795a79507a516|-1183035839||t20235.8038367014s|s1406877b|1406877|rds|local|vector|||6.438||
+simtestis_NC400_db10_vstresiduals_Mean_limmaTrend|stem|d9c4c04ce52b2a0c|4764f28f866511fb|290c3d1758891a10|-1536002797||t20235.8039466209s|s1435306b|1435306|rds|local|vector|||7.448||
+simtestis_NC400_db10_cpm_Sum_edgeR|stem|b9977ddc591f4e8a|559f9d6cc4d3c410|5c40437c80a9c23d|-598072455||t20235.8040823043s|s1233076b|1233076|rds|local|vector|||9.704||
+simtestis_NC20_de10_counts_Sum_DESeq2|stem|b5c36e72e946b63d|46ae6170a2409f24|9d6f73a083c9fd96|1156467052||t20235.8042871778s|s1186577b|1186577|rds|local|vector|||15.649||
+simtestis_NC20_de10_counts_Sum_limmaVoom|stem|2950b748eee76e99|c7a9cb18bfd0a4fa|975a7ba407b7fd63|-1570975844||t20235.8043850602s|s1247894b|1247894|rds|local|vector|||6.421||
+simtestis_NC20_de10_counts_Sum_edgeR|stem|a2105969125682fc|f3a3ff34359bb370|be3ddd31d8c06d37|1427576505||t20235.8045027111s|s1136238b|1136238|rds|local|vector|||8.09||
+simtestis_NC20_de10_vstresiduals_Mean_limmaTrend|stem|1c7c7108eb9136b9|33789b27bcb065fe|9dafbbf49d43e33e|-159221298||t20235.8046004662s|s1495976b|1495976|rds|local|vector|||6.393||
+simtestis_NC20_de10_logcounts_Mean_limmaTrend|stem|f81fdda1c7901fb8|c9754603f5d44bef|7c4aa3ddb0c4110f|-1542768020||t20235.8047050731s|s1387345b|1387345|rds|local|vector|||6.991||
+simtestis_NC20_de10_counts_None_MMvst|stem|59c39a373e9108a9|f3eae9897b8c2d86|1cc94feec0e649ca|-1799420394||t20235.8049341481s|s31744b|31744|rds|local|vector|||17.836||
+simtestis_NC20_de10_counts_None_MMdream2|stem|af613492a1517d3a|a06334123b20f7c9|fecca849eecb23e4|-1567741947||t20235.8054173214s|s32645b|32645|rds|local|vector|||39.74||
+simtestis_NC20_de10_cpm_Sum_edgeR|stem|a183c3d5e7a2f0c8|6748fc8661d19bcd|371091a8e08cf2a1|-2128547897||t20235.8055386761s|s1241583b|1241583|rds|local|vector|||8.403||
+simtestis_NC20_de10_logcounts_None_scDD|stem|b61c06efdc2f795b|5afec4c37f51ffd0|c2457a6818e7d70c|-2018178082||t20235.8056702391s|s853879b|853879|rds|local|vector|||9.308||
+simtestis_NC400_de10_logcounts_Mean_limmaTrend|stem|0203ad8b47be9a99|ab2fc231a9d73cb0|80eac526c87cc57d|1397541371||t20235.8057673808s|s1476786b|1476786|rds|local|vector|||6.354||
+simtestis_NC400_de10_counts_None_MMdream2|stem|46364ae714bec2a3|ef8e885baae42a06|2123632cd1c33ccb|1374174711||t20235.828427487s|s1127643b|1127643|rds|local|vector|||1955.423||
+simtestis_NC400_de10_counts_None_MMvst|stem|f20e8b208f5e2c32|19c1a8ee0eb2cf55|7ebf60f04e9dfcf8|1115537962||t20235.8370099205s|s1234626b|1234626|rds|local|vector|||739.93||
+simtestis_NC400_de10_counts_Sum_limmaVoom|stem|0cb045118175549e|ea14283e6ac8232e|a98440b4c44e63a0|-333918329||t20235.8371111015s|s1452154b|1452154|rds|local|vector|||7.537||
+simtestis_NC400_de10_counts_Sum_DESeq2|stem|2f5e0a36c484b202|2e986a2736ca50cf|8481ba523b1a9dbc|-819204538||t20235.8373125608s|s1430638b|1430638|rds|local|vector|||16.164||
+simtestis_NC400_de10_counts_Sum_edgeR|stem|644e14f5adf4654c|bbf0aa9ddd96f111|c97935d9f9de6495|-1800864406||t20235.8374450267s|s1284142b|1284142|rds|local|vector|||10.263||
+simtestis_NC400_de10_vstresiduals_Mean_limmaTrend|stem|702241c971cf81de|c4fdead751300e48|69ba99faa8ca749b|-1107381076||t20235.8375310571s|s1493565b|1493565|rds|local|vector|||6.252||
+simtestis_NC400_de10_logcounts_None_scDD|stem|ef2d5aa697c464c9|da21679143334694|41e10fdeee4ba0c1|1578192590||t20235.8377442989s|s1014515b|1014515|rds|local|vector|||16.869||
+simtestis_NC400_de10_cpm_Sum_edgeR|stem|b8d2e80d44914d9c|404c6d42ba0959a8|bdb0ffa759be1d1e|486331451||t20235.8378585586s|s1301096b|1301096|rds|local|vector|||8.721||

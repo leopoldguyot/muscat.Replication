@@ -67,9 +67,11 @@ simulate_data <- function(
         p_dd,
         probs) {
     set.seed(124)
-
+    paired <- FALSE
+    if(length(unique(colData(prepData)$sample_id)) <= 3)
+        paired <- TRUE
     sim <- simData(prepData,
-        paired = FALSE, lfc = 2,
+        paired = paired, lfc = 2,
         ng = nrow(prepData), nc = nc,
         ns = ns, nk = nk,
         p_dd = p_dd, probs = probs
