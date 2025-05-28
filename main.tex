@@ -77,33 +77,102 @@
 \twocolumn
 \section{Introduction}
 
-Start with generic context
-– Then zoom in: why is your approach necessary
-and relevant within this context?
-– Finish with a brief description of your method and
-what you found out
-– Read background information!
-– Brief, 1 page (font size 11, normal margins)
+Single-cell RNA sequencing (scRNA-seq) has revolutionized transcriptomics by enabling gene expression profiling at the resolution of individual cells. Unlike bulk RNA-seq, which averages expression signals across thousands or millions of cells, scRNA-seq reveals cell-to-cell heterogeneity and uncovers distinct cellular subpopulations within complex tissues. This allows to provide crucial insights in biological mechanisms.
+
+\textbf{FIND REAL EXAMPLE OF CELL HETERO IMPORTANCE}
+In many biological and clinical contexts, it is essential to account for this cellular diversity. For instance, in immunology or oncology, the presence or absence of specific cell subtypes can have significant functional and diagnostic implications. scRNA-seq offers the granularity needed to capture such variation, making it indispensable for studies where subtle but biologically meaningful differences may be masked by population averages.
+
+However, the analytical challenges of scRNA-seq data are considerable. The data are high-dimensional, sparse, and noisy due to dropout events and technical variability. Modeling gene expression at the single-cell level must account for these factors while also respecting the hierarchical structure of the data—cells nested within patients or experimental groups. Furthermore, the design of appropriate statistical models must balance sensitivity, specificity, and computational scalability.
+
+To address these challenges, a variety of statistical models have been developed. The \texttt{scDD} method \citep{scdd} models gene expression as a mixture of distributions, enabling the detection of differential expression patterns beyond mean shifts, such as changes in modality or proportion. Mixed-effect models  incorporate both fixed effects (e.g., cell subpopulation) and random effects (e.g., patient) to account for intra-patient correlations and nested data structures.
+
+The reviewed article \citep{muscat} proposes a pseudobulking approach, where cells are aggregated by the combination of cell subpopulation and patient. This results in a data structure resembling bulk RNA-seq, reducing noise. Once aggregated, well-established bulk RNA-seq methods such as \texttt{limma} \citep{limma}, \texttt{DESeq2} \citep{deseq2}, and \texttt{edgeR} \citep{edger} can be applied for differential expression analysis. This strategy leverages the robustness of bulk models while preserving important biological structure related to both cell type and biological replicates.
 
 
-- Presenting what is Single -Cell RNA seq.
+In this study, we aim to reproduce and evaluate the results presented in the reviewed paper, which investigated differential expression analysis strategies for scRNA-seq data. In that work, the authors used two real scRNA-seq datasets as the basis for simulating artificial datasets with known, controlled variations. These simulated datasets allowed for rigorous benchmarking of modeling approaches.
 
-- Explain why it is important to use SCRNAseq in some case
+The original study compared different strategies: Single-cell methods including \texttt{scDD}, and mixed-effect models and aggregation-based methods, where cells were grouped by patient and subpopulation to produce pseudobulk profiles, then analysed using established bulk RNA-seq tools such as \texttt{limma}, \texttt{DESeq2}, and \texttt{edgeR}. 
 
-- Explain the dificulty of the modelisation part
-
-- Present some models?
-
-- Description on the content of the work
+\textbf{PREVIEW OF RESULTS}
 
 \section{Methods}
-– Describe the datasets you are using
-• Both their content and where you got them
-– Describe the methods you implemented to get
-your results
-• Describe separate steps required (reproducibility!)
-• Overview figures can help.
-– 2-3 pages
+
+This project was developed using the R programming language \citep{base} and leveraged packages from the Bioconductor repository \citep{bioc}.
+
+\subsection{Datasets}
+
+To evaluate the performance of pseudobulking methods, the datasets used had to satisfy specific criteria. In particular, each dataset needed to include multiple patients and several identifiable cell subpopulations. These datasets were then used to simulate new data that mimic the original distribution patterns.
+
+\subsubsection{Kang et al. 2018}
+
+The dataset from Kang et al. \citep{kang_multiplexed_2018} consists of single-cell RNA-sequencing profiles of peripheral blood mononuclear cells (PBMCs) collected from 8 human donors. It includes both unstimulated and interferon-$\beta$–stimulated cells.
+
+The original droplet-based scRNA-seq data is publicly available via the Gene Expression Omnibus (GEO) under the accession \url{https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE96583}. It is also distributed in the \texttt{SingleCellExperiment} format \citep{sce} through the \texttt{ExperimentHub} package \citep{ExperimentHub}, using the accession code: \texttt{EH2259}.
+
+\subsubsection{Mouse LPS}
+
+The second dataset investigates transcriptomic changes in brain tissue from mice subjected to peripheral lipopolysaccharide (LPS) treatment. It includes samples from 4 vehicle-treated and 4 LPS-treated mice.
+
+This dataset was originally published alongside the reviewed paper \citep{muscat}. It is accessible via ArrayExpress (accession: E-MTAB-8192) and can also be obtained from the \texttt{ExperimentHub} package \citep{ExperimentHub} with the accession code: \texttt{EH3297}.
+
+\subsubsection{Guo et al. 2018}
+
+Guo et al. \citep{guo_adult_2018} performed single-cell RNA sequencing on approximately 6,500 testicular cells from 3 healthy adult males, using the 10x Genomics Chromium platform.
+
+This dataset was not included in the original benchmarking paper. It was added here as an independent dataset to assess the generalizability and robustness of the results obtained with other datasets. The aim is to evaluate whether similar conclusions can be drawn using a dataset with different biological context and origin.
+
+The dataset is available through the \texttt{CTdata} R package \citep{CTdata}, and can be accessed using the \texttt{testis\_sce} function.
+
+
+\subsection{Simulation Framework}
+
+\subsection{Pseudobulk Approach}
+scheme
+
+\subsection{Workflow}
+
+\textbf{ADD woRKFLOW FIGURE}
+
+Given the complexity and number of steps involved in this workflow, we used the \texttt{targets} R package \citep{targets} to automate the entire process. Each step is applied to the results produced by all preceding steps, ensuring a consistent and reproducible pipeline. In total, the workflow comprises 291 steps and results in the generation of X models.
+
+\subsubsection{Preprocessing}
+
+Each dataset underwent a standardized preprocessing procedure. To ensure that only the intended variation was present, we retained a single experimental condition per dataset. Specifically, for the Kang et al. dataset, only the control cells were kept; for the mouse LPS dataset, only vehicle-treated cells were retained; and the testis dataset included only one experimental condition.
+
+We filtered genes to retain those with more than one count in at least 10 cells. Similarly, we filtered cells to keep only those expressing at least 100 genes. Additionally, we retained only those clusters that consisted of at least 100 cells.
+
+\subsubsection{Simulation}
+
+The datasets were used to generate synthetic data according to the simulation framework described earlier. We used functions provided by the \texttt{muscat} R package \citep{muscat} to facilitate the simulation process.
+
+We simulated various scenarios using different parameter combinations. In the first set of simulations, each sample-subpopulation combination contained 400 cells. We considered four cases:
+\begin{enumerate}
+	\item 10\% of genes were altered in both proportion and modality.
+	\item 10\% of genes were altered in mean expression.
+	\item 10\% of genes were altered in modality.
+	\item 10\% of genes were altered in the proportions of low and high expression-state components.
+\end{enumerate}
+
+Additionally, we conducted a series of simulations in which 10\% of the genes were altered in mean expression, varying the number of cells per sample-subpopulation combination (20, 100, and 400 cells).
+
+\subsubsection{Processing Counts}
+
+Each simulated dataset was processed using multiple count normalization methods. These included log-transformation, residuals, counts-per-million (CPM), and unprocessed raw counts. The transformations were performed using the \texttt{calculateCPM}, \texttt{normalizeCounts}, and \texttt{computeLibraryFactors} functions from the \texttt{scuttle} R package \citep{scatter}, as well as the \texttt{vst} function from the \texttt{sctransform} R package \citep{sctrans}.
+
+\subsubsection{Pseudobulk}
+
+We applied three different pseudobulk aggregation strategies: mean aggregation, sum aggregation, and no aggregation.
+
+\subsubsection{Modelisation}
+
+We employed a variety of models for differential analysis, using the formula \texttt{\textasciitilde{} patient + cell\_subpopulation}. For non-aggregated data, we applied mixed models and the \texttt{scDD} method. The mixed models were implemented using the \texttt{lmer} function from the \texttt{lme4} package \citep{lme4}, treating the patient effect as a random effect. The \texttt{scDD} method was implemented using the \texttt{scDD} package \citep{scdd}.
+
+For aggregated (pseudobulk) data, we used established bulk RNA-seq modeling approaches, including \texttt{limma} \citep{limma}, \texttt{DESeq2} \citep{deseq2}, and \texttt{edgeR} \citep{edger}. The \texttt{limma} package was applied with either the \texttt{voom} or the \texttt{trend} method.
+
+\subsubsection{Process Results}
+
+The results were processed using the \texttt{iCOBRA} package \citep{icobra}. Differential expression tables were used to generate FDR–TPR curves at various adjusted \textit{p}-value thresholds (0.01, 0.05, 0.1, and 0.2) comparing the results between locally adjusted \textit{p}-value (at the cluster level) and globally adjusted \textit{p}-value. Additionally, UpSet plots were generated to visualize the intersections of detected gene sets across methods and ground truth. The runtime for each method, comprising both the aggregation and modeling steps, was recorded using the \texttt{targets} package \citep{targets}.
+	
 \section{Results}
 
 – Describe your results

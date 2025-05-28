@@ -85,9 +85,6 @@ simulate_data <- function(
 }
 
 prep_testis_data <- function() {
-    library(SingleCellExperiment)
-    library(CTdata)
-
     sce <- CTdata::testis_sce()
     reducedDims(sce) <- NULL # remove dimensionality reductions
     assays(sce) <- SimpleList(counts = counts(sce)) # remove slots other than counts

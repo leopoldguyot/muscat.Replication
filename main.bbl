@@ -1,8 +1,158 @@
-\begin{thebibliography}{0}
+\begin{thebibliography}{17}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Amezquita et~al.(2020)Amezquita, Lun, Becht, Carey, Carpp,
+  Geistlinger, Marini, Rue-Albrecht, Risso, Soneson, Waldron, Pages, Smith,
+  Huber, Morgan, Gottardo, and Hicks]{sce}
+R.~Amezquita, A.~Lun, E.~Becht, V.~Carey, L.~Carpp, L.~Geistlinger, F.~Marini,
+  K.~Rue-Albrecht, D.~Risso, C.~Soneson, L.~Waldron, H.~Pages, M.~Smith,
+  W.~Huber, M.~Morgan, R.~Gottardo, and S.~Hicks.
+\newblock Orchestrating single-cell analysis with bioconductor.
+\newblock \emph{Nature Methods}, 17:\penalty0 137--145, 2020.
+\newblock URL \url{https://www.nature.com/articles/s41592-019-0654-x}.
+
+\bibitem[Bates et~al.(2015)Bates, M{\"a}chler, Bolker, and Walker]{lme4}
+D.~Bates, M.~M{\"a}chler, B.~Bolker, and S.~Walker.
+\newblock Fitting linear mixed-effects models using {lme4}.
+\newblock \emph{Journal of Statistical Software}, 67\penalty0 (1):\penalty0
+  1--48, 2015.
+\newblock \doi{10.18637/jss.v067.i01}.
+
+\bibitem[Chen et~al.(2025)Chen, Chen, Lun, Baldoni, and Smyth]{edger}
+Y.~Chen, L.~Chen, A.~T.~L. Lun, P.~Baldoni, and G.~K. Smyth.
+\newblock {edgeR} v4: powerful differential analysis of sequencing data with
+  expanded functionality and improved support for small counts and larger
+  datasets.
+\newblock \emph{Nucleic Acids Research}, 53\penalty0 (2):\penalty0 gkaf018,
+  2025.
+\newblock \doi{10.1093/nar/gkaf018}.
+
+\bibitem[Choudhary and Satija(2022)]{sctrans}
+S.~Choudhary and R.~Satija.
+\newblock Comparison and evaluation of statistical error models for scrna-seq.
+\newblock \emph{Genome Biology}, 23:\penalty0 20, 2022.
+\newblock \doi{10.1186/s13059-021-02584-9}.
+\newblock URL \url{https://doi.org/10.1186/s13059-021-02584-9}.
+
+\bibitem[Crowell et~al.(2025)Crowell, Germain, Soneson, Sonrel, Gilis, Risso,
+  Clement, and Robinson]{muscat}
+H.~L. Crowell, P.-L. Germain, C.~Soneson, A.~Sonrel, J.~Gilis, D.~Risso,
+  L.~Clement, and M.~D. Robinson.
+\newblock \emph{muscat: Multi-sample multi-group scRNA-seq data analysis
+  tools}, 2025.
+\newblock URL \url{https://bioconductor.org/packages/muscat}.
+\newblock R package version 1.22.0.
+
+\bibitem[Guo et~al.(2018)Guo, Grow, Mlcochova, Maher, Lindskog, Nie, Guo,
+  Takei, Yun, Cai, Kim, Carrell, Goriely, Hotaling, and Cairns]{guo_adult_2018}
+J.~Guo, E.~J. Grow, H.~Mlcochova, G.~J. Maher, C.~Lindskog, X.~Nie, Y.~Guo,
+  Y.~Takei, J.~Yun, L.~Cai, R.~Kim, D.~T. Carrell, A.~Goriely, J.~M. Hotaling,
+  and B.~R. Cairns.
+\newblock The adult human testis transcriptional cell atlas.
+\newblock \emph{Cell Research}, 28\penalty0 (12):\penalty0 1141--1157, Dec.
+  2018.
+\newblock ISSN 1748-7838.
+\newblock \doi{10.1038/s41422-018-0099-2}.
+\newblock URL \url{https://www.nature.com/articles/s41422-018-0099-2}.
+\newblock Publisher: Nature Publishing Group.
+
+\bibitem[Huber et~al.(2015)Huber, Carey, Gentleman, Anders, Carlson, Carvalho,
+  Bravo, Davis, Gatto, Girke, Gottardo, Hahne, Hansen, Irizarry, Lawrence,
+  Love, MacDonald, Obenchain, {Ole's}, {Pag`es}, Reyes, Shannon, Smyth,
+  Tenenbaum, Waldron, and Morgan]{bioc}
+W.~Huber, V.~J. Carey, R.~Gentleman, S.~Anders, M.~Carlson, B.~S. Carvalho,
+  H.~C. Bravo, S.~Davis, L.~Gatto, T.~Girke, R.~Gottardo, F.~Hahne, K.~D.
+  Hansen, R.~A. Irizarry, M.~Lawrence, M.~I. Love, J.~MacDonald, V.~Obenchain,
+  A.~K. {Ole's}, H.~{Pag`es}, A.~Reyes, P.~Shannon, G.~K. Smyth, D.~Tenenbaum,
+  L.~Waldron, and M.~Morgan.
+\newblock {O}rchestrating high-throughput genomic analysis with {B}ioconductor.
+\newblock \emph{Nature Methods}, 12\penalty0 (2):\penalty0 115--121, 2015.
+\newblock URL
+  \url{http://www.nature.com/nmeth/journal/v12/n2/full/nmeth.3252.html}.
+
+\bibitem[Kang et~al.(2018)Kang, Subramaniam, Targ, Nguyen, Maliskova, McCarthy,
+  Wan, Wong, Byrnes, Lanata, Gate, Mostafavi, Marson, Zaitlen, Criswell, and
+  Ye]{kang_multiplexed_2018}
+H.~M. Kang, M.~Subramaniam, S.~Targ, M.~Nguyen, L.~Maliskova, E.~McCarthy,
+  E.~Wan, S.~Wong, L.~Byrnes, C.~M. Lanata, R.~E. Gate, S.~Mostafavi,
+  A.~Marson, N.~Zaitlen, L.~A. Criswell, and C.~J. Ye.
+\newblock Multiplexed droplet single-cell {RNA}-sequencing using natural
+  genetic variation.
+\newblock \emph{Nature Biotechnology}, 36\penalty0 (1):\penalty0 89--94, Jan.
+  2018.
+\newblock ISSN 1546-1696.
+\newblock \doi{10.1038/nbt.4042}.
+\newblock URL \url{https://www.nature.com/articles/nbt.4042}.
+\newblock Publisher: Nature Publishing Group.
+
+\bibitem[Korthauer et~al.(2016)Korthauer, Chu, Newton, Yuan, Thomson, Stewart,
+  and Kendziorski]{scdd}
+K.~D. Korthauer, L.-F. Chu, M.~A. Newton, L.~Yuan, J.~Thomson, R.~Stewart, and
+  C.~Kendziorski.
+\newblock A statistical approach for identifying differential distributions in
+  single-cell {RNA}-seq experiments.
+\newblock \emph{Genome Biology}, 17\penalty0 (1):\penalty0 222, 2016.
+\newblock URL
+  \url{https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1077-y}.
+
+\bibitem[Landau(2021)]{targets}
+W.~M. Landau.
+\newblock The targets r package: a dynamic make-like function-oriented pipeline
+  toolkit for reproducibility and high-performance computing.
+\newblock \emph{Journal of Open Source Software}, 6\penalty0 (57):\penalty0
+  2959, 2021.
+\newblock URL \url{https://doi.org/10.21105/joss.02959}.
+
+\bibitem[Loriot et~al.(2025)Loriot, Devis, and Gatto]{CTdata}
+A.~Loriot, J.~Devis, and L.~Gatto.
+\newblock \emph{CTdata: Data companion to CTexploreR}, 2025.
+\newblock URL \url{https://bioconductor.org/packages/CTdata}.
+\newblock R package version 1.8.0.
+
+\bibitem[Love et~al.(2014)Love, Huber, and Anders]{deseq2}
+M.~I. Love, W.~Huber, and S.~Anders.
+\newblock Moderated estimation of fold change and dispersion for rna-seq data
+  with deseq2.
+\newblock \emph{Genome Biology}, 15:\penalty0 550, 2014.
+\newblock \doi{10.1186/s13059-014-0550-8}.
+
+\bibitem[McCarthy et~al.(2017)McCarthy, Campbell, Lun, and Willis]{scatter}
+D.~J. McCarthy, K.~R. Campbell, A.~T.~L. Lun, and Q.~F. Willis.
+\newblock Scater: pre-processing, quality control, normalisation and
+  visualisation of single-cell {R}{N}{A}-seq data in {R}.
+\newblock \emph{Bioinformatics}, 33:\penalty0 1179--1186, 2017.
+\newblock \doi{10.1093/bioinformatics/btw777}.
+
+\bibitem[Morgan and Shepherd(2025)]{ExperimentHub}
+M.~Morgan and L.~Shepherd.
+\newblock \emph{ExperimentHub: Client to access ExperimentHub resources}, 2025.
+\newblock URL \url{https://bioconductor.org/packages/ExperimentHub}.
+\newblock R package version 2.16.0.
+
+\bibitem[{R Core Team}(2025)]{base}
+{R Core Team}.
+\newblock \emph{R: A Language and Environment for Statistical Computing}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria, 2025.
+\newblock URL \url{https://www.R-project.org/}.
+
+\bibitem[Ritchie et~al.(2015)Ritchie, Phipson, Wu, Hu, Law, Shi, and
+  Smyth]{limma}
+M.~E. Ritchie, B.~Phipson, D.~Wu, Y.~Hu, C.~W. Law, W.~Shi, and G.~K. Smyth.
+\newblock {limma} powers differential expression analyses for {RNA}-sequencing
+  and microarray studies.
+\newblock \emph{Nucleic Acids Research}, 43\penalty0 (7):\penalty0 e47, 2015.
+\newblock \doi{10.1093/nar/gkv007}.
+
+\bibitem[Soneson and Robinson(2016)]{icobra}
+C.~Soneson and M.~D. Robinson.
+\newblock icobra: open, reproducible, standardized and live method
+  benchmarking.
+\newblock \emph{Nature Methods}, 13\penalty0 (4):\penalty0 283, 2016.
+\newblock URL
+  \url{http://www.nature.com/nmeth/journal/v13/n4/full/nmeth.3805.html}.
 
 \end{thebibliography}
