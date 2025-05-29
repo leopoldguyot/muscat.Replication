@@ -1,4 +1,4 @@
-\begin{thebibliography}{18}
+\begin{thebibliography}{22}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -37,6 +37,14 @@ S.~Choudhary and R.~Satija.
 \newblock \emph{Genome Biology}, 23:\penalty0 20, 2022.
 \newblock \doi{10.1186/s13059-021-02584-9}.
 \newblock URL \url{https://doi.org/10.1186/s13059-021-02584-9}.
+
+\bibitem[Crowell et~al.(2020)Crowell, Soneson, Germain, Calini, Collin, Raposo,
+  Malhotra, and Robinson]{crowell2020muscat}
+H.~L. Crowell, C.~Soneson, P.-L. Germain, D.~Calini, L.~Collin, C.~Raposo,
+  D.~Malhotra, and M.~D. Robinson.
+\newblock Muscat detects subpopulation-specific state transitions from
+  multi-sample multi-condition single-cell transcriptomics data.
+\newblock \emph{Nature communications}, 11\penalty0 (1):\penalty0 6077, 2020.
 
 \bibitem[Crowell et~al.(2025)Crowell, Germain, Soneson, Sonrel, Gilis, Risso,
   Clement, and Robinson]{muscat}
@@ -142,6 +150,13 @@ M.~Morgan and L.~Shepherd.
 \newblock URL \url{https://bioconductor.org/packages/ExperimentHub}.
 \newblock R package version 2.16.0.
 
+\bibitem[Murphy and Skene(2022)]{murphy2022balanced}
+A.~E. Murphy and N.~G. Skene.
+\newblock A balanced measure shows superior performance of pseudobulk methods
+  over mixed models and pseudoreplication approaches in single-cell
+  rna-sequencing analysis.
+\newblock \emph{bioRxiv}, pages 2022--02, 2022.
+
 \bibitem[{R Core Team}(2025)]{base}
 {R Core Team}.
 \newblock \emph{R: A Language and Environment for Statistical Computing}.
@@ -163,5 +178,20 @@ C.~Soneson and M.~D. Robinson.
 \newblock \emph{Nature Methods}, 13\penalty0 (4):\penalty0 283, 2016.
 \newblock URL
   \url{http://www.nature.com/nmeth/journal/v13/n4/full/nmeth.3805.html}.
+
+\bibitem[van Galen et~al.(2019)van Galen, Hovestadt, Wadsworth~II, Hughes,
+  Griffin, Battaglia, Verga, Stephansky, Pastika, Story, et~al.]{van2019single}
+P.~van Galen, V.~Hovestadt, M.~H. Wadsworth~II, T.~K. Hughes, G.~K. Griffin,
+  S.~Battaglia, J.~A. Verga, J.~Stephansky, T.~J. Pastika, J.~L. Story, et~al.
+\newblock Single-cell rna-seq reveals aml hierarchies relevant to disease
+  progression and immunity.
+\newblock \emph{Cell}, 176\penalty0 (6):\penalty0 1265--1281, 2019.
+
+\bibitem[Zimmerman et~al.(2021)Zimmerman, Espeland, and
+  Langefeld]{zimmerman2021practical}
+K.~D. Zimmerman, M.~A. Espeland, and C.~D. Langefeld.
+\newblock A practical solution to pseudoreplication bias in single-cell
+  studies.
+\newblock \emph{Nature communications}, 12\penalty0 (1):\penalty0 738, 2021.
 
 \end{thebibliography}

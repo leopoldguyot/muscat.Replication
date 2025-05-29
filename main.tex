@@ -22,14 +22,15 @@
 
 \usepackage{url}
 
-\usepackage{natbib}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage{enumitem}
 
 %\usepackage[
 %backend=biber,
 %sorting=none
 %]{biblatex}
 \bibliographystyle{abbrvnat}
-\setcitestyle{authoryear,open={(},close={)}}
+%\setcitestyle{authoryear,open={(},close={)}}
 
 \usepackage[most]{tcolorbox}
 
@@ -88,21 +89,20 @@
 
 Single-cell RNA sequencing (scRNA-seq) has revolutionized transcriptomics by enabling gene expression profiling at the resolution of individual cells. Unlike bulk RNA-seq, which averages expression signals across thousands or millions of cells, scRNA-seq reveals cell-to-cell heterogeneity and uncovers distinct cellular subpopulations within complex tissues. This allows to provide crucial insights in biological mechanisms.
 
-\textbf{FIND REAL EXAMPLE OF CELL HETERO IMPORTANCE}
-In many biological and clinical contexts, it is essential to account for this cellular diversity. For instance, in immunology or oncology, the presence or absence of specific cell subtypes can have significant functional and diagnostic implications. scRNA-seq offers the granularity needed to capture such variation, making it indispensable for studies where subtle but biologically meaningful differences may be masked by population averages.
+In many biological and clinical contexts, it is essential to account for this cellular diversity. For instance, in immunology or oncology, the presence or absence of specific cell subtypes can have significant functional and diagnostic implications. A clear example is acute myeloid leukemia (AML), where the tumor comprises a hierarchy of subpopulations, including leukemia stem cells (LSCs) that are often resistant to treatment and responsible for relapse \citep{van2019single}. Identifying and characterizing these rare subpopulations is critical for prognosis and therapeutic targeting. scRNA-seq offers the granularity needed to capture such variation, making it indispensable for studies where subtle but biologically meaningful differences may be masked by population averages.
 
 However, the analytical challenges of scRNA-seq data are considerable. The data are high-dimensional, sparse, and noisy due to dropout events and technical variability. Modeling gene expression at the single-cell level must account for these factors while also respecting the hierarchical structure of the data—cells nested within patients or experimental groups. Furthermore, the design of appropriate statistical models must balance sensitivity, specificity, and computational scalability.
 
 To address these challenges, a variety of statistical models have been developed. The \texttt{scDD} method \citep{scdd} models gene expression as a mixture of distributions, enabling the detection of differential expression patterns beyond mean shifts, such as changes in modality or proportion. Mixed-effect models  incorporate both fixed effects (e.g., cell subpopulation) and random effects (e.g., patient) to account for intra-patient correlations and nested data structures.
 
-The reviewed article \citep{muscat} proposes a pseudobulking approach, where cells are aggregated by the combination of cell subpopulation and patient. This results in a data structure resembling bulk RNA-seq, reducing noise. Once aggregated, well-established bulk RNA-seq methods such as \texttt{limma} \citep{limma}, \texttt{DESeq2} \citep{deseq2}, and \texttt{edgeR} \citep{edger} can be applied for differential expression analysis. This strategy leverages the robustness of bulk models while preserving important biological structure related to both cell type and biological replicates.
+The reviewed article \citep{crowell2020muscat} proposes a pseudobulking approach, where cells are aggregated by the combination of cell subpopulation and patient. This results in a data structure resembling bulk RNA-seq, reducing noise. Once aggregated, well-established bulk RNA-seq methods such as \texttt{limma} \citep{limma}, \texttt{DESeq2} \citep{deseq2}, and \texttt{edgeR} \citep{edger} can be applied for differential expression analysis. This strategy leverages the robustness of bulk models while preserving important biological structure related to both cell type and biological replicates.
 
 
 In this study, we aim to reproduce and evaluate the results presented in the reviewed paper, which investigated differential expression analysis strategies for scRNA-seq data. In that work, the authors used two real scRNA-seq datasets as the basis for simulating artificial datasets with known, controlled variations. These simulated datasets allowed for rigorous benchmarking of modeling approaches.
 
 The original study compared different strategies: Single-cell methods including \texttt{scDD}, and mixed-effect models and aggregation-based methods, where cells were grouped by patient and subpopulation to produce pseudobulk profiles, then analysed using established bulk RNA-seq tools such as \texttt{limma}, \texttt{DESeq2}, and \texttt{edgeR}. 
 
-\textbf{PREVIEW OF RESULTS}
+In this review, we reproduce the benchmark of the differential expression methods using simulated and real scRNA-seq datasets, compare our findings with existing studies, and explore the literature about pseudobulking.
 
 \section{Methods}
 
@@ -122,7 +122,7 @@ The original droplet-based scRNA-seq data is publicly available via the Gene Exp
 
 The second dataset investigates transcriptomic changes in brain tissue from mice subjected to peripheral lipopolysaccharide (LPS) treatment. It includes samples from 4 vehicle-treated and 4 LPS-treated mice.
 
-This dataset was originally published alongside the reviewed paper \citep{muscat}. It is accessible via ArrayExpress (accession: E-MTAB-8192) and can also be obtained from the \texttt{ExperimentHub} package \citep{ExperimentHub} with the accession code: \texttt{EH3297}.
+This dataset was originally published alongside the reviewed paper \citep{crowell2020muscat}. It is accessible via ArrayExpress (accession: E-MTAB-8192) and can also be obtained from the \texttt{ExperimentHub} package \citep{ExperimentHub} with the accession code: \texttt{EH3297}.
 
 \subsubsection{Guo et al. 2018}
 
@@ -140,7 +140,7 @@ To systematically evaluate differential expression analysis methods, we develope
 To introduce biologically meaningful variation, genes can be designated as subpopulation specific (differential across cell types), condition specific (differential expression between treatment conditions), or non-differential (uniform expression across all variables). 
 
 The framework supports a diverse set of expression patterns based on the classification by Korthauer et al. \citep{korthauer2016statistical}:
-\begin{itemize}
+\begin{itemize}[itemsep=1pt, topsep=1pt]
 	\item \textbf{DE (Differential Expression)}: A change in the mean expression level of a gene between conditions, while the overall distribution shape remains unimodal and similar.
 	\item \textbf{DP (Differential Proportion)}: A shift in the proportions of cells in low and high expression states between conditions, without a change in the expression values themselves.
 	\item \textbf{DM (Differential Modality)}: A change in the modality of gene expression, such as shifting from a unimodal to a bimodal distribution, indicating that the underlying structure of expression changes.
@@ -165,7 +165,7 @@ To reduce the complexity of the data to be modeled, an aggregation approach can 
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.8\columnwidth]{img/workflowCut.pdf}
+	\includegraphics[width=0.7\columnwidth]{img/workflowCut.pdf}
 	\caption{{\footnotesize Scheme of the workflow generated with \texttt{targets}. The first layer is the datasets retrieval and preprocessing. The second layer is the simulation of new datasets using different parameters. The third layer is the use of different processing method and aggregation techniques on counts. The fourth layer is the modelisation of the data.}}
 	\label{fig:workflow}
 \end{figure}
@@ -183,11 +183,11 @@ We filtered genes to retain those with more than one count in at least 10 cells.
 The datasets were used to generate artificial data according to the simulation framework described earlier. We used functions provided by the \texttt{muscat} R package \citep{muscat} to facilitate the simulation process.
 
 We simulated various scenarios using different parameter combinations. In the first set of simulations, each sample-subpopulation combination contained 400 cells. We considered four cases:
-\begin{enumerate}
-	\item 10\% of genes were altered in both proportion and modality.
-	\item 10\% of genes were altered in mean expression.
-	\item 10\% of genes were altered in modality.
-	\item 10\% of genes were altered in the proportions of low and high expression-state components.
+\begin{enumerate}[itemsep=0pt, topsep=0pt]
+	\item 10\% of genes were altered in both proportion and modality (DB).
+	\item 10\% of genes were altered in mean expression (DE).
+	\item 10\% of genes were altered in modality (DM).
+	\item 10\% of genes were altered in the proportions of low and high expression-state components (DP).
 \end{enumerate}
 
 Additionally, we conducted a series of simulations in which 10\% of the genes were altered in mean expression, varying the number of cells per sample-subpopulation combination (20, 100, and 400 cells).
@@ -238,7 +238,7 @@ We assess the impact of the number of cells per patient and subpopulation on mod
 
 As expected, model performance declined when the number of cells per patient/subpopulation decreased. This effect was evident in both true positive rate (TPR) and false discovery rate (FDR), with fewer cells leading to reduced sensitivity and less stable error control.
 
-Importantly, the rate at which performance improved with increasing sample size was not uniform across methods. Notably, \textit{edgeR} and \textit{limma-trend} applied to mean-aggregated logcounts showed a steeper gain in performance between low (e.g., 20 cells) and moderate (e.g., 100 cells) cell counts compared to other methods. This suggests that these approaches are more sensitive to increases in data quantity and may be preferable in settings with moderate to high cell numbers per subpopulation. Other methods, while also benefiting from larger sample sizes, exhibited more gradual improvements, indicating differences in statistical efficiency or robustness to small sample regimes.
+Importantly, the rate at which performance improved with increasing sample size was not uniform across methods. Notably, \textit{edgeR} (whatever the counts processing method) and \textit{limma-trend} applied to mean-aggregated logcounts showed a steeper gain in performance between low (e.g., 20 cells) and moderate (e.g., 100 cells) cell counts compared to other methods. This suggests that these approaches are more sensitive to increases in data quantity and may be preferable in settings with moderate to high cell numbers per subpopulation. Other methods, while also benefiting from larger sample sizes, exhibited more gradual improvements, indicating differences in statistical efficiency or robustness to small sample regimes.
 
 \end{multicols}
 
@@ -297,21 +297,31 @@ Importantly, the rate at which performance improved with increasing sample size 
 	\caption{{\footnotesize Runtime analysis of the counts processing + aggregation and the modelisation. Time in seconds.}}
 	\label{fig:runtime}
 \end{figure}
+
+To complement our performance evaluation, we also compared the computational efficiency of the tested methods by measuring their total runtime on the Kang dataset (Fig. \ref{fig:runtime}). The results clearly show that aggregation-based pseudobulk methods are consistently the most efficient. In particular, \textit{limma-voom} applied to summed counts, \textit{limma-trend} on mean-aggregated logcounts, and \textit{edgeR} on both raw and CPM-normalized counts all completed in substantially less time than the alternative approaches. These findings highlight the scalability and practicality of pseudobulk-based workflows, especially for large single-cell datasets.
+
+While most count processing strategies had little impact on computational time, an exception was observed for the \textit{vstresiduals} used in combination with \textit{limma-trend}, which resulted in increased runtimes and poorer performance compared to other aggregation schemes. 
+
+Notably, methods based on mixed models (\textit{MMvst}) and scDD were the slowest among all those tested, often requiring several times more computational time than pseudobulk approaches. This is consistent with our earlier findings that, despite their flexibility, these methods did not yield superior performance and thus may not justify their higher computational cost in most applications.
+
+Taken together, these results support the recommendation of pseudobulk approaches not only for their accuracy but also for their computational efficiency, making them well-suited for both small- and large-scale differential state analyses in scRNA-seq studies.
+
 \section{Discussion}
 
-Difference between my setup: not replicates (too long)
-Did not tested all the methods (AD)
+Our benchmark results using the Kang and LPS datasets are in strong agreement with those reported in the reviewed paper. Across both datasets (Kang and LPS), we observed similar trends that reinforce the conclusions from the reviewed article. Notably, pseudobulk approaches consistently outperformed both mixed models (MM) and scDD in terms of true positive rate (TPR) and false discovery rate (FDR). This superior performance was especially evident in the detection of genes with differential expression (DE) and differential modality (DM), where pseudobulk methods yielded both high true positive rates (TPRs) and efficient runtime.
 
+As previously reported, we also observed that scDD exhibited poor performance across most simulated variation types, and that \textit{limma-trend} applied to VST residuals was the least performant among the pseudobulk methods tested. Additionally, our results confirmed the difficulty in detecting DB (differential both) genes, consistent with the original study. These genes, which combine modality and proportion shifts, remain particularly challenging to identify for all evaluated methods. Furthermore, we reproduced the difference between globally and locally adjusted p-values: while local adjustments led to higher sensitivity, they also resulted in inflated FDR.
 
-Which issues did you identify, and which problems
-did you encounter?
-– What is different about your approach (and the
-results you get) in comparison to the original
-method? Why?
-– What are advantages/disadvantage of each
-method?
-– 1 page
-\section{Conclusion} 
+Importantly, both our analysis and the reviewed article highlighted the critical impact of the number of cells per patient and per subpopulation on model performance. As the number of cells increased, all methods improved in accuracy, but the rate of improvement varied. We observed that methods such as \textit{edgeR} and \textit{limma-trend} (on mean-aggregated logcounts) benefitted more rapidly from increases in cell number, showing steeper performance gains between 20 and 100 cells than other models.
+
+To further test the generalizability of our conclusions, we evaluated all methods on an additional dataset derived from testis tissue. Remarkably, the results obtained from this dataset mirrored those from the Kang and LPS datasets, and by extend as those reported in the reviewed article. This consistency across datasets reinforces the robustness of our findings and supports the broader applicability of the conclusions drawn regarding method performance, computational efficiency, and sensitivity to sample size.
+
+Nevertheless, there are important differences between our setup and the one used in the reviewed article that should be acknowledged. For example, we did not replicate each method-simulation pair multiple times as they did, primarily due to computational constraints (our full benchmark already required over eight hours of runtime). Additionally, our benchmark did not cover all models or preprocessing strategies included in their study. In particular, we did not test alternative count processing methods applied to MM or scDD models, nor did we evaluate methods based on Anderson–Darling (AD) tests or MAST, which were used in the original paper.
+
+After further exploring the literature, we identified an earlier study by Zimmerman et al. \citep{zimmerman2021practical} that raised concerns regarding the use of pseudobulk methods for single-cell differential analysis. Their simulations, which accounted for intra-individual correlation structures observed in real data, suggested that while pseudobulk approaches provided good type 1 error control, they were overly conservative—leading to inflated type 2 error rates. This was attributed to the loss of information due to aggregation and imbalanced cell numbers across individuals, which disproportionately impacted statistical power. They recommended generalized linear mixed models (GLMMs) with individual-level random effects as the most effective solution for balancing type 1 and type 2 error control.
+
+However, these findings were critically re-evaluated by Murphy and Skene \citep{murphy2022balanced}, who highlighted important methodological issues in the original analysis. Notably, they pointed out that Zimmerman et al. did not control for randomness in their simulations, making direct comparisons between methods unreliable. Moreover, they emphasized the limitations of evaluating methods solely based on type 1 or type 2 error rates. By introducing the Matthews Correlation Coefficient (MCC) as a balanced performance metric and using ROC curves, Murphy and Skene demonstrated that pseudobulk approaches—particularly aggregation by averaging—outperformed all other tested methods, including GLMMs. Even in the presence of imbalanced datasets, mean-based pseudobulking maintained superior performance, challenging the earlier claims of excessive conservatism. These findings reaffirm our conclusions and those of other recent studies, strengthening the case for pseudobulk methods as a robust and computationally efficient solution for DS analysis in scRNA-seq data.
+
 
 \bibliography{references}
 \end{multicols}

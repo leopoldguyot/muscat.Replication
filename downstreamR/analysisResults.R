@@ -81,7 +81,7 @@ make_prop_plot <- function(data) {
         scale_x_continuous(
             trans = "sqrt",
             limits = c(0, 1),
-            breaks = c(0.01, 0.05, 0.2, 0.4, 0.8, 1),
+            breaks = c(0.01, 0.2, 0.6, 1),
             labels = scales::label_number()
         ) +
         scale_y_continuous(
@@ -112,7 +112,7 @@ make_size_plot <- function(data) {
         scale_x_continuous(
             trans = "sqrt",
             limits = c(0, 1),
-            breaks = c(0.01, 0.05, 0.2, 0.4, 0.8, 1),
+            breaks = c(0.01, 0.2, 0.6, 1),
             labels = scales::label_number()
         ) +
         scale_y_continuous(
