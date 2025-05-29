@@ -16,10 +16,10 @@ tar_runtime <- tar_meta(fields = c("name", "seconds")) %>%
 tar_runtime_filtered <- tar_runtime %>%
   filter(NC == "NC400",
          prop == "de10",
-         dataset == "simLPS")
+         dataset == "simKang")
 
-tar_runtime_model <- tar_runtime_filtered[2:10,]
-tar_runtime_counts <- tar_runtime_filtered[11:16,]
+tar_runtime_model <- tar_runtime_filtered[!is.na(tar_runtime_filtered$model) & tar_runtime_filtered$model != "MMdream2",]
+tar_runtime_counts <- tar_runtime_filtered[is.na(tar_runtime_filtered$model) & !is.na(tar_runtime_filtered$aggregation),]
 tar_runtime_total <- tar_runtime_model %>%
   left_join(
     tar_runtime_counts %>%
@@ -31,7 +31,7 @@ tar_runtime_total <- tar_runtime_model %>%
   unite(method, counts, aggregation, model, sep = "_", na.rm = TRUE)
 
 # View final result
-plotLPS <- tar_runtime_total %>%
+plotKang <- tar_runtime_total %>%
   select(dataset, NC, prop, method, counts_seconds, model_seconds = seconds, total_seconds) %>%
   ggplot(aes(x = reorder(method, total_seconds), y = total_seconds, fill = method)) +
   geom_col(show.legend = FALSE) +
@@ -46,4 +46,4 @@ plotLPS <- tar_runtime_total %>%
     axis.text.y = element_text(size = 10),
     plot.title = element_text(face = "bold", hjust = 0.5)
   )
-ggsave("figs/plot_runtime_lps.pdf", plotLPS)
+ggsave("figs/plot_runtime_Kang.pdf", plotKang, width = 6, height = 4)

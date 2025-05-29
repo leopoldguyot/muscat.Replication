@@ -1,4 +1,4 @@
-\begin{thebibliography}{17}
+\begin{thebibliography}{18}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -89,13 +89,22 @@ H.~M. Kang, M.~Subramaniam, S.~Targ, M.~Nguyen, L.~Maliskova, E.~McCarthy,
 \newblock URL \url{https://www.nature.com/articles/nbt.4042}.
 \newblock Publisher: Nature Publishing Group.
 
-\bibitem[Korthauer et~al.(2016)Korthauer, Chu, Newton, Yuan, Thomson, Stewart,
-  and Kendziorski]{scdd}
+\bibitem[Korthauer et~al.(2016{\natexlab{a}})Korthauer, Chu, Newton, Li,
+  Thomson, Stewart, and Kendziorski]{korthauer2016statistical}
+K.~D. Korthauer, L.-F. Chu, M.~A. Newton, Y.~Li, J.~Thomson, R.~Stewart, and
+  C.~Kendziorski.
+\newblock A statistical approach for identifying differential distributions in
+  single-cell rna-seq experiments.
+\newblock \emph{Genome biology}, 17:\penalty0 1--15, 2016{\natexlab{a}}.
+
+\bibitem[Korthauer et~al.(2016{\natexlab{b}})Korthauer, Chu, Newton, Yuan,
+  Thomson, Stewart, and Kendziorski]{scdd}
 K.~D. Korthauer, L.-F. Chu, M.~A. Newton, L.~Yuan, J.~Thomson, R.~Stewart, and
   C.~Kendziorski.
 \newblock A statistical approach for identifying differential distributions in
   single-cell {RNA}-seq experiments.
-\newblock \emph{Genome Biology}, 17\penalty0 (1):\penalty0 222, 2016.
+\newblock \emph{Genome Biology}, 17\penalty0 (1):\penalty0 222,
+  2016{\natexlab{b}}.
 \newblock URL
   \url{https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1077-y}.
 
