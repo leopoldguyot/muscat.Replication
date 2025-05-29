@@ -70,7 +70,69 @@ perf_metrics <- function(metadata, selectedData, selectedNC, selectedProps, padj
         mutate(thr = as.numeric(sub("thr", "", thr)))
     return(perf)
 }
+make_prop_plot <- function(data) {
+    ggplot(data, aes(x = FDR, y = TPR, color = method)) +
+        geom_vline(
+            xintercept = c(0.01, 0.05, 0.1),
+            linetype = "dashed", color = "grey50", linewidth = 0.3
+        ) +
+        geom_point(size = 2.5, alpha = 0.8) +
+        geom_line(size = 0.7) +
+        scale_x_continuous(
+            trans = "sqrt",
+            limits = c(0, 1),
+            breaks = c(0.01, 0.05, 0.2, 0.4, 0.8, 1),
+            labels = scales::label_number()
+        ) +
+        scale_y_continuous(
+            limits = c(0, 1),
+            breaks = seq(0, 1, 0.2)
+        ) +
+        theme_minimal() +
+        labs(
+            x = "False Discovery Rate (sqrt scale)",
+            y = "True Positive Rate",
+            color = "Method"
+        ) +
+        facet_grid(rows = vars(padjType), cols = vars(prop)) +
+        theme(
+            panel.border = element_rect(color = "black", fill = NA, size = 0.5),
+            legend.position = "bottom"
+        )
 
+}
+make_size_plot <- function(data) {
+    ggplot(data, aes(x = FDR, y = TPR, color = NC)) +
+        geom_vline(
+            xintercept = c(0.01, 0.05, 0.1),
+            linetype = "dashed", color = "grey50", linewidth = 0.3
+        ) +
+        geom_point(size = 2.5, alpha = 0.8) +
+        geom_line(size = 0.7) +
+        scale_x_continuous(
+            trans = "sqrt",
+            limits = c(0, 1),
+            breaks = c(0.01, 0.05, 0.2, 0.4, 0.8, 1),
+            labels = scales::label_number()
+        ) +
+        scale_y_continuous(
+            limits = c(0, 1),
+            breaks = seq(0, 1, 0.2)
+        ) +
+        theme_minimal() +
+        labs(
+            x = "False Discovery Rate (sqrt scale)",
+            y = "True Positive Rate",
+            color = "Method"
+        ) + facet_wrap(~method) +
+        theme(
+            panel.border = element_rect(color = "black", fill = NA, size = 0.5),
+            legend.position = "bottom"
+        )
+
+}
+
+## Process LPS results
 perfsPropLPS <- lapply(unique(metadata$props), function(prop) {
     cobDataLoc <- perf_metrics(metadata, "simLPS", "NC400", prop, TRUE) %>%
         mutate(padjType = "local",
@@ -87,6 +149,8 @@ perfsSizeLPS <- lapply(unique(metadata$NC), function(size) {
         mutate(padjType = "global",
                NC = size)
 })
+
+## Process Kang results
 
 perfsPropKang <- lapply(unique(metadata$props), function(prop) {
     cobDataLoc <- perf_metrics(metadata, "simKang", "NC400", prop, TRUE) %>%
@@ -105,6 +169,8 @@ perfsSizeKang <- lapply(unique(metadata$NC), function(size) {
                NC = size)
 })
 
+## Process testis results
+
 perfsPropTestis <- lapply(unique(metadata$props), function(prop) {
     cobDataLoc <- perf_metrics(metadata, "simtestis", "NC400", prop, TRUE) %>%
         mutate(padjType = "local",
@@ -122,6 +188,8 @@ perfsSizeTestis <- lapply(unique(metadata$NC), function(size) {
                NC = size)
 })
 
+## aggregate processed results
+
 perfsPropLPSDF <- do.call(rbind, perfsPropLPS)
 perfsSizeLPSDF <- do.call(rbind, perfsSizeLPS)
 perfsPropKangDF <- do.call(rbind, perfsPropKang)
@@ -129,182 +197,33 @@ perfsSizeKangDF <- do.call(rbind, perfsSizeKang)
 perfsPropTestisDF <- do.call(rbind, perfsPropTestis)
 perfsSizeTestisDF <- do.call(rbind, perfsSizeTestis)
 
-plot <- ggplot(perfsPropLPSDF, aes(x = FDR, y = TPR, color = method)) +
-    geom_vline(
-        xintercept = c(0.01, 0.05, 0.1),
-        linetype = "dashed", color = "grey50", linewidth = 0.3
-    ) +
-    geom_point(size = 2.5, alpha = 0.8) +
-    geom_line(size = 0.7) +
-    scale_x_continuous(
-        trans = "sqrt",
-        limits = c(0, 1),
-        breaks = c(0.01, 0.05, 0.2, 0.4, 0.8, 1),
-        labels = scales::label_number()
-    ) +
-    scale_y_continuous(
-        limits = c(0, 1),
-        breaks = seq(0, 1, 0.2)
-    ) +
-    theme_minimal() +
-    labs(
-        title = "FDR vs TPR (square root x-axis)",
-        x = "False Discovery Rate (sqrt scale)",
-        y = "True Positive Rate",
-        color = "Method"
-    ) + facet_grid(rows = vars(padjType), cols = vars(prop)) + theme(
-        panel.border = element_rect(color = "black", fill = NA, size = 0.5)
-    )
 
-ggsave("figs/fdrtpr_prop_method_LPS.pdf", plot)
+## plots LPS
+plotPropLPS <- make_prop_plot(perfsPropLPSDF)
+
+ggsave("figs/fdrtpr_prop_method_LPS.pdf", plotPropLPS, width = 9, height = 5)
+
+plotSizeLPS <- make_size_plot(perfsSizeLPSDF)
+
+ggsave("figs/fdrtpr_size_method_LPS.pdf", plotSizeLPS, width = 7, height = 5)
+
+## plots Kang
+
+plotPropKang <- make_prop_plot(perfsPropKangDF)
+
+ggsave("figs/fdrtpr_prop_method_Kang.pdf", plotPropKang, width = 9, height = 5)
+
+plotSizeKang <- make_size_plot(perfsSizeKangDF)
 
 
-plot <- ggplot(perfsSizeLPSDF, aes(x = FDR, y = TPR, color = NC)) +
-    geom_vline(
-        xintercept = c(0.01, 0.05, 0.1),
-        linetype = "dashed", color = "grey50", linewidth = 0.3
-    ) +
-    geom_point(size = 2.5, alpha = 0.8) +
-    geom_line(size = 0.7) +
-    scale_x_continuous(
-        trans = "sqrt",
-        limits = c(0, 1),
-        breaks = c(0.01, 0.05, 0.2, 0.4, 0.8, 1),
-        labels = scales::label_number()
-    ) +
-    scale_y_continuous(
-        limits = c(0, 1),
-        breaks = seq(0, 1, 0.2)
-    ) +
-    theme_minimal() +
-    labs(
-        title = "FDR vs TPR (square root x-axis)",
-        x = "False Discovery Rate (sqrt scale)",
-        y = "True Positive Rate",
-        color = "Method"
-    ) + facet_wrap(~method) +
-    theme(
-        panel.border = element_rect(color = "black", fill = NA, size = 0.5)
-    )
+ggsave("figs/fdrtpr_size_method_Kang.pdf", plotSizeKang, width = 7, height = 5)
 
-ggsave("figs/fdrtpr_size_method_LPS.pdf", plot)
+## plots testis
 
-plot <- ggplot(perfsPropKangDF, aes(x = FDR, y = TPR, color = method)) +
-    geom_vline(
-        xintercept = c(0.01, 0.05, 0.1),
-        linetype = "dashed", color = "grey50", linewidth = 0.3
-    ) +
-    geom_point(size = 2.5, alpha = 0.8) +
-    geom_line(size = 0.7) +
-    scale_x_continuous(
-        trans = "sqrt",
-        limits = c(0, 1),
-        breaks = c(0.01, 0.05, 0.2, 0.4, 0.8, 1),
-        labels = scales::label_number()
-    ) +
-    scale_y_continuous(
-        limits = c(0, 1),
-        breaks = seq(0, 1, 0.2)
-    ) +
-    theme_minimal() +
-    labs(
-        title = "FDR vs TPR (square root x-axis)",
-        x = "False Discovery Rate (sqrt scale)",
-        y = "True Positive Rate",
-        color = "Method"
-    ) + facet_grid(rows = vars(padjType), cols = vars(prop)) + theme(
-        panel.border = element_rect(color = "black", fill = NA, size = 0.5)
-    )
+plotPropTestis <- make_prop_plot(perfsPropTestisDF)
 
-ggsave("figs/fdrtpr_prop_method_Kang.pdf", plot)
+ggsave("figs/fdrtpr_prop_method_Testis.pdf", plotPropTestis, width = 9, height = 5)
 
+plotSizeTestis <- make_size_plot(perfsSizeTestisDF)
 
-plot <- ggplot(perfsSizeKangDF, aes(x = FDR, y = TPR, color = NC)) +
-    geom_vline(
-        xintercept = c(0.01, 0.05, 0.1),
-        linetype = "dashed", color = "grey50", linewidth = 0.3
-    ) +
-    geom_point(size = 2.5, alpha = 0.8) +
-    geom_line(size = 0.7) +
-    scale_x_continuous(
-        trans = "sqrt",
-        limits = c(0, 1),
-        breaks = c(0.01, 0.05, 0.2, 0.4, 0.8, 1),
-        labels = scales::label_number()
-    ) +
-    scale_y_continuous(
-        limits = c(0, 1),
-        breaks = seq(0, 1, 0.2)
-    ) +
-    theme_minimal() +
-    labs(
-        title = "FDR vs TPR (square root x-axis)",
-        x = "False Discovery Rate (sqrt scale)",
-        y = "True Positive Rate",
-        color = "Method"
-    ) + facet_wrap(~method) +
-    theme(
-        panel.border = element_rect(color = "black", fill = NA, size = 0.5)
-    )
-
-ggsave("figs/fdrtpr_size_method_Kang.pdf", plot)
-
-plot <- ggplot(perfsPropTestisDF, aes(x = FDR, y = TPR, color = method)) +
-    geom_vline(
-        xintercept = c(0.01, 0.05, 0.1),
-        linetype = "dashed", color = "grey50", linewidth = 0.3
-    ) +
-    geom_point(size = 2.5, alpha = 0.8) +
-    geom_line(size = 0.7) +
-    scale_x_continuous(
-        trans = "sqrt",
-        limits = c(0, 1),
-        breaks = c(0.01, 0.05, 0.2, 0.4, 0.8, 1),
-        labels = scales::label_number()
-    ) +
-    scale_y_continuous(
-        limits = c(0, 1),
-        breaks = seq(0, 1, 0.2)
-    ) +
-    theme_minimal() +
-    labs(
-        title = "FDR vs TPR (square root x-axis)",
-        x = "False Discovery Rate (sqrt scale)",
-        y = "True Positive Rate",
-        color = "Method"
-    ) + facet_grid(rows = vars(padjType), cols = vars(prop)) + theme(
-        panel.border = element_rect(color = "black", fill = NA, size = 0.5)
-    )
-
-ggsave("figs/fdrtpr_prop_method_testis.pdf", plot)
-
-
-plot <- ggplot(perfsSizeTestisDF, aes(x = FDR, y = TPR, color = NC)) +
-    geom_vline(
-        xintercept = c(0.01, 0.05, 0.1),
-        linetype = "dashed", color = "grey50", linewidth = 0.3
-    ) +
-    geom_point(size = 2.5, alpha = 0.8) +
-    geom_line(size = 0.7) +
-    scale_x_continuous(
-        trans = "sqrt",
-        limits = c(0, 1),
-        breaks = c(0.01, 0.05, 0.2, 0.4, 0.8, 1),
-        labels = scales::label_number()
-    ) +
-    scale_y_continuous(
-        limits = c(0, 1),
-        breaks = seq(0, 1, 0.2)
-    ) +
-    theme_minimal() +
-    labs(
-        title = "FDR vs TPR (square root x-axis)",
-        x = "False Discovery Rate (sqrt scale)",
-        y = "True Positive Rate",
-        color = "Method"
-    ) + facet_wrap(~method) +
-    theme(
-        panel.border = element_rect(color = "black", fill = NA, size = 0.5)
-    )
-
-ggsave("figs/fdrtpr_size_method_testis.pdf", plot)
+ggsave("figs/fdrtpr_size_method_Testis.pdf", plotSizeTestis, width = 7, height = 5)

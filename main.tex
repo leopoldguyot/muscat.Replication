@@ -9,6 +9,9 @@
 \usepackage{graphicx}
 
  \usepackage{floatrow}
+ 
+ \usepackage{caption}
+ \usepackage{subcaption}
 
 \usepackage[margin = 1in]{geometry}
 
@@ -37,10 +40,11 @@
 
 \usepackage{lipsum}
 
+\usepackage{multicol}
 %\addbibresource{references.bib}
 
-\title{\Large Internship report \\
-\huge Alternative PCA algorithms analysis with missing values}
+\title{\Large Methods in Bioinformatics Project \\
+\huge Review of "muscat detects subpopulation-specific state transitions from multi-sample multi-condition single-cell transcriptomics data"}
 
 
 \author{Léopold Guyot}
@@ -53,7 +57,7 @@
 \setlength{\headheight}{25.0117pt}
 \fancyhead{}\fancyfoot{}
 \fancyhead[L]{\includegraphics[width = 0.2\textwidth]{img/LOGO_Universite__libre_bruxelles.png}}
-\fancyhead[R]{Alternative PCA algorithms analysis with missing values}
+\fancyhead[R]{Methods in Bioinformatics Project}
 \fancyfoot[R]{\thepage}
 
 \onecolumn
@@ -66,15 +70,8 @@
 
 \end{tcolorbox}
 
-\begin{figure}[H]
-          \begin{minipage}{\textwidth}
-                \centering
-                \includegraphics[width = .8\linewidth]{img/LOGO_Universite__libre_bruxelles.png}
-          \end{minipage}
-\end{figure}
 
-
-\twocolumn
+\begin{multicols}{2}
 \section{Introduction}
 
 Single-cell RNA sequencing (scRNA-seq) has revolutionized transcriptomics by enabling gene expression profiling at the resolution of individual cells. Unlike bulk RNA-seq, which averages expression signals across thousands or millions of cells, scRNA-seq reveals cell-to-cell heterogeneity and uncovers distinct cellular subpopulations within complex tissues. This allows to provide crucial insights in biological mechanisms.
@@ -127,13 +124,25 @@ The dataset is available through the \texttt{CTdata} R package \citep{CTdata}, a
 \subsection{Simulation Framework}
 
 \subsection{Pseudobulk Approach}
-scheme
+
+To reduce the complexity of the data to be modeled, an aggregation approach can be applied. This involves summarizing the counts of cells belonging to a specific patient and a specific cell group. Aggregation can be performed using different summary statistics, such as the sum or the mean. By applying this technique, we simplify the data and reduce the noise while preserving meaningful biological variation, specifically the variability between biological replicates and the variability between cell (sub)populations.
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\columnwidth]{img/rnapseudobulk.drawio-1.pdf}
+	\caption{{\footnotesize Scheme of the pseudobulk approach. The columns in the first table represent the individual cells. Several cells belonging to the same bio-sample and cell type are aggregated to give the second table in which each column represent the value for a particular bio-sample and cell type.}}
+	\label{fig:pseudobulk}
+\end{figure}
 
 \subsection{Workflow}
 
-\textbf{ADD woRKFLOW FIGURE}
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\columnwidth]{img/workflowCut.pdf}
+	\caption{{\footnotesize Scheme of the workflow generated with \texttt{targets}. The first layer is the datasets retrieval and preprocessing. The second layer is the simulation of new datasets using different parameters. The third layer is the use of different processing method and aggregation techniques on counts. The fourth layer is the modelisation of the data.}}
+	\label{fig:workflow}
+\end{figure}
 
-Given the complexity and number of steps involved in this workflow, we used the \texttt{targets} R package \citep{targets} to automate the entire process. Each step is applied to the results produced by all preceding steps, ensuring a consistent and reproducible pipeline. In total, the workflow comprises 291 steps and results in the generation of X models.
+Given the complexity and number of steps involved in this workflow, we used the \texttt{targets} R package \citep{targets} to automate the entire process. Each step is applied to the results produced by all preceding steps, ensuring a consistent and reproducible pipeline. In total, the workflow comprises 291 steps and results in the generation of 144 models \ref{fig:workflow}.
 
 \subsubsection{Preprocessing}
 
@@ -184,22 +193,65 @@ The results were processed using the \texttt{iCOBRA} package \citep{icobra}. Dif
 – Figures for distributions, relationships, … (easier
 to understand than text)
 – 2-3 pages
-\begin{figure*}[!ht]
-	\centering
-	\includegraphics[width = \linewidth]{figs/fdrtpr_prop_method.pdf}
-	\caption{
-	}
-	\label{fdrtpr_prop}
-\end{figure*}
 
-\begin{figure*}[!ht]
-	\centering
-	\includegraphics[width = \linewidth]{figs/fdrtpr_size_method.pdf}
-	\caption{
-	}
-	\label{fdrtpr_size}
-\end{figure*}
 
+- Superiority of pseudobulk
+
+- difference with db vs de vs dm
+
+- scDD really bad
+
+- Computation time
+
+
+\end{multicols}
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{0.9\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figs/fdrtpr_prop_method_Kang.pdf}
+		\caption{FDR vs TPR by proportion}
+		\label{fig:fdrtpr_prop_kang}
+	\end{subfigure}
+	
+	\vspace{1em}
+	
+	\begin{subfigure}[t]{0.8\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figs/fdrtpr_size_method_Kang.pdf}
+		\caption{FDR vs TPR by sample size}
+		\label{fig:fdrtpr_size}
+	\end{subfigure}
+	
+	\caption{Comparison of FDR vs TPR under different experimental conditions: (a) varying proportions and (b) varying sample sizes.}
+	\label{fig:fdrtpr_combined_kang}
+\end{figure}
+
+
+\begin{figure}[H]
+	\centering
+	\begin{subfigure}[t]{0.9\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figs/fdrtpr_prop_method_Testis.pdf}
+		\caption{FDR vs TPR by proportion}
+		\label{fig:fdrtpr_prop_testis}
+	\end{subfigure}
+	
+	\vspace{1em}
+	
+	\begin{subfigure}[t]{0.8\textwidth}
+		\centering
+		\includegraphics[width=\textwidth]{figs/fdrtpr_size_method_Testis.pdf}
+		\caption{FDR vs TPR by sample size}
+		\label{fig:fdrtpr_testis}
+	\end{subfigure}
+	
+	\caption{Comparison of FDR vs TPR under different experimental conditions: (a) varying proportions and (b) varying sample sizes.}
+	\label{fig:fdrtpr_combined_testis}
+\end{figure}
+
+\begin{multicols}{2}
 \section{Discussion}
 Which issues did you identify, and which problems
 did you encounter?
@@ -212,5 +264,5 @@ method?
 \section{Conclusion} 
 
 \bibliography{references}
-
+\end{multicols}
 \end{document}
