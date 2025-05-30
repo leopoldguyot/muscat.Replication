@@ -272,7 +272,7 @@ Our benchmark results using the Kang and LPS datasets are in strong agreement wi
 
 As previously reported, we also observed that scDD exhibited poor performance across most simulated variation types, and that \textit{limma-trend} applied to VST residuals was the least performant among the pseudobulk methods tested. Additionally, our results confirmed the difficulty in detecting DB (differential both) genes, consistent with the original study. These genes, which combine modality and proportion shifts, remain particularly challenging to identify for all evaluated methods. Furthermore, we reproduced the difference between globally and locally adjusted p-values: while local adjustments led to higher sensitivity, they also resulted in inflated FDR.
 
-Importantly, both our analysis and the reviewed article highlighted the critical impact of the number of cells per patient and per subpopulation on model performance. As the number of cells increased, all methods improved in accuracy, but the rate of improvement varied. We observed that methods such as \textit{edgeR} and \textit{limma-trend} (on mean-aggregated logcounts) benefitted more rapidly from increases in cell number, showing steeper performance gains between 20 and 100 cells than other models.
+Importantly, both our analysis and the reviewed article highlighted the critical impact of the number of cells per patient and per subpopulation on model performance. As the number of cells increased, all methods improved in accuracy, but the rate of improvement varied.
 
 To further test the generalisability of our conclusions, we evaluated all methods on an additional dataset derived from testis tissue. Remarkably, the results obtained from this dataset mirrored those from the Kang and LPS datasets, and by extent as those reported in the reviewed article. This consistency across datasets reinforces the robustness of our findings and supports the broader applicability of the conclusions drawn regarding method performance, computational efficiency, and sensitivity to sample size.
 
@@ -285,6 +285,8 @@ However, these findings were critically re-evaluated by Murphy and Skene \citep{
 \section*{Code Availability}
 
 All scripts used for this report are available on \url{https://github.com/leopoldguyot/muscat.Replication}.
+
+\pagebreak
 \bibliography{references}
 \end{multicols}
 
