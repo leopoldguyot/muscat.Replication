@@ -5,25 +5,52 @@
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Amezquita et~al.(2020)Amezquita, Lun, Becht, Carey, Carpp,
-  Geistlinger, Marini, Rue-Albrecht, Risso, Soneson, Waldron, Pages, Smith,
-  Huber, Morgan, Gottardo, and Hicks]{sce}
-R.~Amezquita, A.~Lun, E.~Becht, V.~Carey, L.~Carpp, L.~Geistlinger, F.~Marini,
-  K.~Rue-Albrecht, D.~Risso, C.~Soneson, L.~Waldron, H.~Pages, M.~Smith,
-  W.~Huber, M.~Morgan, R.~Gottardo, and S.~Hicks.
-\newblock Orchestrating single-cell analysis with bioconductor.
-\newblock \emph{Nature Methods}, 17:\penalty0 137--145, 2020.
-\newblock URL \url{https://www.nature.com/articles/s41592-019-0654-x}.
+\bibitem[Crowell et~al.(2020)Crowell, Soneson, Germain, Calini, Collin, Raposo,
+  Malhotra, and Robinson]{crowell2020muscat}
+Helena~L Crowell, Charlotte Soneson, Pierre-Luc Germain, Daniela Calini,
+  Ludovic Collin, Catarina Raposo, Dheeraj Malhotra, and Mark~D Robinson.
+\newblock Muscat detects subpopulation-specific state transitions from
+  multi-sample multi-condition single-cell transcriptomics data.
+\newblock \emph{Nature communications}, 11\penalty0 (1):\penalty0 6077, 2020.
 
-\bibitem[Bates et~al.(2015)Bates, M{\"a}chler, Bolker, and Walker]{lme4}
-D.~Bates, M.~M{\"a}chler, B.~Bolker, and S.~Walker.
-\newblock Fitting linear mixed-effects models using {lme4}.
-\newblock \emph{Journal of Statistical Software}, 67\penalty0 (1):\penalty0
-  1--48, 2015.
-\newblock \doi{10.18637/jss.v067.i01}.
+\bibitem[van Galen et~al.(2019)van Galen, Hovestadt, Wadsworth~II, Hughes,
+  Griffin, Battaglia, Verga, Stephansky, Pastika, Story, et~al.]{van2019single}
+Peter van Galen, Volker Hovestadt, Marc~H Wadsworth~II, Travis~K Hughes,
+  Gabriel~K Griffin, Sofia Battaglia, Julia~A Verga, Jason Stephansky,
+  Timothy~J Pastika, Jennifer~Lombardi Story, et~al.
+\newblock Single-cell rna-seq reveals aml hierarchies relevant to disease
+  progression and immunity.
+\newblock \emph{Cell}, 176\penalty0 (6):\penalty0 1265--1281, 2019.
+
+\bibitem[Korthauer et~al.(2016{\natexlab{a}})Korthauer, Chu, Newton, Yuan,
+  Thomson, Stewart, and Kendziorski]{scdd}
+Keegan~D Korthauer, Li-Fang Chu, Michael~A Newton, Li~Yuan, James Thomson, Ron
+  Stewart, and Christina Kendziorski.
+\newblock A statistical approach for identifying differential distributions in
+  single-cell {RNA}-seq experiments.
+\newblock \emph{Genome Biology}, 17\penalty0 (1):\penalty0 222,
+  2016{\natexlab{a}}.
+\newblock URL
+  \url{https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1077-y}.
+
+\bibitem[Ritchie et~al.(2015)Ritchie, Phipson, Wu, Hu, Law, Shi, and
+  Smyth]{limma}
+Matthew~E Ritchie, Belinda Phipson, Di~Wu, Yifang Hu, Charity~W Law, Wei Shi,
+  and Gordon~K Smyth.
+\newblock {limma} powers differential expression analyses for {RNA}-sequencing
+  and microarray studies.
+\newblock \emph{Nucleic Acids Research}, 43\penalty0 (7):\penalty0 e47, 2015.
+\newblock \doi{10.1093/nar/gkv007}.
+
+\bibitem[Love et~al.(2014)Love, Huber, and Anders]{deseq2}
+Michael~I. Love, Wolfgang Huber, and Simon Anders.
+\newblock Moderated estimation of fold change and dispersion for rna-seq data
+  with deseq2.
+\newblock \emph{Genome Biology}, 15:\penalty0 550, 2014.
+\newblock \doi{10.1186/s13059-014-0550-8}.
 
 \bibitem[Chen et~al.(2025)Chen, Chen, Lun, Baldoni, and Smyth]{edger}
-Y.~Chen, L.~Chen, A.~T.~L. Lun, P.~Baldoni, and G.~K. Smyth.
+Yunshun Chen, Lizhong Chen, Aaron T~L Lun, Pedro Baldoni, and Gordon~K Smyth.
 \newblock {edgeR} v4: powerful differential analysis of sequencing data with
   expanded functionality and improved support for small counts and larger
   datasets.
@@ -31,42 +58,11 @@ Y.~Chen, L.~Chen, A.~T.~L. Lun, P.~Baldoni, and G.~K. Smyth.
   2025.
 \newblock \doi{10.1093/nar/gkaf018}.
 
-\bibitem[Choudhary and Satija(2022)]{sctrans}
-S.~Choudhary and R.~Satija.
-\newblock Comparison and evaluation of statistical error models for scrna-seq.
-\newblock \emph{Genome Biology}, 23:\penalty0 20, 2022.
-\newblock \doi{10.1186/s13059-021-02584-9}.
-\newblock URL \url{https://doi.org/10.1186/s13059-021-02584-9}.
-
-\bibitem[Crowell et~al.(2020)Crowell, Soneson, Germain, Calini, Collin, Raposo,
-  Malhotra, and Robinson]{crowell2020muscat}
-H.~L. Crowell, C.~Soneson, P.-L. Germain, D.~Calini, L.~Collin, C.~Raposo,
-  D.~Malhotra, and M.~D. Robinson.
-\newblock Muscat detects subpopulation-specific state transitions from
-  multi-sample multi-condition single-cell transcriptomics data.
-\newblock \emph{Nature communications}, 11\penalty0 (1):\penalty0 6077, 2020.
-
-\bibitem[Crowell et~al.(2025)Crowell, Germain, Soneson, Sonrel, Gilis, Risso,
-  Clement, and Robinson]{muscat}
-H.~L. Crowell, P.-L. Germain, C.~Soneson, A.~Sonrel, J.~Gilis, D.~Risso,
-  L.~Clement, and M.~D. Robinson.
-\newblock \emph{muscat: Multi-sample multi-group scRNA-seq data analysis
-  tools}, 2025.
-\newblock URL \url{https://bioconductor.org/packages/muscat}.
-\newblock R package version 1.22.0.
-
-\bibitem[Guo et~al.(2018)Guo, Grow, Mlcochova, Maher, Lindskog, Nie, Guo,
-  Takei, Yun, Cai, Kim, Carrell, Goriely, Hotaling, and Cairns]{guo_adult_2018}
-J.~Guo, E.~J. Grow, H.~Mlcochova, G.~J. Maher, C.~Lindskog, X.~Nie, Y.~Guo,
-  Y.~Takei, J.~Yun, L.~Cai, R.~Kim, D.~T. Carrell, A.~Goriely, J.~M. Hotaling,
-  and B.~R. Cairns.
-\newblock The adult human testis transcriptional cell atlas.
-\newblock \emph{Cell Research}, 28\penalty0 (12):\penalty0 1141--1157, Dec.
-  2018.
-\newblock ISSN 1748-7838.
-\newblock \doi{10.1038/s41422-018-0099-2}.
-\newblock URL \url{https://www.nature.com/articles/s41422-018-0099-2}.
-\newblock Publisher: Nature Publishing Group.
+\bibitem[{R Core Team}(2025)]{base}
+{R Core Team}.
+\newblock \emph{R: A Language and Environment for Statistical Computing}.
+\newblock R Foundation for Statistical Computing, Vienna, Austria, 2025.
+\newblock URL \url{https://www.R-project.org/}.
 
 \bibitem[Huber et~al.(2015)Huber, Carey, Gentleman, Anders, Carlson, Carvalho,
   Bravo, Davis, Gatto, Girke, Gottardo, Hahne, Hansen, Irizarry, Lawrence,
@@ -85,113 +81,121 @@ W.~Huber, V.~J. Carey, R.~Gentleman, S.~Anders, M.~Carlson, B.~S. Carvalho,
 \bibitem[Kang et~al.(2018)Kang, Subramaniam, Targ, Nguyen, Maliskova, McCarthy,
   Wan, Wong, Byrnes, Lanata, Gate, Mostafavi, Marson, Zaitlen, Criswell, and
   Ye]{kang_multiplexed_2018}
-H.~M. Kang, M.~Subramaniam, S.~Targ, M.~Nguyen, L.~Maliskova, E.~McCarthy,
-  E.~Wan, S.~Wong, L.~Byrnes, C.~M. Lanata, R.~E. Gate, S.~Mostafavi,
-  A.~Marson, N.~Zaitlen, L.~A. Criswell, and C.~J. Ye.
+Hyun~Min Kang, Meena Subramaniam, Sasha Targ, Michelle Nguyen, Lenka Maliskova,
+  Elizabeth McCarthy, Eunice Wan, Simon Wong, Lauren Byrnes, Cristina~M.
+  Lanata, Rachel~E. Gate, Sara Mostafavi, Alexander Marson, Noah Zaitlen,
+  Lindsey~A. Criswell, and Chun~Jimmie Ye.
 \newblock Multiplexed droplet single-cell {RNA}-sequencing using natural
   genetic variation.
-\newblock \emph{Nature Biotechnology}, 36\penalty0 (1):\penalty0 89--94, Jan.
-  2018.
+\newblock \emph{Nature Biotechnology}, 36\penalty0 (1):\penalty0 89--94,
+  January 2018.
 \newblock ISSN 1546-1696.
 \newblock \doi{10.1038/nbt.4042}.
 \newblock URL \url{https://www.nature.com/articles/nbt.4042}.
 \newblock Publisher: Nature Publishing Group.
 
-\bibitem[Korthauer et~al.(2016{\natexlab{a}})Korthauer, Chu, Newton, Li,
+\bibitem[Amezquita et~al.(2020)Amezquita, Lun, Becht, Carey, Carpp,
+  Geistlinger, Marini, Rue-Albrecht, Risso, Soneson, Waldron, Pages, Smith,
+  Huber, Morgan, Gottardo, and Hicks]{sce}
+Robert Amezquita, Aaron Lun, Etienne Becht, Vince Carey, Lindsay Carpp, Ludwig
+  Geistlinger, Federico Marini, Kevin Rue-Albrecht, Davide Risso, Charlotte
+  Soneson, Levi Waldron, Herve Pages, Mike Smith, Wolfgang Huber, Martin
+  Morgan, Raphael Gottardo, and Stephanie Hicks.
+\newblock Orchestrating single-cell analysis with bioconductor.
+\newblock \emph{Nature Methods}, 17:\penalty0 137--145, 2020.
+\newblock URL \url{https://www.nature.com/articles/s41592-019-0654-x}.
+
+\bibitem[Morgan and Shepherd(2025)]{ExperimentHub}
+Martin Morgan and Lori Shepherd.
+\newblock \emph{ExperimentHub: Client to access ExperimentHub resources}, 2025.
+\newblock URL \url{https://bioconductor.org/packages/ExperimentHub}.
+\newblock R package version 2.16.0.
+
+\bibitem[Guo et~al.(2018)Guo, Grow, Mlcochova, Maher, Lindskog, Nie, Guo,
+  Takei, Yun, Cai, Kim, Carrell, Goriely, Hotaling, and Cairns]{guo_adult_2018}
+Jingtao Guo, Edward~J. Grow, Hana Mlcochova, Geoffrey~J. Maher, Cecilia
+  Lindskog, Xichen Nie, Yixuan Guo, Yodai Takei, Jina Yun, Long Cai, Robin Kim,
+  Douglas~T. Carrell, Anne Goriely, James~M. Hotaling, and Bradley~R. Cairns.
+\newblock The adult human testis transcriptional cell atlas.
+\newblock \emph{Cell Research}, 28\penalty0 (12):\penalty0 1141--1157, December
+  2018.
+\newblock ISSN 1748-7838.
+\newblock \doi{10.1038/s41422-018-0099-2}.
+\newblock URL \url{https://www.nature.com/articles/s41422-018-0099-2}.
+\newblock Publisher: Nature Publishing Group.
+
+\bibitem[Loriot et~al.(2025)Loriot, Devis, and Gatto]{CTdata}
+Axelle Loriot, Julie Devis, and Laurent Gatto.
+\newblock \emph{CTdata: Data companion to CTexploreR}, 2025.
+\newblock URL \url{https://bioconductor.org/packages/CTdata}.
+\newblock R package version 1.8.0.
+
+\bibitem[Korthauer et~al.(2016{\natexlab{b}})Korthauer, Chu, Newton, Li,
   Thomson, Stewart, and Kendziorski]{korthauer2016statistical}
-K.~D. Korthauer, L.-F. Chu, M.~A. Newton, Y.~Li, J.~Thomson, R.~Stewart, and
-  C.~Kendziorski.
+Keegan~D Korthauer, Li-Fang Chu, Michael~A Newton, Yuan Li, James Thomson, Ron
+  Stewart, and Christina Kendziorski.
 \newblock A statistical approach for identifying differential distributions in
   single-cell rna-seq experiments.
-\newblock \emph{Genome biology}, 17:\penalty0 1--15, 2016{\natexlab{a}}.
-
-\bibitem[Korthauer et~al.(2016{\natexlab{b}})Korthauer, Chu, Newton, Yuan,
-  Thomson, Stewart, and Kendziorski]{scdd}
-K.~D. Korthauer, L.-F. Chu, M.~A. Newton, L.~Yuan, J.~Thomson, R.~Stewart, and
-  C.~Kendziorski.
-\newblock A statistical approach for identifying differential distributions in
-  single-cell {RNA}-seq experiments.
-\newblock \emph{Genome Biology}, 17\penalty0 (1):\penalty0 222,
-  2016{\natexlab{b}}.
-\newblock URL
-  \url{https://genomebiology.biomedcentral.com/articles/10.1186/s13059-016-1077-y}.
+\newblock \emph{Genome biology}, 17:\penalty0 1--15, 2016{\natexlab{b}}.
 
 \bibitem[Landau(2021)]{targets}
-W.~M. Landau.
+William~Michael Landau.
 \newblock The targets r package: a dynamic make-like function-oriented pipeline
   toolkit for reproducibility and high-performance computing.
 \newblock \emph{Journal of Open Source Software}, 6\penalty0 (57):\penalty0
   2959, 2021.
 \newblock URL \url{https://doi.org/10.21105/joss.02959}.
 
-\bibitem[Loriot et~al.(2025)Loriot, Devis, and Gatto]{CTdata}
-A.~Loriot, J.~Devis, and L.~Gatto.
-\newblock \emph{CTdata: Data companion to CTexploreR}, 2025.
-\newblock URL \url{https://bioconductor.org/packages/CTdata}.
-\newblock R package version 1.8.0.
-
-\bibitem[Love et~al.(2014)Love, Huber, and Anders]{deseq2}
-M.~I. Love, W.~Huber, and S.~Anders.
-\newblock Moderated estimation of fold change and dispersion for rna-seq data
-  with deseq2.
-\newblock \emph{Genome Biology}, 15:\penalty0 550, 2014.
-\newblock \doi{10.1186/s13059-014-0550-8}.
+\bibitem[Crowell et~al.(2025)Crowell, Germain, Soneson, Sonrel, Gilis, Risso,
+  Clement, and Robinson]{muscat}
+Helena~L. Crowell, Pierre-Luc Germain, Charlotte Soneson, Anthony Sonrel,
+  Jeroen Gilis, Davide Risso, Lieven Clement, and Mark~D. Robinson.
+\newblock \emph{muscat: Multi-sample multi-group scRNA-seq data analysis
+  tools}, 2025.
+\newblock URL \url{https://bioconductor.org/packages/muscat}.
+\newblock R package version 1.22.0.
 
 \bibitem[McCarthy et~al.(2017)McCarthy, Campbell, Lun, and Willis]{scatter}
-D.~J. McCarthy, K.~R. Campbell, A.~T.~L. Lun, and Q.~F. Willis.
+Davis~J. McCarthy, Kieran~R. Campbell, Aaron T.~L. Lun, and Quin~F. Willis.
 \newblock Scater: pre-processing, quality control, normalisation and
   visualisation of single-cell {R}{N}{A}-seq data in {R}.
 \newblock \emph{Bioinformatics}, 33:\penalty0 1179--1186, 2017.
 \newblock \doi{10.1093/bioinformatics/btw777}.
 
-\bibitem[Morgan and Shepherd(2025)]{ExperimentHub}
-M.~Morgan and L.~Shepherd.
-\newblock \emph{ExperimentHub: Client to access ExperimentHub resources}, 2025.
-\newblock URL \url{https://bioconductor.org/packages/ExperimentHub}.
-\newblock R package version 2.16.0.
+\bibitem[Choudhary and Satija(2022)]{sctrans}
+Saket Choudhary and Rahul Satija.
+\newblock Comparison and evaluation of statistical error models for scrna-seq.
+\newblock \emph{Genome Biology}, 23:\penalty0 20, 2022.
+\newblock \doi{10.1186/s13059-021-02584-9}.
+\newblock URL \url{https://doi.org/10.1186/s13059-021-02584-9}.
 
-\bibitem[Murphy and Skene(2022)]{murphy2022balanced}
-A.~E. Murphy and N.~G. Skene.
-\newblock A balanced measure shows superior performance of pseudobulk methods
-  over mixed models and pseudoreplication approaches in single-cell
-  rna-sequencing analysis.
-\newblock \emph{bioRxiv}, pages 2022--02, 2022.
-
-\bibitem[{R Core Team}(2025)]{base}
-{R Core Team}.
-\newblock \emph{R: A Language and Environment for Statistical Computing}.
-\newblock R Foundation for Statistical Computing, Vienna, Austria, 2025.
-\newblock URL \url{https://www.R-project.org/}.
-
-\bibitem[Ritchie et~al.(2015)Ritchie, Phipson, Wu, Hu, Law, Shi, and
-  Smyth]{limma}
-M.~E. Ritchie, B.~Phipson, D.~Wu, Y.~Hu, C.~W. Law, W.~Shi, and G.~K. Smyth.
-\newblock {limma} powers differential expression analyses for {RNA}-sequencing
-  and microarray studies.
-\newblock \emph{Nucleic Acids Research}, 43\penalty0 (7):\penalty0 e47, 2015.
-\newblock \doi{10.1093/nar/gkv007}.
+\bibitem[Bates et~al.(2015)Bates, M{\"a}chler, Bolker, and Walker]{lme4}
+Douglas Bates, Martin M{\"a}chler, Ben Bolker, and Steve Walker.
+\newblock Fitting linear mixed-effects models using {lme4}.
+\newblock \emph{Journal of Statistical Software}, 67\penalty0 (1):\penalty0
+  1--48, 2015.
+\newblock \doi{10.18637/jss.v067.i01}.
 
 \bibitem[Soneson and Robinson(2016)]{icobra}
-C.~Soneson and M.~D. Robinson.
+Charlotte Soneson and Mark~D Robinson.
 \newblock icobra: open, reproducible, standardized and live method
   benchmarking.
 \newblock \emph{Nature Methods}, 13\penalty0 (4):\penalty0 283, 2016.
 \newblock URL
   \url{http://www.nature.com/nmeth/journal/v13/n4/full/nmeth.3805.html}.
 
-\bibitem[van Galen et~al.(2019)van Galen, Hovestadt, Wadsworth~II, Hughes,
-  Griffin, Battaglia, Verga, Stephansky, Pastika, Story, et~al.]{van2019single}
-P.~van Galen, V.~Hovestadt, M.~H. Wadsworth~II, T.~K. Hughes, G.~K. Griffin,
-  S.~Battaglia, J.~A. Verga, J.~Stephansky, T.~J. Pastika, J.~L. Story, et~al.
-\newblock Single-cell rna-seq reveals aml hierarchies relevant to disease
-  progression and immunity.
-\newblock \emph{Cell}, 176\penalty0 (6):\penalty0 1265--1281, 2019.
-
 \bibitem[Zimmerman et~al.(2021)Zimmerman, Espeland, and
   Langefeld]{zimmerman2021practical}
-K.~D. Zimmerman, M.~A. Espeland, and C.~D. Langefeld.
+Kip~D Zimmerman, Mark~A Espeland, and Carl~D Langefeld.
 \newblock A practical solution to pseudoreplication bias in single-cell
   studies.
 \newblock \emph{Nature communications}, 12\penalty0 (1):\penalty0 738, 2021.
+
+\bibitem[Murphy and Skene(2022)]{murphy2022balanced}
+Alan~E Murphy and Nathan~G Skene.
+\newblock A balanced measure shows superior performance of pseudobulk methods
+  over mixed models and pseudoreplication approaches in single-cell
+  rna-sequencing analysis.
+\newblock \emph{bioRxiv}, pages 2022--02, 2022.
 
 \end{thebibliography}
