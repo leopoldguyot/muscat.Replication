@@ -170,7 +170,7 @@ To reduce the complexity of the data to be modeled, an aggregation approach can 
 	\label{fig:workflow}
 \end{figure}
 
-Given the complexity and number of steps involved in this workflow, we used the \texttt{targets} R package \citep{targets} to automate the entire process. Each step is applied to the results produced by all preceding steps, ensuring a consistent and reproducible pipeline. In total, the workflow comprises 291 steps and results in the generation of 144 models (Fig. \ref{fig:workflow}).
+Given the complexity and number of steps involved in this workflow, we used the \texttt{targets} R package \citep{targets} to automate the entire process. Each step is applied to the results produced by all preceding steps, ensuring a consistent and reproducible pipeline. In total, the workflow comprises 291 steps and results in the generation of 144 models (Fig. \ref{fig:workflow}). The computation of each step was recorded to make an runtime analysis. This workflow was run on a computer with the following specifications:  36 cores - Intel(R) Core(TM) i9-10980XE CPU @ 3.00GHz and 135 GB of RAM.
 
 \subsubsection{Preprocessing}
 
