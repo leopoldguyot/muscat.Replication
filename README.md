@@ -21,7 +21,7 @@ tar_make()
 
 ## Benchmark results analysis
 
-Run scripts in `downstreamR/`
+Run scripts in `benchmarkAnalysisR/`
 
 ## LPS downstream
 
